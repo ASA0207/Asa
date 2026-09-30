@@ -36,6 +36,20 @@ addEventListener('scroll',()=>{let h=document.documentElement.scrollHeight-inner
   toggle.addEventListener('click',()=>audio.paused?play():pause());
   volume.addEventListener('input',()=>{audio.volume=Number(volume.value)/100;localStorage.setItem('asaWikiBgmVolume',String(audio.volume));if(audio.volume>0&&wanted&&audio.paused)play()});
   audio.addEventListener('play',sync);audio.addEventListener('pause',sync);
-  // Browsers may reject audible autoplay. Try immediately, then retry on the user's first interaction.
-  if(wanted){audio.play().then(()=>{player.classList.remove('autoplayBlocked');sync()}).catch(()=>{player.classList.add('autoplayBlocked');sync();const unlock=()=>{if(wanted)play();document.removeEventListener('pointerdown',unlock);document.removeEventListener('keydown',unlock)};document.addEventListener('pointerdown',unlock,{once:true});document.addEventListener('keydown',unlock,{once:true})})}else sync();
+  // Browsers may reject audible autoplay. Try immediately. If blocked, a user
+  // interaction OUTSIDE the player may unlock it. Player controls handle themselves,
+  // preventing pointerdown -> play -> click -> pause conflicts.
+  if(wanted){
+    audio.play().then(()=>{player.classList.remove('autoplayBlocked');sync()}).catch(()=>{
+      player.classList.add('autoplayBlocked');sync();
+      const unlock=(e)=>{
+        if(e && player.contains(e.target)) return;
+        if(wanted) play();
+        document.removeEventListener('pointerdown',unlock,true);
+        document.removeEventListener('keydown',unlock,true);
+      };
+      document.addEventListener('pointerdown',unlock,true);
+      document.addEventListener('keydown',unlock,true);
+    });
+  }else sync();
 })();
