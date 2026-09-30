@@ -8,3 +8,34 @@ const modal=document.querySelector('#searchModal'),input=document.querySelector(
 document.querySelector('#menuBtn').onclick=()=>document.querySelector('#sidebar').classList.toggle('open');
 document.querySelectorAll('[data-copy]').forEach(b=>b.onclick=async()=>{try{await navigator.clipboard.writeText(b.dataset.copy)}catch(e){const t=document.createElement('textarea');t.value=b.dataset.copy;document.body.append(t);t.select();document.execCommand('copy');t.remove()}let toast=document.querySelector('#toast');toast.textContent=`${b.dataset.copy} 복사 완료`;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1800)});
 addEventListener('scroll',()=>{let h=document.documentElement.scrollHeight-innerHeight;document.querySelector('#progress').style.width=(h?scrollY/h*100:0)+'%'});
+
+// Promise — SoundStills / ASA Wiki background music
+(()=>{
+  const audio=document.querySelector('#bgmAudio');
+  const player=document.querySelector('#bgmPlayer');
+  const toggle=document.querySelector('#bgmToggle');
+  const volume=document.querySelector('#bgmVolume');
+  if(!audio||!player||!toggle||!volume)return;
+  const savedVolume=Number(localStorage.getItem('asaWikiBgmVolume'));
+  const initialVolume=Number.isFinite(savedVolume)&&savedVolume>=0&&savedVolume<=1?savedVolume:.22;
+  audio.volume=initialVolume;
+  volume.value=Math.round(initialVolume*100);
+  let wanted=localStorage.getItem('asaWikiBgmEnabled')!=='0';
+  const sync=()=>{
+    const playing=!audio.paused;
+    player.classList.toggle('playing',playing);
+    toggle.textContent=playing?'Ⅱ':'▶';
+    toggle.setAttribute('aria-label',playing?'배경음악 일시정지':'배경음악 재생');
+  };
+  const play=async()=>{
+    wanted=true; localStorage.setItem('asaWikiBgmEnabled','1');
+    try{await audio.play();player.classList.remove('autoplayBlocked')}catch(e){player.classList.add('autoplayBlocked')}
+    sync();
+  };
+  const pause=()=>{wanted=false;localStorage.setItem('asaWikiBgmEnabled','0');audio.pause();player.classList.remove('autoplayBlocked');sync()};
+  toggle.addEventListener('click',()=>audio.paused?play():pause());
+  volume.addEventListener('input',()=>{audio.volume=Number(volume.value)/100;localStorage.setItem('asaWikiBgmVolume',String(audio.volume));if(audio.volume>0&&wanted&&audio.paused)play()});
+  audio.addEventListener('play',sync);audio.addEventListener('pause',sync);
+  // Browsers may reject audible autoplay. Try immediately, then retry on the user's first interaction.
+  if(wanted){audio.play().then(()=>{player.classList.remove('autoplayBlocked');sync()}).catch(()=>{player.classList.add('autoplayBlocked');sync();const unlock=()=>{if(wanted)play();document.removeEventListener('pointerdown',unlock);document.removeEventListener('keydown',unlock)};document.addEventListener('pointerdown',unlock,{once:true});document.addEventListener('keydown',unlock,{once:true})})}else sync();
+})();
