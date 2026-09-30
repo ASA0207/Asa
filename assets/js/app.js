@@ -1,0 +1,2 @@
+const menu=document.querySelector('.menu'),side=document.querySelector('.side');if(menu)menu.onclick=()=>side.classList.toggle('open');
+const search=document.querySelector('.search');if(search)search.addEventListener('keydown',e=>{if(e.key==='Enter'){const q=e.target.value.toLowerCase().trim();const links=[...document.querySelectorAll('.side a')];const hit=links.find(a=>a.textContent.toLowerCase().includes(q));if(hit)location.href=hit.href;}});
