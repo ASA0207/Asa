@@ -1,8 +1,10 @@
-# ASA SERVER WIKI V2
+# ASA SERVER WIKI V2.1
 
-GitHub Pages용 정적 위키입니다. 기존 저장소의 파일을 이 ZIP의 내용으로 교체하면 됩니다.
+GitHub Pages `/Asa/` deployment hotfix.
 
-- `index.html`은 저장소 최상위에 위치해야 합니다.
-- `.nojekyll`을 유지하세요.
-- Pages: `main` / `/(root)`
-- 검색, 모바일 메뉴, 복사 버튼 포함
+## 핵심 수정
+- CSS와 JavaScript를 `index.html` 내부에 포함하여 이전 `assets/` 파일 캐시/덮어쓰기 문제를 제거했습니다.
+- 메인 페이지는 외부 로컬 CSS/JS 경로에 의존하지 않습니다.
+
+## 적용
+저장소 최상위에 `index.html`, `.nojekyll`, `README.md`를 업로드하고 기존 파일을 덮어쓰세요.
