@@ -1,5 +1,6 @@
-# ASA SERVER WIKI V5 — Cinematic Edition
+# ASA SERVER WIKI — FINAL
+GitHub Pages 배포용 완성 구조입니다.
 
-메인 화면은 승인된 V5 시안을 그대로 사용하고, 검색/메뉴/카드/서버 주소 복사에 실제 클릭 영역을 입힌 버전입니다.
+업로드: 이 폴더 안의 `index.html`, `.nojekyll`, `assets` 폴더를 저장소 루트에 업로드하세요.
 
-GitHub Pages 업로드: 이 폴더 안의 index.html, .nojekyll, assets 폴더, pages 폴더를 저장소 루트에 업로드하세요.
+구성: 분리된 로고/히어로/카드 이미지 에셋 + 실제 HTML/CSS UI + 통합 검색 + 문서 라우팅 + 모바일 메뉴 + 서버 주소 복사.
