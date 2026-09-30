@@ -1,13 +1,7 @@
-# ASA SERVER WIKI — Deploy Ready
+# ASA SERVER WIKI — AURORA PREMIUM PATCH
 
-GitHub Pages 배포용 완성 패키지입니다.
+GitHub Pages 배포용 프리미엄 UI 패치입니다.
 
-## 업로드
-저장소 루트에 `index.html`, `.nojekyll`, `assets/` 폴더를 그대로 업로드하세요.
+업로드: `index.html`, `.nojekyll`, `assets/` 전체를 저장소 루트에 덮어쓰세요.
 
-## 구조
-- 외부 CSS/JS/CDN 없음
-- 모든 UI 텍스트는 HTML/CSS
-- hero 이미지는 UI 글자 없는 깨끗한 성 배경으로 교체
-- 은행/주식/상점/길드/던전/생활 카드 이미지는 각각 독립 파일
-- 상대경로 사용: GitHub Pages `/Asa/` 프로젝트 사이트에서 동작
+주요 기능: 시네마틱 Hero, ASA 엠블럼, 글래스 UI, 파티클/조명 효과, 스크롤 진행바, 카드 모션, 통합 검색(Ctrl+K), 퀵 도크, 서버 주소 복사, 반응형 모바일 메뉴, 해시 기반 문서 라우팅, 상세 문서 레이아웃.
