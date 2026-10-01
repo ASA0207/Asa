@@ -9,7 +9,7 @@ document.querySelector('#menuBtn').onclick=()=>document.querySelector('#sidebar'
 document.querySelectorAll('[data-copy]').forEach(b=>b.onclick=async()=>{try{await navigator.clipboard.writeText(b.dataset.copy)}catch(e){const t=document.createElement('textarea');t.value=b.dataset.copy;document.body.append(t);t.select();document.execCommand('copy');t.remove()}let toast=document.querySelector('#toast');toast.textContent=`${b.dataset.copy} 복사 완료`;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1800)});
 addEventListener('scroll',()=>{let h=document.documentElement.scrollHeight-innerHeight;document.querySelector('#progress').style.width=(h?scrollY/h*100:0)+'%'});
 
-// Promise — SoundStills / ASA Wiki background music
+// Arcade — ASA Wiki background music
 (()=>{
   const audio=document.querySelector('#bgmAudio');
   const player=document.querySelector('#bgmPlayer');
@@ -17,7 +17,7 @@ addEventListener('scroll',()=>{let h=document.documentElement.scrollHeight-inner
   const volume=document.querySelector('#bgmVolume');
   if(!audio||!player||!toggle||!volume)return;
   const savedVolume=Number(localStorage.getItem('asaWikiBgmVolume'));
-  const initialVolume=Number.isFinite(savedVolume)&&savedVolume>=0&&savedVolume<=1?savedVolume:.22;
+  const initialVolume=Number.isFinite(savedVolume)&&savedVolume>=0&&savedVolume<=1?savedVolume:.20;
   audio.volume=initialVolume;
   volume.value=Math.round(initialVolume*100);
   let wanted=localStorage.getItem('asaWikiBgmEnabled')!=='0';
@@ -52,4 +52,29 @@ addEventListener('scroll',()=>{let h=document.documentElement.scrollHeight-inner
       document.addEventListener('keydown',unlock,true);
     });
   }else sync();
+})();
+
+// ===== ASA IMMERSIVE EDITION =====
+(()=>{
+ const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const glow=document.querySelector('#cursorGlow'), heroImg=document.querySelector('#heroImage');
+ if(!reduce && matchMedia('(pointer:fine)').matches){
+  addEventListener('pointermove',e=>{if(glow){glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px'};if(heroImg&&location.hash.replace('#','')==='home'){const x=(e.clientX/innerWidth-.5)*-14,y=(e.clientY/innerHeight-.5)*-9;heroImg.style.transform=`scale(1.06) translate(${x}px,${y}px)`}}, {passive:true});
+  document.querySelectorAll('.feature,.quick>div').forEach(el=>el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;el.style.setProperty('--mx',x+'px');el.style.setProperty('--my',y+'px');const rx=(.5-y/r.height)*3.5,ry=(x/r.width-.5)*4.5;el.style.transform=`perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-3px)`}));
+  document.querySelectorAll('.feature,.quick>div').forEach(el=>el.addEventListener('pointerleave',()=>el.style.transform=''));
+ }
+ const flash=document.querySelector('#routeFlash'); addEventListener('hashchange',()=>{if(!flash)return;flash.classList.remove('go');void flash.offsetWidth;flash.classList.add('go')});
+ // lightweight ambient star dust
+ const c=document.querySelector('#starfield'); if(c&&!reduce){const ctx=c.getContext('2d');let pts=[];function resize(){const d=Math.min(devicePixelRatio||1,1.5);c.width=innerWidth*d;c.height=innerHeight*d;c.style.width=innerWidth+'px';c.style.height=innerHeight+'px';ctx.setTransform(d,0,0,d,0,0);pts=Array.from({length:Math.min(90,Math.floor(innerWidth/15))},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*1.2+.2,v:Math.random()*.08+.02,a:Math.random()*.45+.08}))}function draw(){ctx.clearRect(0,0,innerWidth,innerHeight);for(const p of pts){p.y-=p.v;if(p.y<0)p.y=innerHeight;ctx.beginPath();ctx.fillStyle=`rgba(226,201,151,${p.a})`;ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill()}requestAnimationFrame(draw)}resize();addEventListener('resize',resize);draw()}
+ // Easter egg: type ASA
+ let seq=''; addEventListener('keydown',e=>{if(e.target.matches?.('input,textarea'))return;seq=(seq+e.key.toLowerCase()).slice(-3);if(seq==='asa'){document.body.animate([{filter:'brightness(1)'},{filter:'brightness(1.35) saturate(1.3)'},{filter:'brightness(1)'}],{duration:900});const t=document.querySelector('#toast');t.textContent='✦ ASA SECRET SIGNAL DETECTED';t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)}});
+})();
+
+// Enhanced Arcade player controls (seek/time + metadata-safe autoplay)
+(()=>{
+ const a=document.querySelector('#bgmAudio'),seek=document.querySelector('#bgmSeek'),cur=document.querySelector('#bgmCurrent'),dur=document.querySelector('#bgmDuration'); if(!a||!seek)return;
+ const fmt=s=>Number.isFinite(s)?`${Math.floor(s/60)}:${String(Math.floor(s%60)).padStart(2,'0')}`:'0:00';
+ a.addEventListener('loadedmetadata',()=>dur.textContent=fmt(a.duration));
+ a.addEventListener('timeupdate',()=>{if(!seek.matches(':active'))seek.value=a.duration?Math.round(a.currentTime/a.duration*1000):0;cur.textContent=fmt(a.currentTime);dur.textContent=fmt(a.duration)});
+ seek.addEventListener('input',()=>{if(a.duration)a.currentTime=Number(seek.value)/1000*a.duration});
 })();

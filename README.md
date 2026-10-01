@@ -17,3 +17,8 @@ GitHub Pages 배포용 정적 사이트입니다.
 - 2026-09-30 시점 설정/플러그인 메타데이터
 
 비밀번호 등 민감한 DB 인증정보는 위키에 포함하지 않았습니다.
+
+## ASA Immersive Edition
+This build adds a cinematic intro, ambient particle field, hero parallax, interactive 3D cards, animated navigation transitions, an Arcade music deck with seek/volume controls, responsive performance fallbacks, reduced-motion accessibility, and an `ASA` keyboard easter egg.
+
+> Note: browsers can block audible autoplay until the first user interaction. The player automatically retries after a page interaction.
