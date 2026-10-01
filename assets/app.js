@@ -99,7 +99,7 @@ addEventListener('scroll',()=>{let h=document.documentElement.scrollHeight-inner
 (()=>{
  const nodes=[...document.querySelectorAll('.atlasNode')], title=document.querySelector('#atlasTitle'), desc=document.querySelector('#atlasDesc'), icon=document.querySelector('#atlasIcon');
  if(!nodes.length)return;
- nodes.forEach(n=>n.addEventListener('click',()=>{nodes.forEach(x=>x.classList.remove('active'));n.classList.add('active');title.textContent=n.dataset.title;desc.textContent=n.dataset.desc;icon.textContent=n.dataset.icon||'✦'}));
+ nodes.forEach(n=>n.addEventListener('click',()=>{nodes.forEach(x=>x.classList.remove('active'));n.classList.add('active');title.textContent=n.dataset.title||n.querySelector('b')?.textContent||'ASA WORLD';desc.textContent=n.dataset.desc||'ASA 네트워크의 서버입니다.';icon.textContent=n.dataset.icon||'✦';const info=title.closest('.atlasInfo');if(info){info.classList.remove('flash');void info.offsetWidth;info.classList.add('flash')}}));
 })();
 
 // Magnetic primary controls + reactive sheen
