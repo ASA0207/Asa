@@ -78,3 +78,34 @@ addEventListener('scroll',()=>{let h=document.documentElement.scrollHeight-inner
  a.addEventListener('timeupdate',()=>{if(!seek.matches(':active'))seek.value=a.duration?Math.round(a.currentTime/a.duration*1000):0;cur.textContent=fmt(a.currentTime);dur.textContent=fmt(a.duration)});
  seek.addEventListener('input',()=>{if(a.duration)a.currentTime=Number(seek.value)/1000*a.duration});
 })();
+
+// ===== ASA CINEMATIC GATE V2 =====
+(()=>{
+ const gate=document.querySelector('#asaIntro'), bars=document.querySelector('#introBars'), audio=document.querySelector('#bgmAudio');
+ if(!gate||!bars)return;
+ // A field of vertical strokes: deliberately abstract until the visitor enters.
+ const count=31;
+ bars.innerHTML=Array.from({length:count},(_,i)=>`<i class="introBar" style="--i:${i}"></i>`).join('');
+ let entered=false;
+ const enter=async()=>{
+  if(entered)return; entered=true; gate.classList.add('entering');
+  // This runs directly inside the click/Enter gesture, giving audible playback
+  // the best chance of being accepted by browser autoplay policies.
+  if(audio){try{audio.currentTime=0;audio.volume=Math.max(.18,Math.min(.28,audio.volume||.22));localStorage.setItem('asaWikiBgmEnabled','1');await audio.play()}catch(e){}}
+  setTimeout(()=>document.body.classList.add('asaBooted'),1500);
+  setTimeout(()=>{gate.classList.add('done');gate.setAttribute('aria-hidden','true')},2350);
+  setTimeout(()=>gate.remove(),3200);
+ };
+ gate.addEventListener('pointerup',enter,{once:true});
+ gate.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();enter()}},{once:true});
+ setTimeout(()=>gate.focus({preventScroll:true}),50);
+})();
+
+// Magnetic primary controls + reactive sheen
+(()=>{
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches||!matchMedia('(pointer:fine)').matches)return;
+ document.querySelectorAll('.btn,.bgmToggle').forEach(el=>{
+  el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect(),x=(e.clientX-r.left-r.width/2)*.09,y=(e.clientY-r.top-r.height/2)*.12;el.style.transform=`translate(${x}px,${y}px)`});
+  el.addEventListener('pointerleave',()=>el.style.transform='');
+ });
+})();
