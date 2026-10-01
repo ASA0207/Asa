@@ -79,26 +79,27 @@ addEventListener('scroll',()=>{let h=document.documentElement.scrollHeight-inner
  seek.addEventListener('input',()=>{if(a.duration)a.currentTime=Number(seek.value)/1000*a.duration});
 })();
 
-// ===== ASA CINEMATIC GATE V2 =====
+// ===== ASA LIGHTWEIGHT GATE V3 =====
 (()=>{
- const gate=document.querySelector('#asaIntro'), bars=document.querySelector('#introBars'), audio=document.querySelector('#bgmAudio');
- if(!gate||!bars)return;
- // A field of vertical strokes: deliberately abstract until the visitor enters.
- const count=31;
- bars.innerHTML=Array.from({length:count},(_,i)=>`<i class="introBar" style="--i:${i}"></i>`).join('');
- let entered=false;
+ const gate=document.querySelector('#asaIntro'), audio=document.querySelector('#bgmAudio');
+ if(!gate)return; let entered=false;
  const enter=async()=>{
   if(entered)return; entered=true; gate.classList.add('entering');
-  // This runs directly inside the click/Enter gesture, giving audible playback
-  // the best chance of being accepted by browser autoplay policies.
-  if(audio){try{audio.currentTime=0;audio.volume=Math.max(.18,Math.min(.28,audio.volume||.22));localStorage.setItem('asaWikiBgmEnabled','1');await audio.play()}catch(e){}}
-  setTimeout(()=>document.body.classList.add('asaBooted'),1500);
-  setTimeout(()=>{gate.classList.add('done');gate.setAttribute('aria-hidden','true')},2350);
-  setTimeout(()=>gate.remove(),3200);
+  if(audio){try{audio.currentTime=0;audio.volume=.22;localStorage.setItem('asaWikiBgmEnabled','1');await audio.play()}catch(e){}}
+  document.body.classList.add('asaBooted');
+  setTimeout(()=>{gate.classList.add('done');gate.setAttribute('aria-hidden','true')},900);
+  setTimeout(()=>gate.remove(),1500);
  };
  gate.addEventListener('pointerup',enter,{once:true});
  gate.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();enter()}},{once:true});
  setTimeout(()=>gate.focus({preventScroll:true}),50);
+})();
+
+// Interactive ASA world network
+(()=>{
+ const nodes=[...document.querySelectorAll('.atlasNode')], title=document.querySelector('#atlasTitle'), desc=document.querySelector('#atlasDesc'), icon=document.querySelector('#atlasIcon');
+ if(!nodes.length)return;
+ nodes.forEach(n=>n.addEventListener('click',()=>{nodes.forEach(x=>x.classList.remove('active'));n.classList.add('active');title.textContent=n.dataset.title;desc.textContent=n.dataset.desc;icon.textContent=n.dataset.icon||'✦'}));
 })();
 
 // Magnetic primary controls + reactive sheen
