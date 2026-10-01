@@ -66,8 +66,18 @@ addEventListener('scroll',()=>{let h=document.documentElement.scrollHeight-inner
  const flash=document.querySelector('#routeFlash'); addEventListener('hashchange',()=>{if(!flash)return;flash.classList.remove('go');void flash.offsetWidth;flash.classList.add('go')});
  // lightweight ambient star dust
  const c=document.querySelector('#starfield'); if(c&&!reduce){const ctx=c.getContext('2d');let pts=[];function resize(){const d=Math.min(devicePixelRatio||1,1.5);c.width=innerWidth*d;c.height=innerHeight*d;c.style.width=innerWidth+'px';c.style.height=innerHeight+'px';ctx.setTransform(d,0,0,d,0,0);pts=Array.from({length:Math.min(90,Math.floor(innerWidth/15))},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*1.2+.2,v:Math.random()*.08+.02,a:Math.random()*.45+.08}))}function draw(){ctx.clearRect(0,0,innerWidth,innerHeight);for(const p of pts){p.y-=p.v;if(p.y<0)p.y=innerHeight;ctx.beginPath();ctx.fillStyle=`rgba(226,201,151,${p.a})`;ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill()}requestAnimationFrame(draw)}resize();addEventListener('resize',resize);draw()}
- // Easter egg: type ASA
- let seq=''; addEventListener('keydown',e=>{if(e.target.matches?.('input,textarea'))return;seq=(seq+e.key.toLowerCase()).slice(-3);if(seq==='asa'){document.body.animate([{filter:'brightness(1)'},{filter:'brightness(1.35) saturate(1.3)'},{filter:'brightness(1)'}],{duration:900});const t=document.querySelector('#toast');t.textContent='✦ ASA SECRET SIGNAL DETECTED';t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)}});
+ // Easter egg: type ASA — summon the ASA emblem in the center
+ let seq=''; let secretTimer;
+ addEventListener('keydown',e=>{
+  if(e.target.matches?.('input,textarea,[contenteditable="true"]'))return;
+  seq=(seq+e.key.toLowerCase()).slice(-3);
+  if(seq==='asa'){
+   let mark=document.querySelector('#asaSecretMark');
+   if(!mark){mark=document.createElement('div');mark.id='asaSecretMark';mark.className='asaSecretMark';mark.setAttribute('aria-hidden','true');mark.innerHTML='<div class="asaSecretMark__logo">ASA</div>';document.body.append(mark)}
+   clearTimeout(secretTimer);mark.classList.remove('show');void mark.offsetWidth;mark.classList.add('show');
+   secretTimer=setTimeout(()=>mark.classList.remove('show'),1700);seq='';
+  }
+ });
 })();
 
 // Enhanced Arcade player controls (seek/time + metadata-safe autoplay)

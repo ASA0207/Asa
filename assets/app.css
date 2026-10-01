@@ -49,3 +49,19 @@ body.asaBooted .topbar{animation:hudDrop .8s cubic-bezier(.16,1,.3,1) both}body.
 .atlasInfo{position:relative;z-index:2;min-height:80px;padding-right:170px!important}.atlasInfo>div{min-width:0}.atlasInfo p{max-width:650px}.atlasInfo.flash>div{animation:atlasInfoFlash .32s ease-out}@keyframes atlasInfoFlash{from{opacity:.25;transform:translateY(5px);filter:blur(2px)}to{opacity:1;transform:none;filter:none}}
 @media(max-width:900px){.atlasInfo{padding-right:18px!important}.atlasLegend{display:none!important}.bgmPlayer{width:min(420px,calc(100vw - 24px))}}
 @media(max-width:600px){.bgmPlayer{grid-template-columns:38px minmax(0,1fr) 38px!important;height:68px!important}.bgmVolume{display:none!important}.albumDisc{width:38px!important;height:38px!important;min-width:38px!important}.introPrompt:before{font-size:72px!important}}
+
+/* 2026-10-01: world-map click fix + ASA secret emblem */
+.atlasCanvas:before,.atlasCanvas:after{pointer-events:none!important}
+.atlasRoutes{pointer-events:none!important}
+.atlasNode{z-index:3}
+.asaSecretMark{position:fixed;inset:0;z-index:10050;display:grid;place-items:center;pointer-events:none;opacity:0;background:radial-gradient(circle at center,#d9ad611c 0,transparent 42%);backdrop-filter:blur(0);transition:opacity .18s ease}
+.asaSecretMark.show{opacity:1;animation:asaSecretScene 1.65s ease both}
+.asaSecretMark__logo{position:relative;font:700 clamp(92px,19vw,260px)/.8 Georgia,'Times New Roman',serif;letter-spacing:.14em;padding-left:.14em;color:#f4e4bd;text-shadow:0 0 12px #fff6,0 0 38px #d9ad61aa,0 0 110px #d9ad6155;transform:scale(.55);opacity:0;filter:blur(10px)}
+.asaSecretMark.show .asaSecretMark__logo{animation:asaSecretLogo 1.65s cubic-bezier(.18,.8,.22,1) both}
+.asaSecretMark__logo:before,.asaSecretMark__logo:after{content:"";position:absolute;left:50%;top:50%;border:1px solid #e8c37a66;border-radius:50%;transform:translate(-50%,-50%) scale(.4);opacity:0}
+.asaSecretMark__logo:before{width:135%;aspect-ratio:1}.asaSecretMark__logo:after{width:175%;aspect-ratio:1}
+.asaSecretMark.show .asaSecretMark__logo:before{animation:asaSecretRing 1.2s .12s ease-out both}.asaSecretMark.show .asaSecretMark__logo:after{animation:asaSecretRing 1.35s .2s ease-out both}
+@keyframes asaSecretScene{0%{opacity:0}12%{opacity:1}72%{opacity:1}100%{opacity:0}}
+@keyframes asaSecretLogo{0%{opacity:0;transform:scale(.55);filter:blur(12px)}22%{opacity:1;transform:scale(1.08);filter:blur(0)}45%{transform:scale(1)}72%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1.24);filter:blur(7px)}}
+@keyframes asaSecretRing{0%{opacity:0;transform:translate(-50%,-50%) scale(.35)}22%{opacity:.75}100%{opacity:0;transform:translate(-50%,-50%) scale(1.25)}}
+@media(prefers-reduced-motion:reduce){.asaSecretMark.show,.asaSecretMark.show .asaSecretMark__logo{animation-duration:.7s}.asaSecretMark__logo:before,.asaSecretMark__logo:after{display:none}}
