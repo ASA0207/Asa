@@ -36,22 +36,12 @@ addEventListener('scroll',()=>{let h=document.documentElement.scrollHeight-inner
   toggle.addEventListener('click',()=>audio.paused?play():pause());
   volume.addEventListener('input',()=>{audio.volume=Number(volume.value)/100;localStorage.setItem('asaWikiBgmVolume',String(audio.volume));if(audio.volume>0&&wanted&&audio.paused)play()});
   audio.addEventListener('play',sync);audio.addEventListener('pause',sync);
-  // Browsers may reject audible autoplay. Try immediately. If blocked, a user
-  // interaction OUTSIDE the player may unlock it. Player controls handle themselves,
-  // preventing pointerdown -> play -> click -> pause conflicts.
-  if(wanted){
-    audio.play().then(()=>{player.classList.remove('autoplayBlocked');sync()}).catch(()=>{
-      player.classList.add('autoplayBlocked');sync();
-      const unlock=(e)=>{
-        if(e && player.contains(e.target)) return;
-        if(wanted) play();
-        document.removeEventListener('pointerdown',unlock,true);
-        document.removeEventListener('keydown',unlock,true);
-      };
-      document.addEventListener('pointerdown',unlock,true);
-      document.addEventListener('keydown',unlock,true);
-    });
-  }else sync();
+  // Intro gate owns the first playback. Never play music behind the entry screen.
+  // The user's click/Enter on the gate is the playback gesture, so audible playback
+  // starts only after the user explicitly enters ASA WORLD.
+  audio.pause();
+  audio.currentTime=0;
+  sync();
 })();
 
 // ===== ASA IMMERSIVE EDITION =====
@@ -89,20 +79,45 @@ addEventListener('scroll',()=>{let h=document.documentElement.scrollHeight-inner
  seek.addEventListener('input',()=>{if(a.duration)a.currentTime=Number(seek.value)/1000*a.duration});
 })();
 
-// ===== ASA LIGHTWEIGHT GATE V3 =====
+// ===== ASA LIGHTWEIGHT GATE V4 =====
 (()=>{
  const gate=document.querySelector('#asaIntro'), audio=document.querySelector('#bgmAudio');
- if(!gate)return; let entered=false;
- const enter=async()=>{
-  if(entered)return; entered=true; gate.classList.add('entering');
-  if(audio){try{audio.currentTime=0;audio.volume=.22;localStorage.setItem('asaWikiBgmEnabled','1');await audio.play()}catch(e){}}
+ if(!gate)return;
+ let entered=false;
+ // Hard-stop any restored/browser-initiated playback while the intro is visible.
+ if(audio){audio.pause();audio.currentTime=0;}
+ const enter=()=>{
+  if(entered)return;
+  entered=true;
+  gate.classList.add('entering');
   document.body.classList.add('asaBooted');
+  if(audio){
+   audio.pause();
+   audio.currentTime=0;
+   const savedVolume=Number(localStorage.getItem('asaWikiBgmVolume'));
+   audio.volume=Number.isFinite(savedVolume)&&savedVolume>=0&&savedVolume<=1?savedVolume:.22;
+   localStorage.setItem('asaWikiBgmEnabled','1');
+   // Keep play() directly inside the trusted click/key gesture; do not await animations first.
+   const promise=audio.play();
+   if(promise&&typeof promise.catch==='function')promise.catch(()=>{});
+  }
   setTimeout(()=>{gate.classList.add('done');gate.setAttribute('aria-hidden','true')},900);
   setTimeout(()=>gate.remove(),1500);
  };
+ const onKey=e=>{
+  if(entered)return;
+  if(e.key==='Enter'||e.code==='Enter'||e.code==='NumpadEnter'||e.key===' '||e.code==='Space'){
+   e.preventDefault();
+   e.stopPropagation();
+   enter();
+  }
+ };
  gate.addEventListener('pointerup',enter,{once:true});
- gate.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();enter()}},{once:true});
- setTimeout(()=>gate.focus({preventScroll:true}),50);
+ // Capture at document level so Enter works even if the intro did not receive focus.
+ document.addEventListener('keydown',onKey,true);
+ const cleanup=new MutationObserver(()=>{if(!document.body.contains(gate)){document.removeEventListener('keydown',onKey,true);cleanup.disconnect();}});
+ cleanup.observe(document.body,{childList:true,subtree:true});
+ requestAnimationFrame(()=>{try{gate.focus({preventScroll:true})}catch(e){gate.focus()}});
 })();
 
 // Interactive ASA world network
