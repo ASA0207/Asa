@@ -1,24 +1,35 @@
-# ASA SERVER OFFICIAL WIKI — 2026
+# ASA SERVER · OFFICIAL WIKI (2026.11)
 
-GitHub Pages 배포용 정적 사이트입니다.
+GitHub Pages에 바로 올릴 수 있는 정적 SPA 공식 위키입니다. 서버 / 빌드 도구 / API 키가 필요하지 않습니다.
 
 ## 배포
-저장소 `ASA0207/Asa`의 Pages 소스가 `main / (root)`라면 이 폴더 **안의 내용**을 저장소 루트에 업로드하세요.
 
-- `index.html`
-- `.nojekyll`
-- `assets/`
+`Asa-main` **폴더 안의 파일 전체**를 GitHub 저장소 루트에 업로드합니다. GitHub Settings → Pages → Deploy from a branch → `main` / `(root)`를 설정합니다. 기존 페이지 주소: `https://asa0207.github.io/Asa/` (저장소 이름이 Asa일 때).
 
-프로젝트 Pages 주소는 `https://asa0207.github.io/Asa/` 형태입니다.
+필수 파일: `index.html`, `.nojekyll`, `assets/`, `pages/`. 웹서버 없이 `index.html`을 직접 열 수도 있으나, 브라우저에 따라 클립보드 기능은 HTTPS/localhost에서만 작동합니다.
 
-## 데이터 기준
-- ASA_SERVER_DIAG_20260930_182905 진단팩
-- ASA_WIKI_PLUGINS 커스텀 JAR
-- 2026-09-30 시점 설정/플러그인 메타데이터
+## 위키 구조
 
-비밀번호 등 민감한 DB 인증정보는 위키에 포함하지 않았습니다.
+- 처음 접속: 로비·월드 선택, 서버 사용법
+- 명령어 백과: 검색, 카테고리, 상세 설명, 입력 예시, 원클릭 복사
+- 경제: 원·캐시, 은행, 주식, 상점
+- 콘텐츠: 길드, 일일·주간 퀘스트, 배틀패스, 잠수낚시, 인맥, 창고
+- 등급: 30일 VIP 4종, LuckPerms 혜택 비교, 자동낚시권과 프리미엄 패스
+- 도움말: FAQ 및 플레이어 주의 사항
 
-## ASA Immersive Edition
-This build adds a cinematic intro, ambient particle field, hero parallax, interactive 3D cards, animated navigation transitions, an Arcade music deck with seek/volume controls, responsive performance fallbacks, reduced-motion accessibility, and an `ASA` keyboard easter egg.
+## 데이터 주의
 
-> Note: browsers can block audible autoplay until the first user interaction. The player automatically retries after a page interaction.
+기존 2026-09-30 위키의 시스템 설명과 2026-11 운영 중 대화/설정 검사 내용을 합쳤습니다. 새로 정한 권한·가격, 설계/예정 기능과 실제 운영 중인 기능은 구별해서 기재하였습니다. `확인 필요` 표시가 있는 명령어는 실제 커스텀 플러그인에서 확인하세요. 관리자 명령어는 일반 유저 명령어 백과에서 제외했습니다. **게임 내 서버 설정이 최종 기준**입니다.
+
+패스권 상품의 캐시 결제·티켓 지급 코드는 이 정적 위키에 포함되지 않습니다. 서버 플러그인과 별개입니다.
+
+## 자산 및 저작권
+
+기존 제공 ZIP에 있던 이미지·폰트·음원 파일은 원본 그대로 보존했습니다. 특히 음악 파일의 공개 배포/재사용 권한은 사이트 운영자가 별도로 확인해야 합니다. 필요하면 `index.html`의 `bgmAudio` 및 음악 플레이어 요소를 제거하세요.
+
+## 수정
+
+- 위키 본문·탐색 메뉴: `index.html`
+- 명령어 메타데이터와 검색/복사 기능: `assets/app.js`의 `wikiMeta`
+- UI 스타일: `assets/app.css` 마지막의 `ASA Wiki 2026.11` 섹션
+- 오래된 `pages/*.html` 링크는 통합 위키 해당 화면으로 자동 연결됩니다.
