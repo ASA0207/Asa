@@ -34,7 +34,7 @@
   let variant = 0;
   let shareTimer;
   function stageHash() {
-    return '#mining?tier=' + stage + '&v=' + forms[variant].key;
+    return '#mining?tier=' + stage + '&v=' + forms[variant].key + (byId('source').value === 'lobby' ? '&src=lobby' : '');
   }
   function updateLocation() {
     if (!/^#mining(?:\?|$)/.test(location.hash)) return;
@@ -45,10 +45,12 @@
     if (!numberInRange(number, 1, 16)) return;
     stage = number;
     const ore = ores[stage - 1];
-    const best = ore.loc.findIndex(row => row.chance === Math.max(...ore.loc.map(item => item.chance)));
+    const isLobby = byId('source').value === 'lobby';
+    const locations = isLobby ? ore.lobby : ore.loc;
+    const best = locations.findIndex(row => row && row.chance === Math.max(...locations.map(item => item?.chance ?? -1)));
     variant = numberInRange(form, 0, 3) ? form : best;
     const current = forms[variant];
-    const location = ore.loc[variant];
+    const location = locations[variant];
     const figure = byId('display');
     figure.style.setProperty('--mine-flare', ore.color);
     byId('object').firstElementChild.style.setProperty('--mine-block', 'url("' + ore.images[current.key] + '")');
@@ -56,16 +58,19 @@
     byId('stage').textContent = rank(stage) + '단계';
     byId('coordinate').textContent = rank(stage) + ' / 16';
     byId('object-caption').textContent = ore.name + ' · ' + current.label;
-    byId('favored').textContent = ore.dim + ' 추천';
+    byId('favored').textContent = (isLobby ? ['오버월드','오버월드','네더','엔드'][best] : ore.dim) + ' 추천';
     byId('required').textContent = ore.tool;
     byId('next-name').textContent = stage < ores.length ? rank(stage + 1) + ' · ' + ores[stage].name : '최종 단계';
-    byId('height').textContent = 'Y ' + location.low + ' ~ ' + location.high;
-    byId('chance').textContent = format.format(location.chance) + '%';
-    byId('vein').textContent = format.format(location.size) + '블록';
+    byId('height').textContent = location ? 'Y ' + location.low + ' ~ ' + location.high : '생성 규칙 없음';
+    byId('chance').textContent = location ? format.format(location.chance) + '%' : '—';
+    byId('vein').textContent = location ? format.format(location.size) + '블록' : '—';
     byId('ingot-img').src = ore.images.ingot;
     byId('pick-img').src = ore.images.pick;
     byId('craft').textContent = '제작대 맨 윗줄에 ' + ore.name + ' 주괴 3개를 놓고, 가운데 칸과 그 아래 칸에 막대기 1개씩을 놓으세요.';
+    const stats = ore.stats;
+    byId('tool-stats').textContent = '이 단계 곡괭이 · 최대 내구도 ' + format.format(stats.durability) + ' · 내구도 보존 ' + format.format(stats.save) + '% · 추가 드롭 설정 ' + format.format(stats.bonus) + '% (최대 ' + stats.extra + '개)';
     const rawName = '거친 ' + ore.name;
+    byId('market').href = '#market?q=' + encodeURIComponent(rawName);
     byId('price').textContent = ore.page + '페이지에서 ‘' + rawName +
       '’을 우클릭한 뒤 판매 수량을 고르고 ‘✔ 판매 확정’을 누르세요. ' +
       '1개 기본가 · 판매 ' + format.format(ore.sell) + '원 / 구매 ' + format.format(ore.buy) + '원';
@@ -82,9 +87,9 @@
     const match = location.hash.match(/^#mining(?:\?(.*))?$/);
     if (!match) return;
     const params = new URLSearchParams(match[1] || '');
+    byId('source').value = params.get('src') === 'lobby' ? 'lobby' : 'wild';
     const requested = Number(params.get('tier'));
-    if (!params.has('tier')) return;
-    if (numberInRange(requested, 1, 16)) showStage(requested, forms.findIndex(f => f.key === params.get('v')), false);
+    showStage(numberInRange(requested, 1, 16) ? requested : stage, forms.findIndex(f => f.key === params.get('v')), false);
   }
   function focusStage(number) {
     showStage(number);
@@ -97,6 +102,7 @@
   root.querySelectorAll('[data-mine-hero]').forEach(button => button.addEventListener('click',() => focusStage(Number(button.dataset.mineHero))));
   variants.forEach((button,i) => button.addEventListener('click', () => showStage(stage, i)));
   byId('previous').addEventListener('click', () => showStage(stage - 1));
+  byId('source').addEventListener('change', () => showStage(stage,variant));
   byId('next').addEventListener('click', () => showStage(stage + 1));
   byId('to-order').addEventListener('click', () => {
     byId('query').focus({preventScroll:true});

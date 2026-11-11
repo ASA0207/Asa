@@ -41,14 +41,18 @@
       mining:'16단계 광물 · 필요 곡괭이 · 차원별 채굴 높이',
       legacy:'기존 위키의 GUI 이용 방법'
     })[id] || '';
-    const shortText = ['home','quick','commands','mining','legacy'].includes(id)?'':p.textContent.replace(/\s+/g,' ').slice(0,1600);
+    const shortText = ['home','quick','commands','mining','legacy','market','jobs'].includes(id)?'':p.textContent.replace(/\s+/g,' ').slice(0,1600);
     return {id,title,subtitle,href:'#'+id,hay:fold(title+' '+subtitle+' '+shortText)};
   });
+  function markNavigation(id){
+    navLinks.forEach(link=>{const selected=link.hash===(id==='commands' && new URLSearchParams(location.hash.split('?')[1]||'').get('frequent')==='1' ? '#commands?frequent=1' : '#'+id);link.classList.toggle('active',selected);
+      if(selected)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current');});
+  }
+  document.addEventListener('asa:command-filters',()=>markNavigation(pageName()));
   function route(){
     const id=pageName(), changed=previousPage!==id;
     for(const [key,p] of pages){p.classList.toggle('active',key===id); p.setAttribute('aria-hidden',String(key!==id));}
-    navLinks.forEach(link=>{const selected=link.hash==='#'+id;link.classList.toggle('active',selected);
-      if(selected)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current');});
+    markNavigation(id);
     document.title=id==='home'?'ASA SERVER · 공식 위키':(guides.find(g=>g.id===id)?.title||id)+' · ASA SERVER';
     if(changed){window.scrollTo(0,0); if(previousPage){$('app').focus({preventScroll:true});}}
     drawer(false); if(!modal.hidden)closeSearch(false); previousPage=id;
@@ -72,7 +76,7 @@
   function renderSearch(){
     const q=fold(input.value);results.replaceChildren();current=-1;shown=[];
     if(!q){
-      group('빠른 이동',['quick','commands','mining','start'].map(id=>guides.find(g=>g.id===id)).filter(Boolean));
+      group('빠른 이동',['quick','market','jobs','commands','mining','start'].map(id=>guides.find(g=>g.id===id)).filter(Boolean));
       return;
     }
     const token=q.split(' ');
@@ -84,7 +88,11 @@
     if(oreFirst)group('광물',minerals);
     group('게임 이용 방법',paths);
     if(q.startsWith('/')){group('명령어',commandHits);group('광물',minerals);}
-    else{if(!oreFirst)group('광물',minerals);group('명령어',commandHits);}
+    else{
+      if(!oreFirst)group('광물',minerals);
+      group('상품 · 직업과 스킬',window.ASAFieldGuide?.search(q)||[]);
+      group('명령어',commandHits);
+    }
     group('가이드',docMatches.slice(0,5));
     if(!shown.length)results.append(make('p','searchEmpty','검색 결과가 없습니다. 명령어 일부나 광물 이름을 입력해 주세요.'));
   }

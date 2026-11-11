@@ -1,46 +1,45 @@
 ﻿ASA SERVER | 전체 명령어
-기본 명령 517개 · 세부 사용 구문 2,158건 · 별도 입력 예시 134개
+기본 명령 522개 · 세부 사용 구문 2,155건 · 별도 입력 예시 144개
 일반 표기는 <필수>와 [선택]입니다. CMI 원문은 [필수]와 (선택)을 사용합니다.
-각 명령의 실제 사용 가능 여부는 해당 서버의 권한과 설정을 따릅니다.
+로비 Paper와 Velocity의 명령을 함께 수록했습니다. 실제 실행은 등록한 서버와 부여된 권한을 따릅니다.
 
 게임에서 따라 하는 메뉴·NPC 이용 경로
 
 광부 브론에게 광물 사고팔기
 Shift + F → 상점 → 광부 브론 → 일반 광물 / 특수 광물 / 광산 전리품
-1. 로비에서 웅크리기 키를 누른 채 보조 손 바꾸기 키를 누르세요. 기본 설정은 Shift + F입니다.
-2. 메인 메뉴 위쪽 왼편의 ‘상점’을 눌러 상점가로 이동하세요.
-3. 상점가에서 광부 브론을 우클릭하세요.
-4. 철 등 기본 광물은 ‘일반 광물’, 호박석부터 루비스까지 도감의 16종은 ‘특수 광물’, 채굴 전리품은 ‘광산 전리품’을 고르세요. 대화 선택지는 마우스 휠로 맞추고 NPC를 다시 우클릭해 결정하세요.
-5. 판매하려면 목록에서 해당 상품을 우클릭한 뒤 수량을 정하고 ‘✔ 판매 확정’을 누르세요. 구매할 때는 상품을 좌클릭하고 ‘✔ 구매 확정’을 누르세요.
+1. 로비에서 Shift + F를 누른 뒤 메인 메뉴 위쪽 왼편의 ‘상점’을 눌러 상점가로 이동하세요.
+2. 광부 브론의 블록 좌표는 X 155 · Y −11 · Z −1778입니다. NPC를 우클릭해 대화를 여세요. 마우스 휠로 항목을 고르고 보조 손 바꾸기 키(기본 F)로 선택하세요. 웅크리기 키(기본 Shift)를 누르면 대화를 마칩니다.
+3. 광물 목록에서 철 등 기본 광물은 ‘일반 광물’, 거친 호박석부터 거친 루비스까지의 16종은 ‘특수 광물’, 기타 채굴 전리품은 ‘광산 전리품’을 고르세요.
+4. 구매 가능한 상품은 좌클릭하고 수량을 정해 ‘✔ 구매 확정’을 누르세요. 판매 가능한 상품은 우클릭하고 수량과 받을 금액을 확인해 ‘✔ 판매 확정’을 누르세요.
 특수 광물 목록에는 거친 광물이 채굴 순서대로 두 종류씩 있어요. 호박석·연수정은 1쪽, 라브라도라이트·루비스는 8쪽입니다.
 
 상점가에서 상인 찾기
 Shift + F → 상점 → 거래할 물품을 맡은 NPC
-1. 로비에서 웅크리기 키를 누른 채 보조 손 바꾸기 키를 누르세요. 기본 설정은 Shift + F입니다.
-2. 메인 메뉴 위쪽 왼편의 ‘상점’을 눌러 상점가로 이동하세요.
-3. 광물은 광부 브론, 작물·농기구는 농부 세라, 건축 자재는 건축가 로건, 잡화·야생 전리품은 잡화 상인 리오를 찾아 우클릭하세요.
-4. 마우스 휠로 원하는 대화 선택지를 고르고 NPC를 우클릭하세요. 상품을 좌클릭하면 구매, 우클릭하면 판매 수량을 고르는 화면이 열립니다.
+1. 로비에서 Shift + F를 누른 뒤 메인 메뉴 위쪽 왼편의 ‘상점’을 눌러 상점가로 이동하세요.
+2. 광물과 광산 전리품은 광부 브론, 작물과 농기구는 농부 세라, 건축 자재는 건축가 로건, 일반 잡화와 야생 전리품은 잡화 상인 리오를 찾아가세요.
+3. NPC를 우클릭해 대화를 여세요. 마우스 휠로 항목을 고르고 보조 손 바꾸기 키(기본 F)로 선택하세요. 웅크리기 키(기본 Shift)를 누르면 대화를 마칩니다.
+4. 구매 가능한 상품은 좌클릭하고 수량을 정해 ‘✔ 구매 확정’을 누르세요. 판매 가능한 상품은 우클릭하고 수량과 받을 금액을 확인해 ‘✔ 판매 확정’을 누르세요.
 
 농부 세라에게 작물·농기구 거래하기
 Shift + F → 상점 → 농부 세라 → 일반 작물 / 특수 작물 / 특수 과일 / 농기구
-1. 로비에서 웅크리기 키를 누른 채 보조 손 바꾸기 키를 누르세요. 기본 설정은 Shift + F입니다.
-2. 메인 메뉴 위쪽 왼편의 ‘상점’을 눌러 상점가로 이동하세요.
-3. 농부 세라 NPC를 우클릭하고 ‘일반 작물’ · ‘특수 작물’ · ‘특수 과일’ · ‘농기구’ 중 거래할 품목을 고르세요.
-4. 대화에서는 마우스 휠로 항목을 고른 뒤 NPC를 우클릭하세요. 상점에서는 상품 좌클릭으로 구매하거나 우클릭으로 판매하고 수량을 정한 뒤 확정하세요.
+1. 로비에서 Shift + F를 누른 뒤 메인 메뉴 위쪽 왼편의 ‘상점’을 눌러 상점가로 이동하세요.
+2. 농부 세라의 블록 좌표는 X 193 · Y −11 · Z −1778입니다. NPC를 우클릭해 대화를 여세요. 마우스 휠로 항목을 고르고 보조 손 바꾸기 키(기본 F)로 선택하세요. 웅크리기 키(기본 Shift)를 누르면 대화를 마칩니다.
+3. 거래할 품목에 맞는 항목을 선택하세요. 일반 작물 / 특수 작물 / 특수 과일 / 농기구
+4. 구매 가능한 상품은 좌클릭하고 수량을 정해 ‘✔ 구매 확정’을 누르세요. 판매 가능한 상품은 우클릭하고 수량과 받을 금액을 확인해 ‘✔ 판매 확정’을 누르세요.
 
 건축가 로건에게 건축 자재 거래하기
 Shift + F → 상점 → 건축가 로건 → 건축 자재
-1. 로비에서 웅크리기 키를 누른 채 보조 손 바꾸기 키를 누르세요. 기본 설정은 Shift + F입니다.
-2. 메인 메뉴 위쪽 왼편의 ‘상점’을 눌러 상점가로 이동하세요.
-3. 건축가 로건 NPC를 우클릭하고 ‘건축 자재’를 고르세요.
-4. 대화에서는 마우스 휠로 항목을 고른 뒤 NPC를 우클릭하세요. 상점에서는 상품 좌클릭으로 구매하거나 우클릭으로 판매하고 수량을 정한 뒤 확정하세요.
+1. 로비에서 Shift + F를 누른 뒤 메인 메뉴 위쪽 왼편의 ‘상점’을 눌러 상점가로 이동하세요.
+2. 건축가 로건의 블록 좌표는 X 193 · Y −11 · Z −1826입니다. NPC를 우클릭해 대화를 여세요. 마우스 휠로 항목을 고르고 보조 손 바꾸기 키(기본 F)로 선택하세요. 웅크리기 키(기본 Shift)를 누르면 대화를 마칩니다.
+3. 거래할 품목에 맞는 항목을 선택하세요. 건축 자재
+4. 구매 가능한 상품은 좌클릭하고 수량을 정해 ‘✔ 구매 확정’을 누르세요. 판매 가능한 상품은 우클릭하고 수량과 받을 금액을 확인해 ‘✔ 판매 확정’을 누르세요.
 
 잡화 상인 리오에게 잡화·전리품 거래하기
 Shift + F → 상점 → 잡화 상인 리오 → 일반 잡화 / 야생 전리품
-1. 로비에서 웅크리기 키를 누른 채 보조 손 바꾸기 키를 누르세요. 기본 설정은 Shift + F입니다.
-2. 메인 메뉴 위쪽 왼편의 ‘상점’을 눌러 상점가로 이동하세요.
-3. 잡화 상인 리오 NPC를 우클릭하고 ‘일반 잡화’ · ‘야생 전리품’ 중 거래할 품목을 고르세요.
-4. 대화에서는 마우스 휠로 항목을 고른 뒤 NPC를 우클릭하세요. 상점에서는 상품 좌클릭으로 구매하거나 우클릭으로 판매하고 수량을 정한 뒤 확정하세요.
+1. 로비에서 Shift + F를 누른 뒤 메인 메뉴 위쪽 왼편의 ‘상점’을 눌러 상점가로 이동하세요.
+2. 잡화 상인 리오의 블록 좌표는 X 193 · Y −11 · Z −1802입니다. NPC를 우클릭해 대화를 여세요. 마우스 휠로 항목을 고르고 보조 손 바꾸기 키(기본 F)로 선택하세요. 웅크리기 키(기본 Shift)를 누르면 대화를 마칩니다.
+3. 거래할 품목에 맞는 항목을 선택하세요. 일반 잡화 / 야생 전리품
+4. 구매 가능한 상품은 좌클릭하고 수량을 정해 ‘✔ 구매 확정’을 누르세요. 판매 가능한 상품은 우클릭하고 수량과 받을 금액을 확인해 ‘✔ 판매 확정’을 누르세요.
 
 메인 메뉴 열기
 웅크리기 + 보조 손 바꾸기 → 메인 메뉴의 여섯 버튼
@@ -58,32 +57,34 @@ Shift + F → 마을 → 아사 또는 요루
 1. 로비에서 웅크리기 키를 누른 채 보조 손 바꾸기 키를 누르세요. 기본 설정은 Shift + F입니다.
 2. 위쪽 오른쪽의 ‘마을’을 클릭하세요.
 3. 마을 선택 화면에서 ‘아사’ 또는 ‘요루’를 고르세요. 목적지 목록이 열리면 원하는 마을 번호를 누르세요.
+아사와 요루에는 각각 1번부터 20번까지 목적지 버튼이 있습니다. 예를 들어 아사 1번은 ‘마을 → 아사 → 아사 마을 1번’ 순서로 누르세요.
 
 계좌 열고 은행 업무 보기
 Shift + F → 내정보 → 계좌
 1. 로비에서 웅크리기 키를 누른 채 보조 손 바꾸기 키를 누르세요. 기본 설정은 Shift + F입니다.
 2. 아래쪽 가운데 ‘내정보’를 누르고 ‘계좌’를 고르세요.
 3. 은행 화면에서 ‘입금’, ‘출금’, ‘송금’, ‘거래내역’ 등 원하는 업무를 선택하세요.
-NPC를 통해서도 열 수 있어요. 은행장 레오폴드를 우클릭하고 ‘은행 업무’를 고르세요.
+상점가에서는 은행장 레오폴드의 블록 좌표는 X 155 · Y −11 · Z −1826입니다. 우클릭 → ‘은행 업무’ → F로 같은 화면을 열 수 있어요. ‘주식 거래’와 ‘카지노 입장’도 이 NPC의 선택지입니다.
 
 은행장에게 주식 거래 열기
 은행장 레오폴드 우클릭 → 주식 거래 → 주식 시장
-1. 은행장 레오폴드를 찾아 우클릭하세요.
-2. 대화 선택지에서 ‘주식 거래’를 고르세요.
+1. 로비에서 Shift + F를 누른 뒤 메인 메뉴 위쪽 왼편의 ‘상점’을 눌러 상점가로 이동하세요. 은행장 레오폴드를 우클릭하세요.
+2. 마우스 휠로 ‘주식 거래’에 맞추고 F를 누르세요.
 3. 주식 화면에서 ‘주식 시장’을 눌러 종목을 고르세요. 보유 주식은 ‘내 자산’, 주문 확인은 ‘미체결 주문’이나 ‘거래 내역’에서 할 수 있어요.
 메뉴에서는 ‘Shift + F → 내정보 → 계좌’로 은행을 연 뒤 ‘ASA 증권’을 선택할 수 있어요. 이 버튼은 주식 서비스와 연동될 때 열립니다.
 
 마법사 아르카나의 인챈트 이용하기
 마법사 아르카나 우클릭 → 인챈트 선택
-1. 마법사 아르카나를 찾아 우클릭하세요.
-2. 장비에 할 작업에 맞게 ‘커스텀 인챈트’ · ‘인챈트 분해’ · ‘인챈트 합성’ · ‘특수 인챈트 목록’ 중 하나를 선택하세요.
-3. 진행 방법이 궁금하면 첫 대화에서 ‘장비 성장 안내’를 고르세요.
+1. 로비에서 Shift + F를 누른 뒤 메인 메뉴 위쪽 왼편의 ‘상점’을 눌러 상점가로 이동하세요.
+2. 마법사 아르카나의 블록 좌표는 X 155 · Y −11 · Z −1802입니다. NPC를 우클릭해 대화를 여세요. 마우스 휠로 항목을 고르고 보조 손 바꾸기 키(기본 F)로 선택하세요. 웅크리기 키(기본 Shift)를 누르면 대화를 마칩니다.
+3. 원하는 작업에 따라 ‘커스텀 인챈트’, ‘인챈트 분해’, ‘인챈트 합성’, ‘특수 인챈트 목록’을 고르세요. 장비 성장 과정을 읽으려면 ‘장비 성장 안내’를 선택하세요.
 
 캐시 상인 루미나에게 진열 상품 문의하기
 캐시 상인 루미나 우클릭 → 현재 진열 상품 / 구매 안내
-1. 캐시 상인 루미나를 우클릭하세요.
-2. 진열 상태는 ‘현재 진열 상품’, 이용 방식은 ‘구매 안내’, 교체 일정에 관한 설명은 ‘다음 상품 소식’을 고르세요.
-이 대화는 상품과 구매 절차를 설명하는 안내 창입니다.
+1. 로비에서 Shift + F를 누른 뒤 메인 메뉴 위쪽 왼편의 ‘상점’을 눌러 상점가로 이동하세요.
+2. 캐시 상인 루미나의 블록 좌표는 X 174 · Y −11 · Z −1842입니다. NPC를 우클릭해 대화를 여세요. 마우스 휠로 항목을 고르고 보조 손 바꾸기 키(기본 F)로 선택하세요. 웅크리기 키(기본 Shift)를 누르면 대화를 마칩니다.
+3. 현재 진열 상품 · 상품 안내 · 상품 교체 안내 · 구매 안내 · 다음 상품 소식 중 원하는 설명을 선택하세요.
+루미나는 대화로 진열 및 구매 절차를 안내합니다. 현재 대화 구성에는 결제 화면을 여는 항목이 없습니다.
 
 개인 창고 · 선물함 · 보험함 열기
 Shift + F → 창고 → 창고 / 선물함 / 보험함
@@ -130,15 +131,15 @@ Shift + F → 내정보 → 배틀패스
 
 일일 · 주간 퀘스트 게시판 열기
 퀘스트 담당 NPC 우클릭 → 일일 퀘스트 / 주간 퀘스트
-1. 일일·주간 퀘스트를 함께 담당하는 NPC를 찾아 우클릭하세요.
-2. 게시판에서 하루 단위 목표는 ‘일일 퀘스트’, 한 주 단위 목표는 ‘주간 퀘스트’를 누르세요.
-3. 퀘스트 포인트를 쓰려면 같은 게시판의 ‘QP 상점’, 순위를 보려면 ‘퀘스트 랭킹’을 누르세요.
+1. 퀘스트 담당 NPC를 우클릭하면 게시판이 열립니다. 배포된 NPC 위치 목록에는 담당자가 없어 찾기 어려우면 채팅창에 /퀘스트를 입력하세요.
+2. 게시판에서 ‘일일 퀘스트’ 또는 ‘주간 퀘스트’를 누르고 목록에서 퀘스트를 선택하세요. 상세 화면에서 추적하거나 완료 보상을 수령할 수 있어요.
+3. 게시판에는 ‘QP 상점’, ‘퀘스트 랭킹’, ‘길드 퀘스트’, ‘공동 퀘스트’, ‘퀘스트 도감’, ‘내 프로필’도 있습니다.
 
 내정보 메뉴에서 개인 기능 찾기
 Shift + F → 내정보 → 원하는 기능
 1. 로비에서 웅크리기 키를 누른 채 보조 손 바꾸기 키를 누르세요. 기본 설정은 Shift + F입니다.
 2. 메인 메뉴 아래쪽 가운데의 ‘내정보’를 누르세요.
-3. ‘계좌’는 은행, ‘살림망’은 어획물, ‘배틀패스’는 시즌 진행도와 보상을 엽니다. 인맥·길드·스킨·펫은 같은 이름의 버튼을 고르세요.
+3. 첫째 줄은 ‘배틀패스 · 직업 · 살림망’, 둘째 줄은 ‘영지 · 인맥 · 계좌’, 셋째 줄은 ‘스킨 · 펫 · 길드’입니다. 아래에서 원하는 버튼을 선택하세요.
 
 보유한 펫 보기
 Shift + F → 내정보 → 펫
@@ -166,23 +167,35 @@ Shift + F → 내정보 → 펫
 서버에서 지급받은 창고 선물은 메인 메뉴의 ‘창고 → 선물함’에서 확인하세요.
 
 직업 고르고 액티브 스킬 쓰기
-직업 화면 → 직업 선택 / 직업 스킬
-1. 채팅창에 /직업을 한 번 입력해 직업 화면을 여세요.
+Shift + F → 내정보 → 직업 → 직업 선택 / 직업 스킬
+1. 로비에서 Shift + F로 메뉴를 열고 아래쪽 가운데 ‘내정보’ → 위쪽 가운데 ‘직업’을 누르세요.
 2. 처음 시작한다면 ‘직업 선택’에서 원하는 직업을 누르고 ‘선택 확인’을 누르세요. 이미 활성 직업이 있다면 기존 직업을 먼저 해제해야 합니다.
 3. 스킬을 쓰려면 직업 화면의 ‘직업 스킬’을 열고 해금된 액티브 스킬 아이콘을 누르세요. 패시브 스킬은 자동 적용됩니다.
 4. 직업 성장 상태에 맞게 직업 화면의 ‘직업 초월’, ‘최종 각성’, ‘직업 의뢰’, ‘직업 랭킹’도 이용할 수 있어요.
 
 개인 영지 관리 화면 열기
-채팅에서 /영지 → 개인 영지 화면
-1. 개인 영지(AsaLand)를 관리하려면 채팅창에 /영지를 입력하세요.
-2. 열린 화면에서 소유 영지와 관리할 항목을 확인하세요.
-메인 메뉴의 ‘내정보 → 영지’는 별도의 Lands 기능에 연결되어 있습니다.
+Shift + F → 내정보 → 영지 → 영지 생성 / 내 영지
+1. Shift + F로 메인 메뉴를 열고 ‘내정보’ → 가운데 줄 왼편 ‘영지’를 누르세요.
+2. ‘땅 선택도구 받기’로 도구를 받아 첫 블록을 좌클릭하고 맞은편 블록을 우클릭하세요. ‘영지 생성’에서 이름과 비용을 확인하세요.
+3. 이미 보유한 땅은 ‘내 영지’에서 대상 영지를 고른 뒤 확장, 멤버 관리 또는 영지 은행으로 들어가세요.
+길드 공동 영지는 ‘내정보 → 길드 → 길드 영지’에서 확인하세요.
 
 야생에서 파티 맺기
-파티 생성 → 함께 갈 사람 초대 → 초대받은 사람이 수락
+파티 생성 → 초대와 수락 → 파티장이 /야생
 1. 파티장이 채팅창에 /야생파티 생성 탐험대를 입력하세요. 탐험대는 예시 파티 이름입니다.
 2. 파티장이 /야생파티 초대 Alex를 입력하세요. Alex 자리에는 함께 갈 플레이어의 닉네임을 쓰세요.
 3. 초대받은 플레이어가 /야생파티 수락을 입력하면 됩니다.
+4. 파티장이 /야생을 입력해 이동하세요. 프록시 설정상 파티는 최대 6명이고 기본 재사용 대기 시간은 10분입니다.
+
+첫 접속 지급품 확인하기
+로비 첫 방문 → 잠시 기다리기 → 인벤토리와 방어구 칸
+1. 이 로비에 처음 접속했다면 약 5초 뒤 인벤토리를 여세요.
+2. 기본 지급품은 철 검 1개, 철 곡괭이 2개, 빵 64개와 철 방어구 네 부위입니다. 핫바와 방어구 칸을 함께 확인하세요.
+
+랜덤상자 보상 확인하고 열쇠로 개봉하기
+설치된 랜덤상자 → Shift + 우클릭으로 미리보기 → 열쇠로 개봉
+1. 설치된 랜덤상자를 웅크린 채 우클릭하면 보상 목록이 열려요. 지급받은 상자 아이템도 손에 들고 Shift + 우클릭하면 미리 볼 수 있습니다.
+2. 전용 열쇠 1개를 인벤토리에 넣고 보상을 담을 공간을 확보하세요. 웅크리기를 풀고 설치된 상자를 우클릭하면 열쇠를 사용해 개봉합니다.
 
 채팅 명령 참고 · 자주 쓰는 명령어 27개
 
@@ -193,7 +206,7 @@ Shift + F → 내정보 → 펫
 /캐시   캐시 조회 및 관리
 /은행   ASA 은행을 엽니다.
 /주식   주식 거래 화면 열기
-/상점 <상점이름>   지정한 상점 카테고리를 엽니다.
+/호퍼확인   내가 설치한 호퍼 수와 내 권한에 적용된 설치 한도를 확인합니다.
 /창고 [목록|페이지]   창고 메인, 목록 또는 지정 페이지
 /선물함   선물함을 엽니다.
 /보험함   보험함을 엽니다.
@@ -550,111 +563,6 @@ AdvancedEnchantments · 로비 Paper
 
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-AdvancedSkills · 로비 Paper
-
-[기본] /advancedskills   스킬 메뉴
-    다른 입력  /askills, /skills
-    권한·조건  advancedskills.command.skills
-    권한 기본값  true
-
-[세부] /advancedskills addmana   Add mana to a player
-    기본 명령 별칭  /askills, /skills
-    권한·조건  advancedskills.command.addmana
-
-[세부] /advancedskills addpoints   Add points to a player's skill
-    기본 명령 별칭  /askills, /skills
-    권한·조건  advancedskills.command.addpoints
-
-[세부] /advancedskills class   Get player's class
-    기본 명령 별칭  /askills, /skills
-    권한·조건  advancedskills.command.class
-
-[세부] /advancedskills info   Get information about player's progress
-    기본 명령 별칭  /askills, /skills
-    권한·조건  advancedskills.command.info
-
-[세부] /advancedskills mana   Get player's mana
-    기본 명령 별칭  /askills, /skills
-    권한·조건  advancedskills.command.mana
-
-[세부] /advancedskills reload   Reload the plugin
-    기본 명령 별칭  /askills, /skills
-    권한·조건  advancedskills.command.reload
-
-[세부] /advancedskills removemana   Remove mana from a player
-    기본 명령 별칭  /askills, /skills
-    권한·조건  advancedskills.command.removemana
-
-[세부] /advancedskills reset   Reset player's progress
-    기본 명령 별칭  /askills, /skills
-    권한·조건  advancedskills.command.reset
-
-[세부] /advancedskills setclass   Set player's class
-    기본 명령 별칭  /askills, /skills
-    권한·조건  advancedskills.command.setclass
-
-[세부] /advancedskills setmana   Set player's mana
-    기본 명령 별칭  /askills, /skills
-    권한·조건  advancedskills.command.setmana
-
-[세부] /advancedskills setprogress   Set player's progress for a skill
-    기본 명령 별칭  /askills, /skills
-    권한·조건  advancedskills.command.setprogress
-
-[세부] /advancedskills testtalent   Test a talent
-    기본 명령 별칭  /askills, /skills
-    권한·조건  advancedskills.command.testtalent
-
-[기본] /classes   클래스 메뉴
-    다른 입력  /class, /advancedclasses
-    권한·조건  advancedskills.command.classes
-    권한 기본값  true
-
-[기본] /mana   See your mana!
-    권한·조건  advancedskills.command.mana
-    권한 기본값  true
-
-[기본] /party   Party Command
-    권한·조건  advancedskills.command.party
-
-[세부] /party clear-password   Clear the password of a party
-    권한·조건  advancedskills.command.clear-password
-
-[세부] /party create   파티 만들기
-    권한·조건  advancedskills.command.createparty
-
-[세부] /party get-password   Shows the password of a party
-    권한·조건  advancedskills.command.get-password
-
-[세부] /party info   Show the info of a party
-    권한·조건  advancedskills.command.info
-
-[세부] /party join   첨부 기본 설정이 join·accept·disband·invite 네 항목에 모두 join을 지정합니다. 실제 연결 동작은 운영 설정에서 확인하세요.
-    권한·조건  advancedskills.command.join / advancedskills.command.disband / advancedskills.command.invite
-
-[세부] /party kick   Kicks a party member
-    권한·조건  advancedskills.command.kick
-
-[세부] /party leave   파티 나가기
-    권한·조건  advancedskills.command.leaveparty
-
-[세부] /party set-owner   Makes owner a party member
-    권한·조건  advancedskills.command.set-owner
-
-[세부] /party set-password   Sets the password of a party
-    권한·조건  advancedskills.command.set-password
-
-[기본] /party-chat   파티 채팅 전환
-    다른 입력  /pc
-    권한·조건  advancedskills.command.party-chat
-
-[기본] /talents   Talents command
-    다른 입력  /talent, /advancedtalents
-    권한·조건  advancedskills.command.talents
-    권한 기본값  true
-
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 AnimationsCore · 로비 Paper
 
 [기본] /animations   Open the animation selection GUI
@@ -943,6 +851,17 @@ AsaAI · Velocity
 
 [세부] /asaai status   상태 확인
     권한·조건  asaai.admin
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+AsaAnimalLimiter · 로비 Paper
+
+[기본] /동물제한리로드   동물 수 제한 설정을 다시 읽습니다.
+    권한·조건  asa.animals.admin
+    권한 기본값  op
+
+[기본] /동물제한확인   서 있는 청크의 동물 수와 제한을 확인합니다.
+    권한·조건  플레이어 전용
 
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -1383,6 +1302,47 @@ AsaEconomy · 로비 Paper
 
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+AsaFirstJoinKit · 로비 Paper
+
+[기본] /첫접속키트   첫 접속 키트 관리 도움말을 표시합니다.
+    다른 입력  /firstjoinkit, /fjkit
+    권한·조건  asa.firstjoinkit.admin
+    권한 기본값  op
+
+[세부] /첫접속키트 리로드   설정과 키트 아이템 파일을 다시 읽습니다.
+    다른 입력  /첫접속키트 reload
+    기본 명령 별칭  /firstjoinkit, /fjkit
+    권한·조건  asa.firstjoinkit.admin
+    권한 기본값  op
+
+[세부] /첫접속키트 상태   현재 첫 접속 키트 설정과 지급 상태를 확인합니다.
+    예시  /첫접속키트 상태
+    다른 입력  /첫접속키트 status
+    기본 명령 별칭  /firstjoinkit, /fjkit
+    권한·조건  asa.firstjoinkit.admin
+    권한 기본값  op
+
+[세부] /첫접속키트 지급 <온라인플레이어>   접속 중인 대상에게 키트를 수동 지급하고 지급 이력을 기록합니다.
+    예시  /첫접속키트 지급 Alex
+    다른 입력  /첫접속키트 give <온라인플레이어>
+    기본 명령 별칭  /firstjoinkit, /fjkit
+    권한·조건  asa.firstjoinkit.admin
+    권한 기본값  op
+
+[세부] /첫접속키트 테스트   실행한 플레이어 자신에게 실제 아이템을 지급합니다. 테스트 지급 이력은 기록하지 않습니다.
+    다른 입력  /첫접속키트 test
+    기본 명령 별칭  /firstjoinkit, /fjkit
+    권한·조건  asa.firstjoinkit.admin
+    권한 기본값  op
+
+[세부] /첫접속키트 편집   플레이어가 첫 접속 지급 아이템을 편집하는 메뉴를 엽니다.
+    다른 입력  /첫접속키트 edit
+    기본 명령 별칭  /firstjoinkit, /fjkit
+    권한·조건  asa.firstjoinkit.admin
+    권한 기본값  op
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 AsaGuild · 로비 Paper
 
 [기본] /길드   길드 메뉴와 길드 관리 기능
@@ -1498,6 +1458,17 @@ AsaHologram · 로비 Paper
     다른 입력  /asaholo addrotate
     기본 명령 별칭  /holo, /hologram, /홀로그램
     권한·조건  asahologram.admin
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+AsaHopperLimit · 로비 Paper
+
+[기본] /호퍼리로드   호퍼 설치 제한 설정을 다시 읽습니다.
+    권한·조건  asa.hopper.admin
+    권한 기본값  op
+
+[기본] /호퍼확인   내가 설치한 호퍼 수와 내 권한에 적용된 설치 한도를 확인합니다.
+    권한·조건  플레이어 전용
 
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -1708,6 +1679,26 @@ AsaLand · 로비 Paper
 
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+AsaLuxTrace · 로비 Paper
+
+[기본] /asaluxtrace   빈 액션 바 필터 상태를 확인합니다.
+    권한·조건  asaluxtrace.admin
+    권한 기본값  op
+
+[세부] /asaluxtrace filter off   빈 액션 바 메시지 필터를 끕니다.
+    권한·조건  asaluxtrace.admin
+    권한 기본값  op
+
+[세부] /asaluxtrace filter on   빈 액션 바 메시지 필터를 켭니다.
+    권한·조건  asaluxtrace.admin
+    권한 기본값  op
+
+[세부] /asaluxtrace status   빈 액션 바 필터의 현재 상태를 표시합니다.
+    권한·조건  asaluxtrace.admin
+    권한 기본값  op
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 AsaMarkerSchemPaste · 로비 Paper
 
 [기본] /asaschempaste   마커와 월드에딧 설계도 배치 관리
@@ -1752,6 +1743,48 @@ AsaMenu · 로비 Paper
 [세부] /asamenu reload   메뉴 설정을 다시 읽습니다.
     기본 명령 별칭  /메뉴, /menu
     권한·조건  asamenu.admin
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+AsaNetworkBanItems · 로비 Paper
+
+[기본] /금지아이템리로드   로비의 금지 아이템 설정과 저장된 정책을 다시 읽습니다. 네트워크 목록은 프록시에서 관리합니다.
+    권한·조건  asa.banitems.admin
+    권한 기본값  op
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+AsaNetworkBanItemsProxy · Velocity
+
+[기본] /금지아이템   네트워크 금지 아이템 관리 도움말을 표시합니다.
+    다른 입력  /banitem, /asabanitem
+    권한·조건  asa.banitems.admin
+
+[세부] /금지아이템 리로드   프록시의 금지 정책을 다시 읽고 연결된 서버로 전송합니다.
+    다른 입력  /금지아이템 reload
+    기본 명령 별칭  /banitem, /asabanitem
+    권한·조건  asa.banitems.admin
+
+[세부] /금지아이템 목록   등록된 금지 아이템 목록을 확인합니다.
+    다른 입력  /금지아이템 list
+    기본 명령 별칭  /banitem, /asabanitem
+    권한·조건  asa.banitems.admin
+
+[세부] /금지아이템 삭제 <MATERIAL>   지정한 재료를 네트워크 금지 목록에서 삭제합니다.
+    다른 입력  /금지아이템 remove <MATERIAL>
+    기본 명령 별칭  /banitem, /asabanitem
+    권한·조건  asa.banitems.admin
+
+[세부] /금지아이템 추가 <MATERIAL> <사유>   재료를 네트워크 금지 목록에 추가합니다. 사유를 160자 이내로 입력합니다.
+    다른 입력  /금지아이템 add <MATERIAL> <사유>
+    기본 명령 별칭  /banitem, /asabanitem
+    권한·조건  asa.banitems.admin
+
+[세부] /금지아이템 확인 <MATERIAL>   재료 이름으로 금지 여부와 등록 사유를 조회합니다.
+    예시  /금지아이템 확인 ELYTRA
+    다른 입력  /금지아이템 check <MATERIAL>
+    기본 명령 별칭  /banitem, /asabanitem
+    권한·조건  asa.banitems.admin
 
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -2006,6 +2039,49 @@ AsaQuest · 로비 Paper
 
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+AsaRandomBox · 로비 Paper
+
+[기본] /랜덤상자   랜덤상자 사용법을 표시합니다. 보상을 미리 보려면 상자를 들고 웅크린 채 우클릭하세요.
+
+[세부] /랜덤상자 리로드   랜덤상자 설정과 상자 데이터를 다시 읽습니다.
+    권한·조건  asa.randombox.admin
+    권한 기본값  op
+
+[세부] /랜덤상자 목록   등록된 상자 ID 목록을 표시합니다.
+    권한·조건  asa.randombox.admin
+    권한 기본값  op
+
+[세부] /랜덤상자 미리보기 [상자ID]   플레이어가 상자의 보상 미리보기를 엽니다. ID를 생략하면 default 상자를 표시합니다.
+    예시  /랜덤상자 미리보기 default
+    권한·조건  플레이어 전용
+
+[세부] /랜덤상자 열쇠지급 <플레이어> [수량]   접속 중인 플레이어에게 랜덤상자 열쇠를 1~64개 지급합니다.
+    예시  /랜덤상자 열쇠지급 Alex 1
+    권한·조건  asa.randombox.admin
+    권한 기본값  op
+
+[세부] /랜덤상자 외형 [상자ID]   플레이어의 주 손에 든 아이템을 지정한 상자의 외형으로 저장합니다.
+    예시  /랜덤상자 외형 default
+    권한·조건  asa.randombox.admin
+    권한 기본값  op
+
+[세부] /랜덤상자 지급 <플레이어> [수량] [상자ID]   접속 중인 플레이어에게 지정한 상자를 1~64개 지급합니다.
+    예시  /랜덤상자 지급 Alex 1 default
+    권한·조건  asa.randombox.admin
+    권한 기본값  op
+
+[세부] /랜덤상자 편집 [상자ID]   플레이어가 보상 편집 화면을 엽니다. 새 ID를 지정하면 해당 상자를 만듭니다.
+    예시  /랜덤상자 편집 default
+    권한·조건  asa.randombox.admin
+    권한 기본값  op
+
+[세부] /랜덤상자 확률 [상자ID]   지정한 상자의 보상과 당첨 확률을 확인합니다.
+    예시  /랜덤상자 확률 default
+    권한·조건  asa.randombox.admin
+    권한 기본값  op
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 AsaRelation · 로비 Paper
 
 [기본] /인맥   인맥 메뉴 열기
@@ -2107,11 +2183,19 @@ AsaRelayPaper · 로비 Paper
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 AsaShop · 로비 Paper
 
-[기본] /상점 [상점이름]   상점 이름을 입력하면 해당 상점이 열립니다. 이름 없는 목록 GUI는 asashop.admin이 필요합니다.
+[기본] /상점 [상점이름]   OP 플레이어가 상점 목록을 엽니다. 이름을 입력하면 해당 카테고리가 열립니다. 일반 플레이어는 Shift + F → 상점으로 이동해 해당 상인을 우클릭하세요. 광물은 광부 브론이 담당합니다.
     예시  /상점 일반작물
+    권한·조건  OP · 플레이어 전용
+    권한 기본값  op
 
-[세부] /상점 <상점이름>   지정한 상점 카테고리를 엽니다.
+[세부] /상점 <상점이름>   OP 플레이어가 지정한 상점 카테고리를 엽니다. 일반 플레이어는 Shift + F → 상점으로 이동해 해당 상인을 우클릭하세요. 광물은 광부 브론이 담당합니다.
     예시  /상점 광물
+    권한·조건  OP · 플레이어 전용
+    권한 기본값  op
+
+[기본] /상점npc <플레이어> <카테고리>   서버 콘솔이 접속 중인 플레이어에게 지정한 상점 화면을 엽니다. 상점 NPC의 카테고리 버튼이 이 기능을 호출합니다.
+    예시  /상점npc Alex 광산 전리품
+    권한·조건  서버 콘솔 전용
 
 [기본] /상점검색 <아이템명>   아이템 이름으로 상점 상품 검색
     예시  /상점검색 철
@@ -2415,6 +2499,14 @@ AsaVelocityChat · Velocity
 
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+AsaVillagerBlock · 로비 Paper
+
+[기본] /주민거래리로드   주민 거래 제한 설정을 다시 읽습니다.
+    권한·조건  asa.villager.admin
+    권한 기본값  op
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 AsaVipTicket · 로비 Paper
 
 [기본] /등급 <등급> <기간> [닉네임]   기간제 등급 티켓 지급
@@ -2537,7 +2629,7 @@ AsaWildProxy · Velocity
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 BetterGUI · 로비 Paper
 
-[기본] /addondownloader   기본 예제 메뉴를 설치한 경우. 운영 메뉴 설정에 따라 변경됨.
+[기본] /addondownloader   BetterGUI 애드온 목록과 설치 상태를 표시하는 메뉴를 엽니다.
     다른 입력  /addondl
 
 [기본] /addons   Get the loaded addons
@@ -2555,7 +2647,7 @@ BetterGUI · 로비 Paper
     다른 입력  /variables, /placeholders, /getplaceholders
     권한·조건  bettergui.variable
 
-[기본] /menu   기본 예제 메뉴를 설치한 경우. 운영 메뉴 설정에 따라 변경됨.
+[기본] /menu   BetterGUI의 예제 메뉴를 엽니다. ASA 메인 메뉴는 웅크린 채 보조 손 바꾸기(기본 Shift + F)로 엽니다.
 
 [기본] /openmenu <menu_name> [player] [args...]   Open the specific menu
     다른 입력  /om
@@ -3624,7 +3716,6 @@ CMI · 로비 Paper
     권한·조건  cmi.command.editwarnings
 
 [세부] /cmi editwarp (warpName) (newName)   워프를 편집합니다.
-    다른 입력  /editwarp
     권한·조건  cmi.command.editwarp
 
 [세부] /cmi effect [playername/all] [effect/clear] (duration/infinite) (multiplier) (-s) (-visual)   플레이어에게 물약 효과를 부여합니다. clear로 모든 효과를 지웁니다.
@@ -3779,11 +3870,9 @@ CMI · 로비 Paper
     권한·조건  cmi.command.hologrampages
 
 [세부] /cmi home (homeName) (playerName) (whoTeleport)   저장된 홈으로 이동합니다.
-    다른 입력  /home
     권한·조건  cmi.command.home
 
 [세부] /cmi homes (playerName/near:[range])   클릭해 이동할 수 있는 홈 목록을 엽니다.
-    다른 입력  /homes
     권한·조건  cmi.command.homes
 
 [세부] /cmi hunger [playerName] [amount] (-s)   플레이어의 허기 수치를 설정합니다.
@@ -4142,7 +4231,6 @@ CMI · 로비 Paper
     권한·조건  cmi.command.reload
 
 [세부] /cmi removehome (homeName) (playerName)   저장한 홈을 삭제합니다. · 기본 꺼짐 별칭 /delhome
-    다른 입력  /removehome
     권한·조건  cmi.command.removehome
 
 [세부] /cmi removeuser [uuid/duplicates]   유저와 해당 유저의 데이터를 삭제합니다.
@@ -4150,7 +4238,6 @@ CMI · 로비 Paper
     권한·조건  cmi.command.removeuser
 
 [세부] /cmi removewarp (warpName)   워프를 삭제합니다. · 기본 꺼짐 별칭 /delwarp
-    다른 입력  /removewarp
     권한·조건  cmi.command.removewarp
 
 [세부] /cmi repair [hand/offhand/armor/all] (playerName)   아이템을 수리합니다.
@@ -4266,11 +4353,9 @@ CMI · 로비 Paper
     권한·조건  cmi.command.setenchantworth
 
 [세부] /cmi setfirstspawn (playerName)   첫 접속 스폰 지점을 설정합니다.
-    다른 입력  /setfirstspawn
     권한·조건  cmi.command.setfirstspawn
 
 [세부] /cmi sethome (homeName) (playerName) (-p) (-l:worldName;x;y;z) (block/Material) (slotNumber) (-overwrite)   홈 위치를 저장합니다.
-    다른 입력  /sethome
     권한·조건  cmi.command.sethome
 
 [세부] /cmi setmotd [newMotd] (-s)   서버 목록에 보이는 소개 문구(MOTD)를 설정합니다.
@@ -4282,11 +4367,9 @@ CMI · 로비 Paper
     권한·조건  cmi.command.setrt
 
 [세부] /cmi setspawn (playerName) (true/false) (-g:[groupName]) (-rng:[range]) (-w:world,world_nether) (-loc:[world;x;y;z;yaw;pitch])   스폰 명령 사용 시 이동할 지점을 설정합니다.
-    다른 입력  /setspawn
     권한·조건  cmi.command.setspawn
 
 [세부] /cmi setwarp [warpName] (reqPermission) (hand/head/head:[playerName]) (slot) (autoLore) (-g:[groupName]) (world;x;y;z;yaw;pitch) (-confirm)   워프 위치를 저장합니다.
-    다른 입력  /setwarp
     권한·조건  cmi.command.setwarp
 
 [세부] /cmi setworth (itemname) -s:(sellPrice)   아이템 가치를 변경합니다.
@@ -4339,7 +4422,6 @@ CMI · 로비 Paper
 
 [세부] /cmi spawn (playerName) (-s)   지정된 스폰 위치로 이동합니다.
     예시  /cmi spawn Alex
-    다른 입력  /spawn
     권한·조건  cmi.command.spawn
 
 [세부] /cmi spawner [EntityType]   몹 생성기를 설정합니다.
@@ -4428,11 +4510,9 @@ CMI · 로비 Paper
     권한·조건  cmi.command.top
 
 [세부] /cmi tp [playerName] (playerName)   다른 플레이어가 있는 위치로 이동합니다.
-    다른 입력  /tp
     권한·조건  cmi.command.tp
 
 [세부] /cmi tpa [playerName] (playerName) (-c)   상대에게 그 위치로 이동해도 되는지 요청합니다.
-    다른 입력  /tpa
     권한·조건  cmi.command.tpa
 
 [세부] /cmi tpaall   모든 접속자에게 내 위치로 이동해 달라고 요청합니다.
@@ -4440,11 +4520,9 @@ CMI · 로비 Paper
     권한·조건  cmi.command.tpaall
 
 [세부] /cmi tpaccept (playerName)   텔레포트 요청을 수락합니다.
-    다른 입력  /tpaccept
     권한·조건  cmi.command.tpaccept
 
 [세부] /cmi tpahere [playerName] (playerName) (-c)   지정한 상대에게 내 위치로 이동해 달라고 요청합니다.
-    다른 입력  /tpahere
     권한·조건  cmi.command.tpahere
 
 [세부] /cmi tpall (playerName)   모든 접속자를 한 위치로 이동시킵니다.
@@ -4460,7 +4538,6 @@ CMI · 로비 Paper
     권한·조건  cmi.command.tpbypass
 
 [세부] /cmi tpdeny (playerName)   텔레포트 요청을 거절합니다.
-    다른 입력  /tpdeny
     권한·조건  cmi.command.tpdeny
 
 [세부] /cmi tphere [playerName] (playerName) (-s)   지정한 플레이어를 내 위치로 이동시킵니다.
@@ -4571,11 +4648,9 @@ CMI · 로비 Paper
     권한·조건  cmi.command.warnings
 
 [세부] /cmi warp (warpName) (playerName) (-s) (-g:[groupName]) (-p:[pageNumber])   지정한 워프로 이동합니다. · 기본 꺼짐 별칭 /warps
-    다른 입력  /warp
     권한·조건  cmi.command.warp
 
 [세부] /cmi warpgroups   워프 그룹 목록을 표시합니다.
-    다른 입력  /warpgroups
     권한·조건  cmi.command.warpgroups
 
 [세부] /cmi weather (sun/rain/storm) (lock/duration) (worldName/all)   서버 날씨를 조정합니다. · /sun → /cmi weather sun / /rain → /cmi weather rain / /storm → /cmi weather storm
@@ -4806,21 +4881,6 @@ CustomCrops · 로비 Paper
     다른 입력  /ccrops season set
     기본 명령 별칭  /ccrops
     권한·조건  customcrops.command.set_season
-
-[세부] /customcrops unsafe delete   A command to delete the CustomCrops data in one chunk
-    다른 입력  /ccrops unsafe delete
-    기본 명령 별칭  /ccrops
-    권한·조건  customcrops.command.unsafe.delete
-
-[세부] /customcrops unsafe fix   A command to fix the CustomCrops data in one section(16x16x16)
-    다른 입력  /ccrops unsafe fix
-    기본 명령 별칭  /ccrops
-    권한·조건  customcrops.command.unsafe.fix
-
-[세부] /customcrops unsafe restore   A command to restore the blocks by CustomCrops data in one chunk
-    다른 입력  /ccrops unsafe restore
-    기본 명령 별칭  /ccrops
-    권한·조건  customcrops.command.unsafe.restore
 
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -8556,7 +8616,8 @@ MMOCore · 로비 Paper
     권한·조건  mmocore.waypoints
     권한 기본값  op
 
-[기본] /withdraw   Withdraw money into coins and notes
+[기본] /withdraw   돈을 인출해 동전과 지폐로 교환합니다.
+    다른 입력  /w
     권한·조건  mmocore.currency
     권한 기본값  op
 

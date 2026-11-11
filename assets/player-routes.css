@@ -21,3 +21,16 @@
 .path-help,.path-label{color:#beced8;font-size:13px}.path-label{display:block;margin-bottom:4px}.path-help{margin:8px 0 12px}
 .doc .doc-click-steps{line-height:1.85;padding-inline-start:1.4em}.doc .doc-click-steps li+li{margin-top:.5em}.doc .tableWrap{overflow-x:auto}.doc .tableWrap table{width:100%;border-collapse:collapse;text-align:left}.doc .tableWrap th,.doc .tableWrap td{padding:.75rem;border-bottom:1px solid #344354}.doc .tableWrap th{color:#edce90}.doc .tableWrap td{color:#dce5eb}
 .cwiki-expanded .cwiki-open-route{display:block;padding:10px 12px;margin:10px 0;border-left:3px solid #daa85e;background:#1e303b;line-height:1.5}
+
+/* Public shop district locations. Coordinates use the block containing each NPC. */
+.market-square-chart{padding:clamp(14px,2.4vw,28px);border:1px solid #31455a;border-radius:14px;background-color:#0d1b2b;background-image:linear-gradient(90deg,#839fb30c 1px,transparent 1px),linear-gradient(#839fb30c 1px,transparent 1px);background-size:24px 24px}
+.market-square-north{display:block;width:max-content;margin:0 auto 12px;color:#b9cbd9;font-weight:650;font-size:.77rem;letter-spacing:.04em}
+.market-square-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(8px,1.25vw,16px)}
+.market-square-grid a{grid-column:var(--c);grid-row:var(--r);display:grid;align-content:center;gap:3px;padding:10px 12px;border:1px solid #456177;border-radius:9px;background:#102234;color:#f3f6f8;text-decoration:none}
+.market-square-grid a:is(:hover,:focus-visible){border-color:#f6c66f;background:#183149;outline:2px solid #e4bd7138;outline-offset:1px}
+.market-square-grid strong{color:#f2d299;font-size:.95rem}
+.market-square-grid span{font-size:.8rem;color:#d9e5ec}
+.market-square-grid small{font:500 .69rem/1.5 ui-monospace,monospace;color:#b0c3d0;letter-spacing:-.025em}
+.market-square-controls{text-align:center;color:#ccdae4;font-size:.84rem;margin:18px 0 0}
+@media(max-width:650px){.market-square-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.market-square-grid a{grid-column:auto;grid-row:auto}.market-square-grid a:first-child{grid-column:1/-1}.market-square-grid small{font-size:.67rem}}
+@media(max-width:370px){.market-square-chart{padding:9px}.market-square-grid a{padding:8px}.market-square-controls{font-size:.76rem}}

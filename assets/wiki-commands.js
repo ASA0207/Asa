@@ -168,7 +168,10 @@
     for(const key of ['q','plugin','kind','site']) if(ui[key].value) p.set(key,ui[key].value);
     if(frequentOnly)p.set('frequent','1');if(savedOnly)p.set('saved','1');if(page>1)p.set('page',String(page));if(focused)p.set('id',focused);
     const query=p.toString(); const next='#commands'+(query?'?'+query:'');
-    if(location.hash!==next)try {history.replaceState(history.state,'',next);} catch {}
+    if(location.hash!==next)try {
+      history.replaceState(history.state,'',next);
+      document.dispatchEvent(new CustomEvent('asa:command-filters'));
+    } catch {}
   }
   function draw(updateUrl=true) {
     if (focused&&idMap.has(focused)) items=[idMap.get(focused)];
