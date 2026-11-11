@@ -3,6 +3,7 @@
   'use strict';
   const $ = id => document.getElementById(id);
   const pages = new Map([...document.querySelectorAll('main .page[data-page]')].map(p => [p.dataset.page,p]));
+  const gate = $('asaIntro');
   const sidebar = $('sidebar'), menu = $('menuBtn'), scrim = $('drawerScrim');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const modal = $('searchModal'), input = $('searchInput'), results = $('results');
@@ -23,10 +24,10 @@
   }
   document.addEventListener('click',async e=>{ const b=e.target.closest('[data-copy]'); if(b)toast(await copy(b.dataset.copy)?'서버 주소를 복사했어요.':b.dataset.copy); });
   function drawer(open){
-    const isOpen=Boolean(open && matchMedia('(max-width:760px)').matches);
+    const isOpen=Boolean(gate.hidden && open && matchMedia('(max-width:760px)').matches);
     sidebar.classList.toggle('open',isOpen);scrim.hidden=!isOpen;document.body.classList.toggle('drawer-open',isOpen);
     menu.setAttribute('aria-expanded',String(isOpen));menu.setAttribute('aria-label',isOpen?'탐색 메뉴 닫기':'탐색 메뉴 열기');
-    sidebar.inert=!isOpen&&matchMedia('(max-width:760px)').matches;
+    sidebar.inert=!gate.hidden || (!isOpen && matchMedia('(max-width:760px)').matches);
   }
   menu.addEventListener('click',()=>drawer(!sidebar.classList.contains('open')));
   scrim.addEventListener('click',()=>{drawer(false);menu.focus();});
@@ -50,6 +51,7 @@
   }
   document.addEventListener('asa:command-filters',()=>markNavigation(pageName()));
   function route(){
+    if (!gate.hidden) return;
     const id=pageName(), changed=previousPage!==id;
     for(const [key,p] of pages){p.classList.toggle('active',key===id); p.setAttribute('aria-hidden',String(key!==id));}
     markNavigation(id);
@@ -127,7 +129,7 @@
     if(e.key==='Tab'){const targets=[...modal.querySelectorAll('button,input,.result')];const first=targets[0],last=targets[targets.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}
   });
   // Only a sound-enabled entry or the player button starts the bundled track.
-  const audio=$('bgmAudio'), deck=$('bgmPlayer'), launcher=$('musicLauncher'), toggle=$('bgmToggle'), volume=$('bgmVolume'), seek=$('bgmSeek'), gate=$('asaIntro');
+  const audio=$('bgmAudio'), deck=$('bgmPlayer'), launcher=$('musicLauncher'), toggle=$('bgmToggle'), volume=$('bgmVolume'), seek=$('bgmSeek');
   const saved=Number(read('localStorage','asaWikiBgmVolume','.22'));audio.volume=Number.isFinite(saved)?Math.min(1,Math.max(0,saved)):.22;volume.value=Math.round(audio.volume*100);
   function syncMusic(){const playing=!audio.paused;deck.classList.toggle('playing',playing);launcher.classList.toggle('playing',playing);toggle.textContent=playing?'Ⅱ':'▶';toggle.setAttribute('aria-label',playing?'배경음악 일시정지':'배경음악 재생');}
   function expandMusic(open){deck.classList.toggle('collapsed',!open);launcher.hidden=open;launcher.setAttribute('aria-expanded',String(open));}
@@ -140,17 +142,40 @@
   const fmt=s=>Number.isFinite(s)?Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0'):'0:00';
   function clock(){if(!seek.matches(':active'))seek.value=audio.duration?Math.round(audio.currentTime/audio.duration*1000):0;$('bgmCurrent').textContent=fmt(audio.currentTime);$('bgmDuration').textContent=fmt(audio.duration);}
   audio.addEventListener('loadedmetadata',clock);audio.addEventListener('timeupdate',clock);seek.addEventListener('input',()=>{if(Number.isFinite(audio.duration))audio.currentTime=Number(seek.value)/1000*audio.duration;});
-  let entered=false;function enter(sound){
-    if(entered)return;entered=true;
-    if(sound)play();else audio.pause();
-    write('sessionStorage','asaWikiEntered','1');gate.classList.add('entering');document.body.classList.add('asaBooted');
-    setTimeout(()=>{gate.hidden=true;gate.setAttribute('aria-hidden','true');setGateInert(false);$('app').focus({preventScroll:true});},reduced.matches?0:460);
+  let entering=false;
+  function enter(withMusic) {
+    if (entering) return;
+    entering=true;
+    if (withMusic) {
+      if (audio.volume===0) {
+        audio.volume=.22;
+        volume.value='22';
+        write('localStorage','asaWikiBgmVolume','0.22');
+      }
+      play();
+    } else {
+      audio.pause();
+    }
+    gate.classList.add('entering');
+    document.body.classList.add('asaBooted');
+    setTimeout(()=>{
+      gate.hidden=true;
+      gate.setAttribute('aria-hidden','true');
+      setGateInert(false);
+      $('app').focus({preventScroll:true});
+      route();
+    },reduced.matches?0:460);
   }
-  function setGateInert(on){for(const n of [document.querySelector('.topbar'),$('app'),sidebar,launcher,deck]){if(n===sidebar&&!on)drawer(false);else n.inert=on;}}
+  function setGateInert(on) {
+    for (const node of [document.querySelector('.wiki-skip'),document.querySelector('.topbar'),$('app'),launcher,deck]) node.inert=on;
+    drawer(false);
+  }
   $('enterSound').addEventListener('click',()=>enter(true));$('enterQuiet').addEventListener('click',()=>enter(false));
   gate.addEventListener('keydown',e=>{if(e.key==='Tab'){if(e.shiftKey&&e.target===$('enterSound')){e.preventDefault();$('enterQuiet').focus();}else if(!e.shiftKey&&e.target===$('enterQuiet')){e.preventDefault();$('enterSound').focus();}}});
-  syncMusic();expandMusic(false);route();
-  if(pageName()==='home' && !read('sessionStorage','asaWikiEntered','')){gate.hidden=false;setGateInert(true);$('enterSound').focus({preventScroll:true});}
+  syncMusic();
+  expandMusic(false);
+  setGateInert(true);
+  $('enterSound').focus({preventScroll:true});
 
   const nodes=[...document.querySelectorAll('.atlasNode')];
   nodes.forEach(n=>{n.setAttribute('aria-pressed',String(n.classList.contains('active')));n.addEventListener('click',()=>{

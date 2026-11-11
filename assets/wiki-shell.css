@@ -23,7 +23,7 @@ body:has(.entryGate:not([hidden])){overflow:hidden}
 .gatePanel h1{margin:16px 0 35px;font:500 clamp(64px,10.5vw,166px)/.98 Georgia,'Times New Roman',serif;letter-spacing:-.072em;color:#fff7e5}
 .gatePanel h1 i{font-weight:400;color:#f7d49a}.gateLinks{display:flex;gap:12px;flex-wrap:wrap}
 .gateLinks button{min-height:46px;border:1px solid #dbc58f88;padding:12px 22px;font-weight:750;font-size:14px;border-radius:5px;color:#fff1cc;background:#101924a8;cursor:pointer}
-.gateLinks button:first-child{border-color:#e6c48c;color:#281b0f;background:#eaca93}.gateLinks button span{margin-left:14px}
+.gateLinks button:first-child{border-color:#e6c48c;color:#281b0f;background:#eaca93}.gateLinks button:last-child span{margin-left:8px}.gateLinks button:first-child span{margin-right:5px}
 .gateLinks button:hover{filter:brightness(1.12)}.entryGate.entering{animation:gateExit .48s cubic-bezier(.4,0,.45,1) forwards!important;pointer-events:none}
 @keyframes gateExit{to{opacity:0;transform:scale(1.015);visibility:hidden}}
 .wikiHero.hero{min-height:clamp(430px,54vh,620px);display:flex;align-items:center;isolation:isolate}
@@ -103,3 +103,5 @@ body:has(.entryGate:not([hidden])){overflow:hidden}
   }
   .topbar > nav { grid-column: 3; justify-self: end; margin-inline: 0; }
 }
+
+@media(max-height:460px){.entryGate.asaIntro{align-items:flex-start;overflow-y:auto;padding-block:18px}.gatePanel{margin-block:auto}.gatePanel h1{font-size:clamp(45px,11vh,65px);margin:9px 0 16px}}
