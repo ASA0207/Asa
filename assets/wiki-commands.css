@@ -1,0 +1,87 @@
+.cwiki-page{
+ --cw-surface:#101d2b;--cw-border:#2d4053;--cw-muted:#b0bed0;--cw-accent:#efc982;
+ color:#edf3fb;min-width:0;
+}
+.cwiki-page [hidden]{display:none!important}
+.cwiki-page .cwiki-bound{width:min(100%,1340px);margin:0 auto;padding-inline:clamp(18px,4.4vw,78px);box-sizing:border-box}
+.cwiki-page .cwiki-hero{position:relative;isolation:isolate;overflow:hidden;border-bottom:1px solid #576055;color:white;background:#0d1823}
+.cwiki-hero:before,.cwiki-hero:after{position:absolute;inset:0;content:"";z-index:-1;pointer-events:none}
+.cwiki-page .cwiki-hero:before{background-image:var(--cw-art);background-size:cover;background-position:center 44%;inset:-2px 0 -2px 28%;filter:saturate(.78)}
+.cwiki-page .cwiki-hero:after{background:linear-gradient(90deg,#0b1825 1%,#0d1925fa 26%,#0e1a25d6 48%,#0a142374 72%,#06121e34),linear-gradient(0deg,#07131dd6,transparent 65%)}
+.cwiki-hero-index{--cw-art:url(./bank.webp)}.cwiki-hero-quick{--cw-art:url(./life.webp)}
+.cwiki-page .cwiki-hero .cwiki-bound{position:relative;padding-block:clamp(40px,5vw,76px) clamp(36px,4.3vw,62px)}
+.cwiki-page .cwiki-hero h1{font-family:inherit;font-weight:780;font-size:clamp(34px,4vw,66px);letter-spacing:-.065em;margin:0 0 14px;color:#fffcf1;line-height:1.1}
+.cwiki-hero p{max-width:50ch;color:#d0d8df;font-size:clamp(14px,1.15vw,17px);line-height:1.75;margin:0 0 21px;word-break:keep-all}
+.cwiki-jump,.cwiki-links a{display:inline-flex;align-items:center;gap:.85em;font-size:14px;font-weight:700;color:#f7d993}
+.cwiki-page a.cwiki-jump{border:1px solid #b69a67a3;border-radius:6px;padding:9px 15px;background:#0b18268c}
+.cwiki-page .cwiki-jump:hover,.cwiki-links a:hover{color:#fff5d6}
+.cwiki-page .cwiki-main{padding-top:clamp(24px,3vw,45px);padding-bottom:120px}
+.cwiki-page label,.cwiki-page input,.cwiki-page select,.cwiki-page button{font-family:inherit}
+.cwiki-page button,.cwiki-page summary{cursor:pointer}
+.cwiki-page a:focus-visible,.cwiki-page button:focus-visible,.cwiki-page summary:focus-visible,.cwiki-page input:focus-visible,.cwiki-page select:focus-visible{outline:2px solid #ffdd9a;outline-offset:3px}
+.cwiki-search-panel{padding:clamp(15px,2vw,26px);border:1px solid var(--cw-border);border-radius:13px;background:linear-gradient(125deg,#142639,#101b29 72%);box-shadow:0 12px 40px #03091228}
+.cwiki-label{display:block;font-size:15px;color:#ecf2f8;font-weight:740;margin-bottom:8px}
+.cwiki-inputbar{display:flex;align-items:center;gap:15px;padding:0 14px;background:#081421;border:1px solid #43576a;border-radius:7px}
+.cwiki-inputbar:focus-within{border-color:#e9bf74;box-shadow:0 0 0 3px #edc47620}
+.cwiki-inputbar .cwiki-glass{width:15px;height:15px;border:2px solid #e7c987;border-radius:50%;position:relative;flex:none}
+.cwiki-glass:after{content:"";width:7px;height:2px;background:#e7c987;position:absolute;right:-5px;bottom:-2px;transform:rotate(47deg)}
+.cwiki-page #cwQuery{border:0;background:transparent;color:#f4f5ef;min-width:0;flex:1;height:49px;outline:none;box-shadow:none;font-size:16px;padding:0}
+.cwiki-inputbar kbd{padding:3px 7px}
+.cwiki-page input::placeholder{color:#a6b6c8}
+.cwiki-filter-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;margin:14px 0}
+.cwiki-filter-grid label{color:#b7c4d2;font-size:12px;font-weight:660}
+.cwiki-page select{display:block;width:100%;padding:8px 10px;background:#101e2c;color:#e8eef6;border:1px solid #3b4b5d;border-radius:5px;margin-top:5px;color-scheme:dark;font-size:14px}
+.cwiki-search-tools,.cwiki-chips,.cwiki-row-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.cwiki-page button.cwiki-chip,.cwiki-page button.cwiki-small,.cwiki-pages button,.cwiki-row-actions button,.cwiki-row-actions a{border:1px solid #374e62;background:#122435;color:#cdd9e6;border-radius:6px;padding:7px 12px;font-size:13px;line-height:1.35}
+.cwiki-page .cwiki-chip{min-height:34px}
+.cwiki-page .cwiki-chip[aria-pressed="true"],.cwiki-page .cwiki-row-actions .is-saved{background:#3b3223;color:#ffe7b2;border-color:#907443}
+.cwiki-page .cwiki-chip:hover,.cwiki-page .cwiki-small:hover,.cwiki-row-actions button:hover,.cwiki-row-actions a:hover,.cwiki-pages button:not(:disabled):hover{border-color:#d2b37a;color:#ffdea0}
+#cwFavCount{padding-left:4px}
+.cwiki-page .cwiki-reset{font-size:13px;background:none;border:0;color:#b2c8db;margin-left:auto;padding:8px}
+.cwiki-page .cwiki-reset:hover{color:#fff}
+.cwiki-resultshead,.cwiki-headline{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:30px 0 15px}
+.cwiki-page h2{font-family:inherit;line-height:1.35;letter-spacing:-.04em;font-size:clamp(21px,2vw,31px);margin:0}
+.cwiki-resultshead span,.cwiki-headline>span,.cwiki-fine{font-size:13px;color:var(--cw-muted)}
+.cwiki-result{border:1px solid var(--cw-border);background:#101d2ce8;overflow:hidden;border-radius:8px;margin:0 0 8px}
+.cwiki-result[open]{border-color:#a18759;background:#132333;box-shadow:inset 3px 0 #e7bf78}
+.cwiki-result summary{display:grid;grid-template-columns:minmax(110px,.85fr) minmax(185px,2.55fr) 22px;align-items:center;gap:17px;list-style:none;padding:15px 18px}
+.cwiki-result summary::-webkit-details-marker{display:none}
+.cwiki-result summary:after{content:"+";font:400 20px/1 system-ui;color:#e2c98f;justify-self:end}
+.cwiki-result[open] summary:after{content:"−"}
+.cwiki-metadata{display:grid;gap:4px;min-width:0}
+.cwiki-metadata b{color:#e7c987;font-size:12px;font-weight:710;overflow-wrap:anywhere}.cwiki-metadata small{font-size:11px;letter-spacing:0;color:#a9b7c8}
+.cwiki-summary-main{display:grid;gap:4px;min-width:0}
+.cwiki-page code{font-family:"SFMono-Regular",Consolas,"Noto Sans Mono CJK KR",monospace;letter-spacing:-.025em;word-break:break-word;overflow-wrap:anywhere;color:#f1f4ec;font-size:14px;line-height:1.55}
+.cwiki-summary-main>code{font-weight:650}
+.cwiki-summary-main>span{color:#b4c4d3;font-size:13px;line-height:1.52;overflow-wrap:anywhere}
+.cwiki-expanded{display:grid;grid-template-columns:1fr;gap:14px;border-top:1px solid #334656;padding:17px 19px 20px;margin-left:3px;}
+.cwiki-expanded dl{margin:0;display:grid;grid-template-columns:minmax(95px,auto) 1fr;column-gap:16px;row-gap:9px;align-items:baseline;font-size:13px}
+.cwiki-expanded dt{color:#a6b9c6}.cwiki-expanded dd{margin:0;color:#e2e9ed;overflow-wrap:anywhere;min-width:0;line-height:1.5}.cwiki-expanded .cwiki-example{color:#b5efcf}
+.cwiki-row-actions button,.cwiki-row-actions a{display:inline-flex;align-items:center;min-height:34px}
+.cwiki-pages{display:flex;justify-content:center;align-items:center;gap:17px;margin:20px 0 28px;font-size:13px;color:#adc0ce}
+.cwiki-pages button:disabled{opacity:.4;cursor:default}
+.cwiki-blank button{padding:7px 11px;background:#1f3448;color:#f6e2ad;border:1px solid #607184;border-radius:5px}.cwiki-blank{padding:28px;border:1px dashed #41586c;border-radius:7px;color:#becbd6}
+.cwiki-notes{padding:14px 17px;border-top:1px solid var(--cw-border);border-bottom:1px solid var(--cw-border);font-size:13px;color:#b1c2d1}
+.cwiki-notes summary{font-weight:680;color:#dee6ed}.cwiki-notes p{line-height:1.8;max-width:82ch}
+.cwiki-links{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-top:23px}
+.cwiki-flows{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.cwiki-flow{overflow:hidden;border:1px solid var(--cw-border);border-radius:10px;background:#101e2b}
+.cwiki-flow header{padding:46px 16px 15px;position:relative;isolation:isolate;background-image:linear-gradient(0deg,#101e2b 3%,#0a1523bf 57%,#0a152331),var(--flow-art);background-size:cover;background-position:center}
+.cwiki-flow h3{font-size:20px;letter-spacing:-.045em;line-height:1.3;margin:0;color:#fff4d7}.cwiki-flow header p{margin:5px 0 0;color:#c1cdd5;font-size:12px}
+.cwiki-flow ol{counter-reset:steps;list-style:none;margin:0;padding:4px 14px 12px}
+.cwiki-flow li{display:grid;grid-template-columns:19px minmax(0,1fr) auto;gap:7px;align-items:start;padding:11px 0;counter-increment:steps;border-top:1px solid #293a4d}
+.cwiki-flow li:before{content:counter(steps);border-radius:50%;background:#3a3326;color:#f7d693;text-align:center;font-size:11px;line-height:19px;width:19px;height:19px}
+.cwiki-flow li p,.cwiki-quick-item p{color:#b2c1ce;line-height:1.6;font-size:12px;margin:4px 0 0}
+.cwiki-flow code{font-size:13px}
+.cwiki-flow .cwiki-small,.cwiki-quick-item .cwiki-small{padding:5px 7px;white-space:nowrap;font-size:11px}
+.cwiki-flow a:hover code,.cwiki-quick-item a:hover code{color:#ffd48c}
+.cwiki-quick-section{margin-top:32px}
+.cwiki-quick-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:13px}
+.cwiki-quick-item{display:grid;grid-template-columns:1fr auto;align-items:start;gap:7px;padding:14px;border:1px solid var(--cw-border);border-radius:7px;background:#101e2b}
+.cwiki-quick-item small{display:block;color:#ceb377;font-size:11px;margin-bottom:4px}
+.cwiki-quick-item [data-cw-copy]{margin-top:12px}
+.cwiki-headline:first-child{margin-top:0}
+.cwiki-fine{margin-top:11px}
+@media(max-width:1170px){.cwiki-flows{grid-template-columns:1fr}.cwiki-flow{display:grid;grid-template-columns:minmax(160px,1fr) minmax(230px,2fr)}.cwiki-flow header{padding:17px 15px;align-content:end}.cwiki-flow ol{padding:0 15px}.cwiki-flow li:first-child{border:0}.cwiki-quick-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.cwiki-page .cwiki-hero:before{inset:0 0 0 18%}.cwiki-page .cwiki-hero .cwiki-bound{padding-block:37px 30px}.cwiki-hero p{font-size:14px;max-width:27ch}.cwiki-filter-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.cwiki-filter-grid label:first-child{grid-column:1/-1}.cwiki-page .cwiki-main{padding-bottom:150px}.cwiki-result summary{grid-template-columns:minmax(0,1fr) 16px;gap:4px 12px;padding:12px}.cwiki-metadata{display:flex;align-items:center;gap:8px;grid-column:1}.cwiki-summary-main{grid-column:1}.cwiki-result summary:after{grid-column:2;grid-row:1/3}.cwiki-expanded{padding:13px 11px}.cwiki-expanded dl{grid-template-columns:1fr;row-gap:4px}.cwiki-expanded dt:not(:first-child){margin-top:5px}.cwiki-quick-list,.cwiki-flow{grid-template-columns:1fr}.cwiki-flow header{padding:32px 14px 12px}.cwiki-pages button{min-height:40px}.cwiki-flow .cwiki-small,.cwiki-quick-item .cwiki-small{min-height:32px;min-width:38px}.cwiki-links{align-items:flex-start;flex-direction:column}}
+.cwiki-search-tools .cwiki-export{color:#e8d1a2;display:inline-flex;align-items:center;gap:6px;text-decoration:underline;text-underline-offset:3px;font-size:13px;padding:6px 2px;margin-right:6px}

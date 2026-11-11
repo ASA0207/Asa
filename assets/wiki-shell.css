@@ -1,0 +1,62 @@
+/* The persistent navigation, entrance and music controls for the ASA wiki. */
+:root{--asa-ivory:#fbf3dc;--asa-wheat:#ecca83;--asa-sea:#86ded0;--asa-ink:#080f19}
+html{scroll-padding-top:calc(var(--top) + 14px)}
+html,body{max-width:100%;overflow-x:clip} [hidden],.asaIntro[hidden],.drawerScrim[hidden],.modal[hidden]{display:none!important}
+:where(button,a,input,select,summary):focus-visible{outline:2px solid #f7d383;outline-offset:4px}
+.wiki-skip{position:fixed;top:4px;left:8px;z-index:20000;transform:translateY(-180%);padding:12px 16px;background:#ffe6a5;color:#15202d;border-radius:6px}
+.wiki-skip:focus{transform:none}#mainContent{position:absolute}
+.crest.crestEmblem{width:42px;height:42px;padding:0;overflow:hidden;border-radius:50%;border:1px solid #d9b47564;flex-shrink:0;background:#111833}
+.crestEmblem img{width:100%;height:100%;object-fit:cover;transform:scale(1.07)}
+.brand b{white-space:nowrap;letter-spacing:.075em}
+.topbar nav{margin-left:auto;align-items:center;white-space:nowrap}
+.topbar nav a[aria-current=page]{color:#fcdb96}
+.sideInner{padding-bottom:60px}.side [aria-hidden=true]{width:1rem;text-align:center}
+.drawerScrim{position:fixed;inset:var(--top) 0 0;z-index:19;border:0;background:#03101dc2;backdrop-filter:blur(3px)}
+body.drawer-open{overflow:hidden}body.asaBooted .sidebar{animation:none}.wikiHero .heroContent{animation:none}
+body:has(.entryGate:not([hidden])){overflow:hidden}
+.entryGate.asaIntro{isolation:isolate;display:flex!important;align-items:flex-end;padding:clamp(26px,7vw,112px);box-sizing:border-box;cursor:default;background:#11181e}
+.entryGate:before,.entryGate:after{display:none!important}.entryGate .gateImage,.entryGate .gateShade{position:absolute;inset:0;width:100%;height:100%;z-index:-2;object-fit:cover;object-position:center 37%}
+.entryGate .gateShade{z-index:-1;background:linear-gradient(90deg,rgba(6,10,18,.73),rgba(10,12,18,.1) 76%),linear-gradient(0deg,#081320f7,transparent 75%)}
+.gatePanel{color:var(--asa-ivory);width:min(810px,100%);margin-bottom:min(8vh,90px)}
+.gateBrand,.heroEdition{display:flex;align-items:center;gap:13px;color:var(--asa-wheat);font:700 11px/1.5 system-ui,sans-serif;letter-spacing:.19em}
+.gateBrand span{letter-spacing:.1em;font-size:12px;border-left:1px solid #c4af8a7a;padding-left:13px}
+.gatePanel h1{margin:16px 0 35px;font:500 clamp(64px,10.5vw,166px)/.98 Georgia,'Times New Roman',serif;letter-spacing:-.072em;color:#fff7e5}
+.gatePanel h1 i{font-weight:400;color:#f7d49a}.gateLinks{display:flex;gap:12px;flex-wrap:wrap}
+.gateLinks button{min-height:46px;border:1px solid #dbc58f88;padding:12px 22px;font-weight:750;font-size:14px;border-radius:5px;color:#fff1cc;background:#101924a8;cursor:pointer}
+.gateLinks button:first-child{border-color:#e6c48c;color:#281b0f;background:#eaca93}.gateLinks button span{margin-left:14px}
+.gateLinks button:hover{filter:brightness(1.12)}.entryGate.entering{animation:gateExit .48s cubic-bezier(.4,0,.45,1) forwards!important;pointer-events:none}
+@keyframes gateExit{to{opacity:0;transform:scale(1.015);visibility:hidden}}
+.wikiHero.hero{min-height:clamp(430px,54vh,620px);display:flex;align-items:center;isolation:isolate}
+.wikiHero>img{object-position:58% 42%;transform:none;filter:saturate(.94) contrast(1.055)}
+.wikiHero .heroShade{background:linear-gradient(90deg,#07111ee8 1%,#07111eac 37%,#08132208 78%),linear-gradient(0deg,#07101de6,transparent 48%)}
+.wikiHero .heroContent{width:min(90%,950px);max-width:none;padding:clamp(50px,6.3vw,100px) clamp(22px,5vw,84px);text-shadow:0 2px 15px #0b1420}
+.heroEdition{color:#f0d495;gap:10px;font-size:10px}.heroEdition i{width:24px;height:1px;background:#eac777}.heroEdition b{color:#fbecd0;font-weight:600;letter-spacing:.1em}
+.wikiHero h1{margin:16px 0 5px;font:500 clamp(54px,7.4vw,115px)/.98 Georgia,'Times New Roman',serif;letter-spacing:-.07em;color:#fbf5e6}
+.wikiHero h1 em{color:#eac88d}.wikiHero p.heroSubtitle{margin:13px 0 22px;font-size:clamp(19px,2.2vw,32px);line-height:1.4;font-weight:650;letter-spacing:-.045em;color:#f3eddd}
+.wikiHero p.heroDescription{margin:0;color:#d0d6d9;line-height:1.9;font-size:14px}.wikiHero .actions{margin-top:25px}
+.wikiHero .btn{border-radius:5px;padding:12px 16px;min-height:44px;text-shadow:none}.wikiHero .btn.primary{background:#edce93;color:#241c14}
+.homeGuide{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:1px solid #324052;background:#101b29;padding:0 clamp(10px,3.4vw,48px)}
+.hg-link{display:flex;align-items:center;gap:clamp(10px,1.8vw,24px);min-height:100px;min-width:0;padding:14px clamp(8px,1.7vw,24px);color:#e4e9f0;transition:background .15s}
+.hg-link+.hg-link{border-left:1px solid #b6c2dc23}.hg-link:hover{background:#28384a66}.hg-mark{color:#dabe8b;font:400 30px/1 Georgia,serif;width:36px;flex-shrink:0;text-align:center}.hg-mark img{width:34px;height:34px;object-fit:contain;image-rendering:pixelated}
+.hg-index .hg-mark{color:#8fd6db}.hg-link b,.hg-link small{display:block}.hg-link b{font-size:clamp(13px,1.25vw,18px);letter-spacing:-.04em}.hg-link small{margin-top:5px;font-size:11px;color:#a2b5c7}.hg-link i{font-style:normal;font-size:17px;font-weight:300;margin-left:auto;color:#d0b77c}
+.relatedGuide{display:flex;gap:8px;flex-wrap:wrap;margin:0 auto;max-width:1100px;padding:12px clamp(20px,5vw,60px) 52px}.relatedGuide a{border:1px solid #374956;border-radius:6px;padding:10px 14px;font-size:13px;color:#efcc91;background:#152332}.relatedGuide a span{margin-left:14px}
+#app{padding-bottom:90px}.wikiSearch.modal{z-index:8500;overflow-y:auto;overscroll-behavior:contain;padding:clamp(24px,10vh,100px) 14px}
+.wikiSearch.open{display:block}.wikiSearch .searchBox{background:#0d1827;box-shadow:0 35px 80px #000b;border-radius:16px;border:1px solid #536073;max-width:690px}
+.searchHead{display:flex;align-items:center;justify-content:space-between;padding:16px 20px 10px}
+.searchHead h2{font-size:17px;letter-spacing:-.03em;color:#f3e4c9;margin:0}.searchHead button{color:#cbd5e1;background:#142233;padding:6px 9px;border:1px solid #344454;border-radius:5px;cursor:pointer}.searchHead kbd{font-size:10px;color:#a7afc0}
+.wikiSearch #results{max-height:min(55dvh,550px);overflow-y:auto}.wikiSearch .result{display:flex;gap:2px;flex-direction:column;color:#e9f2f6;overflow-wrap:anywhere;scroll-margin:3px}
+.wikiSearch .result span{line-height:1.5}.wikiSearch .result[aria-current=true],.wikiSearch .result:hover{background:#26364a}.searchGroup{font-size:11px;color:#e7c993;padding:13px 18px 4px;letter-spacing:.03em;font-weight:700}
+.searchEmpty{padding:20px;color:#bdccd8}.modal-open{overflow:hidden}.searchBox .searchInput{gap:9px}.searchBox small{display:block;padding:8px 18px}.searchBox input{min-width:0}
+.musicLauncher{display:flex;gap:8px;align-items:center;min-height:40px;padding:8px 15px;position:fixed;right:20px;bottom:max(16px,env(safe-area-inset-bottom));z-index:70;border-radius:100px;border:1px solid #bfa16e87;color:#edd5a7;background:#0c1623ee;box-shadow:0 5px 30px #0006;cursor:pointer}
+.musicLauncher span{font-size:18px}.musicLauncher b{font-size:12px}.musicLauncher.playing span{color:#85d8bd}
+.bgmPlayer.collapsed{display:none!important}.bgmPlayer .musicCollapse{cursor:pointer;color:#efcf8b;font-size:23px}.musicCollapse span{font-size:20px}.bgmPlayer .bgmVolume{display:flex}
+.bgmPlayer .musicCollapse:focus-visible{outline-offset:1px}.toast{z-index:9000!important;pointer-events:none}
+#cursorGlow{pointer-events:none}.heroPage .worldAtlas{margin-top:20px}.topbar .live{display:none}.wikiHero .actions .btn{will-change:auto}
+@media(min-width:1051px){.topbar .search{max-width:460px;flex:1 1 auto}.topbar nav{gap:clamp(12px,2vw,30px)}}
+@media(max-width:1050px){.hg-link i{display:none}.homeGuide{padding:0 8px}.hg-mark{width:28px}.hg-mark img{width:26px;height:26px}}
+@media(max-width:760px){.wikiHero.hero{min-height:440px}.wikiHero .heroContent{width:100%;padding:65px 26px 45px}.wikiHero .heroShade{background:linear-gradient(90deg,#06121ccd,#10171b2c),linear-gradient(0deg,#081220ed,transparent 68%)}.wikiHero>img{object-position:60% 30%}.homeGuide{grid-template-columns:1fr;padding:0 20px}.hg-link{padding:11px 3px;min-height:66px;gap:18px}.hg-link+.hg-link{border:0;border-top:1px solid #7e98ac36}.hg-link i{display:block}.hg-link b{font-size:15px}.hg-link small{font-size:11px}.heroPage .worldAtlas{margin-top:5px}.musicLauncher{right:12px;bottom:max(12px,env(safe-area-inset-bottom))}.searchGroup{padding-top:9px}.entryGate .gateImage{object-position:60% 35%}.gatePanel{margin-bottom:8vh}}
+@media(max-width:480px){.bgmPlayer:not(.collapsed){display:grid!important;grid-template-columns:30px minmax(70px,1fr) 35px 60px!important;gap:5px!important;left:8px;right:8px;width:calc(100vw - 16px);max-width:420px;margin:auto}.bgmPlayer .bgmVolume{display:flex!important;width:auto;gap:2px}.bgmPlayer .bgmVolume input{width:42px!important}.bgmPlayer .albumDisc{width:30px;height:30px}.gatePanel h1{font-size:clamp(61px,16vw,80px)}.wikiHero h1{font-size:clamp(48px,13vw,70px)}}
+@media(prefers-reduced-motion:reduce){.entryGate.entering{animation:none!important;opacity:0}.wikiHero *,body.asaBooted .topbar,body.asaBooted .heroContent{animation:none!important;transition:none!important}.widget,.routeFlash,.starfield,.cursorGlow{display:none!important}}
+.entryGate.asaIntro[hidden]{display:none!important}
+@media(max-width:760px){.topbar .searchLabel{display:inline;font-size:12px}.topbar .search{min-width:0}.topbar .searchLabel{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.sideInner{padding-bottom:85px}}
+.wiki-noscript{z-index:21000;position:relative;min-height:100vh;min-height:100dvh;padding:clamp(24px,6vw,72px);color:#f2eddc;background:#101d2b}.wiki-noscript a{color:#f7d388;text-decoration:underline}.wiki-noscript li{line-height:1.7}

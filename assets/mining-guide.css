@@ -1,0 +1,92 @@
+.mine-guide{--mine-metal:#eac39b;--mine-soft:#a9afb8;--mine-line:#3c393b;--mine-bg:#11151b;--mine-text:#f5f1eb;color:var(--mine-text);background:#10141b;min-height:100vh}
+.mine-guide [hidden]{display:none!important}
+.mine-guide :is(button,input,select){font:inherit}
+.mine-guide :is(button,input,select,summary):focus-visible{outline:2px solid #f7cf96;outline-offset:3px}
+.mine-guide h1,.mine-guide h2,.mine-guide h3,.mine-guide p{margin:0}
+.mine-hero{isolation:isolate;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:space-between;gap:25px;background:radial-gradient(ellipse at 87% 64%,#554029 0,transparent 46%),linear-gradient(105deg,#1a1a1e 10%,#2e2523);border-bottom:1px solid #594939;padding:clamp(34px,4.8vw,76px) clamp(22px,5.5vw,85px)}
+.mine-hero:before{position:absolute;content:"";inset:0;z-index:-1;opacity:.22;background-image:repeating-linear-gradient(130deg,transparent,transparent 46px,rgba(255,220,152,.12) 47px,transparent 48px),repeating-linear-gradient(35deg,transparent,transparent 55px,rgba(255,220,152,.11) 56px,transparent 57px);mask-image:linear-gradient(90deg,transparent,#000)}
+.mine-hero-text{min-width:225px}
+.mine-kicker{display:inline-flex;align-items:center;gap:12px;color:#edc28d;font-weight:700;font-size:12px;letter-spacing:.08em}
+.mine-kicker:before{content:"";width:27px;height:2px;background:#d2a36b}
+.mine-hero h1{font:800 clamp(36px,4.2vw,66px)/1.15 "Noto Sans KR",system-ui,sans-serif;letter-spacing:-.065em;margin:14px 0;color:#fff0dd}
+.mine-hero p{color:#d5c8bb;line-height:1.75;font-size:clamp(13px,1.1vw,16px);word-break:keep-all}
+.mine-specimens{display:flex;align-items:flex-end;gap:clamp(4px,1.5vw,28px);padding-top:12px}
+.mine-specimens button{background:none;border:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:12px;color:#dac4ac;padding:0 4px;font-size:11px;white-space:nowrap}
+.mine-specimens .mine-cube{--mine-edge:clamp(20px,3vw,49px);transition:transform .2s ease;filter:drop-shadow(10px 12px 10px rgba(0,0,0,.3))}
+.mine-specimens button:nth-child(2){padding-bottom:15px}.mine-specimens button:hover .mine-cube{transform:translateY(-5px)}
+.mine-cube{--mine-edge:55px;display:block;position:relative;width:calc(var(--mine-edge)*1.732);height:calc(var(--mine-edge)*2)}
+.mine-cube i{position:absolute;height:var(--mine-edge);width:var(--mine-edge);background-image:var(--mine-block);background-size:100% 100%;image-rendering:pixelated;transform-origin:0 0}
+.mine-cube i:first-child{left:50%;top:0;transform:matrix(.866,.5,-.866,.5,0,0);filter:brightness(1.15)}
+.mine-cube i:nth-child(2){left:0;top:calc(var(--mine-edge)*.5);transform:matrix(.866,.5,0,1,0,0);filter:brightness(.88)}
+.mine-cube i:last-child{left:50%;top:var(--mine-edge);transform:matrix(.866,-.5,0,1,0,0);filter:brightness(.70)}
+.mine-shell{max-width:1250px;margin:auto;padding:clamp(22px,3.4vw,49px) clamp(18px,4.4vw,70px) 100px}
+.mine-tool-bar{display:grid;grid-template-columns:1fr auto;align-items:center;gap:6px 16px;padding:17px 21px;border:1px solid #4d413a;border-radius:12px;background:#25211f;margin-bottom:18px}
+.mine-tool-bar label{display:flex;flex-direction:column;gap:4px}.mine-tool-bar label strong{font-size:16px;color:#ffead7}.mine-tool-bar label small,.mine-tool-bar #mine-tool-status{font-size:12px;line-height:1.6;color:#c6b9aa}.mine-tool-bar #mine-tool-status:not(:empty){grid-column:1/-1;border-top:1px solid #4b3d33;padding-top:7px;margin-top:4px;color:#f4cea2}
+.mine-tool-bar #mine-tool-status:empty{display:none}
+.mine-tool-bar select{color:#f3e7d8;color-scheme:dark;background:#16191b;border:1px solid #64503f;padding:8px 12px;border-radius:7px;max-width:100%}
+.mine-detail{border:1px solid var(--mine-line);border-radius:15px;background:#181c22;overflow:hidden;scroll-margin-top:90px}
+.mine-detail:focus:not(:focus-visible){outline:none}
+.mine-detail-layout{display:grid;grid-template-columns:minmax(180px,.83fr) minmax(0,1.4fr)}
+.mine-display{--mine-flare:#ffd54f;position:relative;min-height:239px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(ellipse at center,color-mix(in srgb,var(--mine-flare) 13%,#1e2024),#14191d 74%);border-right:1px solid var(--mine-line);isolation:isolate;overflow:hidden}
+.mine-display:before{position:absolute;inset:14px;content:"";border:1px solid #ffffff0a;z-index:-1;background-image:radial-gradient(#c6bcaa33 0.8px,transparent .9px);background-size:14px 14px;mask-image:linear-gradient(60deg,#000,transparent 90%)}
+.mine-coordinate{position:absolute;left:20px;top:15px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:#b9ad98;letter-spacing:.08em}
+.mine-object{filter:drop-shadow(6px 19px 11px #0008);margin:22px 0}
+.mine-object-caption{position:absolute;bottom:15px;font-size:12px;color:#b6b3ab}
+.mine-profile{padding:clamp(18px,2.6vw,37px);display:flex;flex-direction:column;justify-content:center;min-width:0}
+.mine-stage-line{display:flex;gap:11px;align-items:center;font-size:12px;color:#cdb9a6;font-weight:600}
+#mine-stage{letter-spacing:.07em;color:var(--mine-metal)}
+.mine-profile h2{color:#fff6e8;font:800 clamp(29px,3.2vw,45px)/1.2 system-ui,sans-serif;letter-spacing:-.06em;margin:6px 0}
+.mine-profile .mine-id{color:#b0b2ba;font:12px/1.5 ui-monospace,monospace;overflow-wrap:anywhere}
+.mine-facts{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:17px 0}
+.mine-facts div{display:grid;gap:4px}.mine-facts dt,.mine-location-result small{color:#adb1b9;font-size:11px}.mine-facts dd{font-size:14px;font-weight:650;color:#fff0dd;margin:0}
+.mine-step-controls{display:flex;gap:6px;flex-wrap:wrap}
+.mine-guide .mine-step-controls button,.mine-variants button{border:1px solid #4d4946;background:#25272a;color:#ebe6df;padding:6px 11px;font-size:12px;border-radius:6px;cursor:pointer}
+.mine-guide .mine-step-controls button:hover:not(:disabled),.mine-variants button:hover{border-color:#d8aa75;color:#fff0de}
+.mine-guide .mine-step-controls button:disabled{opacity:.38;cursor:default}
+#mine-share-link{width:100%;margin-top:6px;border:1px solid #8b775e;background:#17181a;color:#f8eedf;border-radius:4px;padding:5px}
+.mine-distribution{padding:18px clamp(16px,2.5vw,32px);border-top:1px solid var(--mine-line)}
+.mine-distribution h3{font-size:16px;color:#f3eadf;margin-bottom:10px}
+.mine-variants{display:flex;flex-wrap:wrap;gap:5px}
+.mine-variants button[aria-pressed=true]{color:#241b14;border-color:#e7c29a;background:#e7c29a;font-weight:700}
+.mine-variants button[aria-pressed=true]:hover{color:#241b14}
+.mine-location-result{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;background:#11161c;border-radius:8px;padding:12px 15px;margin:13px 0 8px}
+.mine-location-result span{display:grid;gap:4px}.mine-location-result b{color:#f9eedf;font:650 clamp(15px,1.5vw,21px)/1.25 ui-monospace,system-ui,sans-serif;white-space:nowrap}
+.mine-distribution p,.mine-recipe p{color:#b4b8c1;font-size:12px;line-height:1.72;word-break:keep-all}
+.mine-recipe{border-top:1px solid var(--mine-line);color:#e6d6c4;font-size:13px}
+.mine-recipe summary{cursor:pointer;font-weight:650;padding:12px clamp(16px,2.5vw,32px)}
+.mine-recipe>div{padding:0 clamp(16px,2.5vw,32px) 15px}.mine-recipe p+p{margin-top:5px}.mine-recipe code{display:inline-block;margin-top:7px;color:#f7cf9a}
+.mine-index{margin-top:clamp(28px,4vw,54px)}
+.mine-index-head{display:flex;gap:12px;align-items:flex-end;justify-content:space-between;flex-wrap:wrap}
+.mine-index-head h2{color:#f9f2e7;font:750 clamp(23px,2.2vw,34px)/1.3 system-ui,sans-serif;letter-spacing:-.06em}.mine-index-head p{font-size:13px;color:#b1b8c1;line-height:1.6;margin-top:5px}
+.mine-find{display:flex;align-items:center;background:#181f25;border:1px solid #46434a;border-radius:8px;gap:7px;padding:4px 11px}
+.mine-find:focus-within{outline:2px solid #f0ca98;outline-offset:2px}.mine-find input{background:none;border:0;color:#f8f2e9;width:155px;font-size:12px;min-height:30px}.mine-find input:focus-visible{outline:none}
+.mine-search-icon{font-size:21px;color:#d3bc9f}
+.mine-band{margin-top:22px;--mine-world:#83c6b3}
+.mine-band[data-mine-band=nether]{--mine-world:#ed9b82}
+.mine-band[data-mine-band=end]{--mine-world:#bcaaec}
+.mine-band-title{display:flex;align-items:center;gap:9px;margin:0 0 9px}
+.mine-band-title i{width:7px;height:7px;background:var(--mine-world);transform:rotate(45deg)}
+.mine-band-title h3{color:var(--mine-world);font-size:14px}
+.mine-band-title span{color:#a6acb7;font:11px/1.4 ui-monospace,system-ui,sans-serif;letter-spacing:.03em}
+.mine-band ol{padding:0;margin:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.mine-band li{margin:0;min-width:0}
+.mine-tier{border:1px solid #363c43;border-radius:8px;width:100%;display:grid;grid-template-columns:24px 32px minmax(0,1fr) minmax(62px,.72fr) 15px;align-items:center;gap:8px;padding:11px 12px;cursor:pointer;background:#181e25;text-align:left;min-height:64px}
+.mine-tier:where(:hover,[aria-pressed=true]){border-color:#a4896d;background:#272622}
+.mine-rank{color:var(--mine-world);font:12px/1 ui-monospace,monospace}
+.mine-tier img{object-fit:contain;image-rendering:pixelated}
+.mine-cell-name,.mine-cell-req{display:flex;gap:3px;flex-direction:column;min-width:0}
+.mine-cell-name strong{color:#ebeff1;font-size:14px;line-height:1.3;overflow-wrap:anywhere}
+.mine-cell-name small{font:9px/1.3 ui-monospace,monospace;letter-spacing:.02em;color:#a8afb5}
+.mine-cell-req small{color:#9ea5ad;font-size:10px}.mine-cell-req b{color:#d8d5d0;font-size:12px;font-weight:550;line-height:1.3}
+.mine-angle{color:#b7aaa0}
+#mine-empty{border:1px dashed #52555b;border-radius:8px;padding:20px;font-size:13px;margin-top:16px;color:#cdbeb2}
+.mine-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media(max-width:1100px){.mine-band ol{grid-template-columns:1fr}.mine-tier{grid-template-columns:26px 32px 1fr minmax(100px,.64fr) 16px}}
+@media(max-width:750px){.mine-hero{gap:12px}.mine-specimens{gap:3px}.mine-specimens .mine-cube{--mine-edge:25px}.mine-shell{padding-bottom:110px}}
+@media(max-width:610px){.mine-hero{flex-wrap:wrap}.mine-hero-text{min-width:0}.mine-hero p{font-size:13px}.mine-specimens{padding-top:3px;gap:15px}.mine-specimens button{gap:5px}.mine-specimens button:nth-child(2){padding-bottom:0}.mine-specimens .mine-cube{--mine-edge:21px}.mine-tool-bar{grid-template-columns:1fr}.mine-tool-bar select{width:100%;margin-top:3px}.mine-detail-layout{grid-template-columns:minmax(0,.58fr) minmax(0,1fr)}.mine-profile{padding:14px 10px}.mine-display{min-height:213px}.mine-coordinate{font-size:9px;left:9px;top:9px}.mine-object .mine-cube{--mine-edge:33px}.mine-object-caption{font-size:10px}.mine-facts{grid-template-columns:1fr;gap:7px;margin:10px 0}.mine-facts div{display:flex;align-items:baseline;gap:7px}.mine-facts dd{font-size:12px}.mine-step-controls{gap:4px}.mine-guide .mine-step-controls button{padding:5px 7px;font-size:11px}.mine-location-result{gap:6px;padding:12px 8px}.mine-location-result small{font-size:10px}.mine-variants button{font-size:11px;padding:6px}.mine-index-head{align-items:stretch}.mine-find{width:100%}.mine-find input{width:100%}.mine-tier{gap:6px;grid-template-columns:21px 28px 1fr minmax(65px,.66fr) 12px;padding:10px}.mine-tier img{width:28px;height:28px}}
+@media(prefers-reduced-motion:reduce){.mine-specimens .mine-cube{transition:none}}
+.mine-order-link{display:inline-block;border:1px solid #916f4c;border-radius:7px;color:#271c13;background:#f4cfa4;font-size:12px!important;font-weight:700!important;cursor:pointer;padding:8px 12px;margin-top:16px}
+.mine-order-link:hover{background:#ffe0bb}
+#mine-order-title{scroll-margin-top:90px}
+.mine-craft-visual{display:flex;align-items:center;gap:8px;min-height:45px;color:#e1d5c9}
+.mine-craft-visual img{image-rendering:pixelated}.mine-craft-visual b{color:#ead5b9}
