@@ -1,191 +1,68 @@
-/* Shared shell. Every screen and search link uses a relative hash for GitHub project Pages. */
-(() => {
-  'use strict';
-  const $ = id => document.getElementById(id);
-  const pages = new Map([...document.querySelectorAll('main .page[data-page]')].map(p => [p.dataset.page,p]));
-  const gate = $('asaIntro');
-  const sidebar = $('sidebar'), menu = $('menuBtn'), scrim = $('drawerScrim');
-  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-  const modal = $('searchModal'), input = $('searchInput'), results = $('results');
-  let previousPage = '', previousFocus, current = -1, shown = [], toastTimeout;
-  const read = (store,key,fallback) => { try { return window[store].getItem(key) ?? fallback; } catch { return fallback; } };
-  const write = (store,key,value) => { try { window[store].setItem(key,value); } catch { /* Storage is optional in local previews. */ } };
-  const fold = value => String(value || '').normalize('NFKC').toLocaleLowerCase('ko').replace(/\s+/g,' ').trim();
-  const make = (tag, cls, text) => { const n=document.createElement(tag); if(cls)n.className=cls; if(text)n.textContent=text; return n; };
-  function toast(message) {
-    const t=$('toast'); clearTimeout(toastTimeout); t.textContent=message; t.classList.add('show');
-    toastTimeout=setTimeout(()=>t.classList.remove('show'),1650);
-  }
-  async function copy(text) {
-    try { if(!navigator.clipboard?.writeText)throw Error(); await navigator.clipboard.writeText(text); return true; } catch {
-      const t=make('textarea'); t.value=text; t.style.cssText='position:fixed;opacity:0;pointer-events:none'; document.body.append(t);
-      const from=document.activeElement; t.select(); let ok=false; try{ok=document.execCommand('copy');}catch{} t.remove(); from?.focus({preventScroll:true}); return ok;
-    }
-  }
-  document.addEventListener('click',async e=>{ const b=e.target.closest('[data-copy]'); if(b)toast(await copy(b.dataset.copy)?'서버 주소를 복사했어요.':b.dataset.copy); });
-  function drawer(open){
-    const isOpen=Boolean(gate.hidden && open && matchMedia('(max-width:760px)').matches);
-    sidebar.classList.toggle('open',isOpen);scrim.hidden=!isOpen;document.body.classList.toggle('drawer-open',isOpen);
-    menu.setAttribute('aria-expanded',String(isOpen));menu.setAttribute('aria-label',isOpen?'탐색 메뉴 닫기':'탐색 메뉴 열기');
-    sidebar.inert=!gate.hidden || (!isOpen && matchMedia('(max-width:760px)').matches);
-  }
-  menu.addEventListener('click',()=>drawer(!sidebar.classList.contains('open')));
-  scrim.addEventListener('click',()=>{drawer(false);menu.focus();});
-  matchMedia('(max-width:760px)').addEventListener('change',()=>drawer(false));
-  const navLinks=[...document.querySelectorAll('.side, .topbar nav a')];
-  const pageName=()=>{ const s=location.hash.slice(1).split('?')[0];return pages.has(s)?s:'home'; };
-  const guides = [...pages].map(([id,p])=>{
-    const title=p.querySelector('h1')?.textContent.trim()||id;
-    const subtitle= p.querySelector('.docHero p,.heroDescription')?.textContent.trim() || ({
-      quick:'메인 메뉴에서 누를 버튼과 상점가에서 말을 걸 NPC 찾기',
-      commands:'플러그인별 명령어 · 입력 예시 · 권한',
-      mining:'16단계 광물 · 필요 곡괭이 · 차원별 채굴 높이',
-      legacy:'기존 위키의 GUI 이용 방법'
-    })[id] || '';
-    const shortText = ['home','quick','commands','mining','legacy','market','jobs'].includes(id)?'':p.textContent.replace(/\s+/g,' ').slice(0,1600);
-    return {id,title,subtitle,href:'#'+id,hay:fold(title+' '+subtitle+' '+shortText)};
-  });
-  function markNavigation(id){
-    navLinks.forEach(link=>{const selected=link.hash===(id==='commands' && new URLSearchParams(location.hash.split('?')[1]||'').get('frequent')==='1' ? '#commands?frequent=1' : '#'+id);link.classList.toggle('active',selected);
-      if(selected)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current');});
-  }
-  document.addEventListener('asa:command-filters',()=>markNavigation(pageName()));
-  function route(){
-    if (!gate.hidden) return;
-    const id=pageName(), changed=previousPage!==id;
-    for(const [key,p] of pages){p.classList.toggle('active',key===id); p.setAttribute('aria-hidden',String(key!==id));}
-    markNavigation(id);
-    document.title=id==='home'?'ASA SERVER · 공식 위키':(guides.find(g=>g.id===id)?.title||id)+' · ASA SERVER';
-    if(changed){window.scrollTo(0,0); if(previousPage){$('app').focus({preventScroll:true});}}
-    drawer(false); if(!modal.hidden)closeSearch(false); previousPage=id;
-    document.dispatchEvent(new CustomEvent('asa:route',{detail:{page:id}}));
-  }
-  window.addEventListener('hashchange',route);
-  sidebar.addEventListener('click',e=>{if(e.target.closest('a'))drawer(false);});
-  document.querySelector('.wiki-skip').addEventListener('click',e=>{e.preventDefault();$('app').focus({preventScroll:true});});
-  function progress(){const range=document.documentElement.scrollHeight-innerHeight;$('progress').style.width=(range>0?100*scrollY/range:0)+'%';}
-  let scheduled=false;
-  addEventListener('scroll',()=>{if(!scheduled){scheduled=true;requestAnimationFrame(()=>{progress();scheduled=false;});}},{passive:true});
-  addEventListener('hashchange',()=>requestAnimationFrame(progress));progress();
-  function group(title,items){
-    if(!items.length)return;
-    results.append(make('div','searchGroup',title));
-    for(const item of items){
-      if(!item || !String(item.href).startsWith('#'))continue;
-      const a=make('a','result');a.href=item.href; a.append(make('b','',item.title),make('span','',item.subtitle));results.append(a);shown.push(a);
-    }
-  }
-  function renderSearch(){
-    const q=fold(input.value);results.replaceChildren();current=-1;shown=[];
-    if(!q){
-      group('빠른 이동',['quick','market','jobs','commands','mining','start'].map(id=>guides.find(g=>g.id===id)).filter(Boolean));
-      return;
-    }
-    const token=q.split(' ');
-    const docMatches=guides.filter(d=>token.every(t=>d.hay.includes(t))).sort((a,b)=>Number(fold(b.title).includes(q))-Number(fold(a.title).includes(q)));
-    const commandHits=window.ASACommandGuide?.search(input.value.trim(),8)||[];
-    const minerals=window.ASAMiningGuide?.search(q,5)||[];
-    const paths=window.ASAPlayerRoutes?.search(input.value.trim(),4)||[];
-    const oreFirst=minerals.some(item=>fold(item.title.split('·').pop())===q) || /^\d+단계$/.test(q);
-    if(oreFirst)group('광물',minerals);
-    group('게임 이용 방법',paths);
-    if(q.startsWith('/')){group('명령어',commandHits);group('광물',minerals);}
-    else{
-      if(!oreFirst)group('광물',minerals);
-      group('상품 · 직업과 스킬',window.ASAFieldGuide?.search(q)||[]);
-      group('명령어',commandHits);
-    }
-    group('가이드',docMatches.slice(0,5));
-    if(!shown.length)results.append(make('p','searchEmpty','검색 결과가 없습니다. 명령어 일부나 광물 이름을 입력해 주세요.'));
-  }
-  function selectResult(i){
-    if(!shown.length)return;
-    current=(i+shown.length)%shown.length;
-    shown.forEach((a,n)=>{if(n===current)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current');});
-    shown[current].scrollIntoView({block:'nearest'});
-  }
-  function openSearch(){
-    if(!$('asaIntro').hidden)return;
-    drawer(false); previousFocus=document.activeElement; modal.hidden=false;modal.classList.add('open');document.body.classList.add('modal-open');
-    input.value='';renderSearch();input.focus({preventScroll:true});
-  }
-  function closeSearch(restore=true){
-    if(modal.hidden)return;
-    modal.hidden=true;modal.classList.remove('open');document.body.classList.remove('modal-open'); if(restore)previousFocus?.focus({preventScroll:true});
-  }
-  $('searchBtn').addEventListener('click',openSearch);$('closeSearch').addEventListener('click',()=>closeSearch());input.addEventListener('input',renderSearch);
-  modal.addEventListener('click',e=>{if(e.target===modal)closeSearch();});
-  results.addEventListener('click',e=>{if(e.target.closest('a.result'))closeSearch(false);});
-  document.addEventListener('keydown',e=>{
-    if(e.isComposing||!$('asaIntro').hidden)return;
-    if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();modal.hidden?openSearch():closeSearch();return;}
-    if(modal.hidden){
-      if(e.key==='Escape'&&sidebar.classList.contains('open')){drawer(false);menu.focus();}
-      return;
-    }
-    if(e.key==='Escape'){e.preventDefault();closeSearch();}
-    if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();selectResult(current<0?(e.key==='ArrowDown'?0:shown.length-1):current+(e.key==='ArrowDown'?1:-1));}
-    if(e.key==='Enter'&&e.target===input){e.preventDefault();shown[Math.max(current,0)]?.click();}
-    if(e.key==='Tab'){const targets=[...modal.querySelectorAll('button,input,.result')];const first=targets[0],last=targets[targets.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}
-  });
-  // Only a sound-enabled entry or the player button starts the bundled track.
-  const audio=$('bgmAudio'), deck=$('bgmPlayer'), launcher=$('musicLauncher'), toggle=$('bgmToggle'), volume=$('bgmVolume'), seek=$('bgmSeek');
-  const saved=Number(read('localStorage','asaWikiBgmVolume','.22'));audio.volume=Number.isFinite(saved)?Math.min(1,Math.max(0,saved)):.22;volume.value=Math.round(audio.volume*100);
-  function syncMusic(){const playing=!audio.paused;deck.classList.toggle('playing',playing);launcher.classList.toggle('playing',playing);toggle.textContent=playing?'Ⅱ':'▶';toggle.setAttribute('aria-label',playing?'배경음악 일시정지':'배경음악 재생');}
-  function expandMusic(open){deck.classList.toggle('collapsed',!open);launcher.hidden=open;launcher.setAttribute('aria-expanded',String(open));}
-  const play=()=>{audio.play()?.catch(()=>toast('음악 재생 버튼을 다시 눌러 주세요.'));};
-  toggle.addEventListener('click',()=>{if(audio.paused)play();else audio.pause();});
-  volume.addEventListener('input',()=>{audio.volume=Number(volume.value)/100;write('localStorage','asaWikiBgmVolume',String(audio.volume));});
-  audio.addEventListener('play',syncMusic);audio.addEventListener('pause',syncMusic);
-  launcher.addEventListener('click',()=>{expandMusic(true);toggle.focus({preventScroll:true});});
-  $('musicCollapse').addEventListener('click',()=>{expandMusic(false);launcher.focus({preventScroll:true});});
-  const fmt=s=>Number.isFinite(s)?Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0'):'0:00';
-  function clock(){if(!seek.matches(':active'))seek.value=audio.duration?Math.round(audio.currentTime/audio.duration*1000):0;$('bgmCurrent').textContent=fmt(audio.currentTime);$('bgmDuration').textContent=fmt(audio.duration);}
-  audio.addEventListener('loadedmetadata',clock);audio.addEventListener('timeupdate',clock);seek.addEventListener('input',()=>{if(Number.isFinite(audio.duration))audio.currentTime=Number(seek.value)/1000*audio.duration;});
-  let entering=false;
-  function enter(withMusic) {
-    if (entering) return;
-    entering=true;
-    if (withMusic) {
-      if (audio.volume===0) {
-        audio.volume=.22;
-        volume.value='22';
-        write('localStorage','asaWikiBgmVolume','0.22');
-      }
-      play();
-    } else {
-      audio.pause();
-    }
-    gate.classList.add('entering');
-    document.body.classList.add('asaBooted');
-    setTimeout(()=>{
-      gate.hidden=true;
-      gate.setAttribute('aria-hidden','true');
-      setGateInert(false);
-      $('app').focus({preventScroll:true});
-      route();
-    },reduced.matches?0:460);
-  }
-  function setGateInert(on) {
-    for (const node of [document.querySelector('.wiki-skip'),document.querySelector('.topbar'),$('app'),launcher,deck]) node.inert=on;
-    drawer(false);
-  }
-  $('enterSound').addEventListener('click',()=>enter(true));$('enterQuiet').addEventListener('click',()=>enter(false));
-  gate.addEventListener('keydown',e=>{if(e.key==='Tab'){if(e.shiftKey&&e.target===$('enterSound')){e.preventDefault();$('enterQuiet').focus();}else if(!e.shiftKey&&e.target===$('enterQuiet')){e.preventDefault();$('enterSound').focus();}}});
-  syncMusic();
-  expandMusic(false);
-  setGateInert(true);
-  $('enterSound').focus({preventScroll:true});
-
-  const nodes=[...document.querySelectorAll('.atlasNode')];
-  nodes.forEach(n=>{n.setAttribute('aria-pressed',String(n.classList.contains('active')));n.addEventListener('click',()=>{
-    nodes.forEach(x=>{x.classList.toggle('active',x===n);x.setAttribute('aria-pressed',String(x===n));});
-    $('atlasTitle').textContent=n.dataset.title;$('atlasDesc').textContent=n.dataset.desc;$('atlasIcon').textContent=n.dataset.icon;
-  });});
-  let sequence='', secretTimer;
-  window.addEventListener('keydown',e=>{if(e.ctrlKey||e.metaKey||e.altKey||e.target.matches('input,textarea,select,[contenteditable="true"]')||!gate.hidden||!modal.hidden)return;
-    sequence=(sequence+e.key.toLowerCase()).slice(-3);if(sequence!=='asa')return;sequence='';
-    let mark=$('asaSecretMark');if(!mark){mark=make('div','asaSecretMark');mark.id='asaSecretMark';mark.setAttribute('aria-hidden','true');mark.append(make('div','asaSecretMark__logo','ASA'));document.body.append(mark);}
-    clearTimeout(secretTimer);mark.classList.add('show');secretTimer=setTimeout(()=>mark.classList.remove('show'),1500);
-  });
+/* ASA public handbook. No accounts, tracking, live economy access or third-party scripts. */
+(()=>{'use strict';
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const base=document.body.dataset.base,page=document.body.dataset.page;
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const norm=s=>String(s??'').toLowerCase().replace(/\s+/g,'').normalize('NFC');
+const read=(k,f)=>{try{return JSON.parse(localStorage.getItem('asa-wiki-'+k))??f;}catch{return f;}};
+const write=(k,v)=>{try{localStorage.setItem('asa-wiki-'+k,JSON.stringify(v));return true;}catch{return false;}};
+let toastTimer;function toast(s){$('#toast').textContent=s;$('#toast').classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').classList.remove('visible'),3000);}
+let copyId=0;async function copy(s,button){try{if(navigator.clipboard&&window.isSecureContext)await navigator.clipboard.writeText(s);else{const t=document.createElement('textarea');t.value=s;t.style.cssText='position:fixed;left:-9999px';document.body.append(t);t.select();const ok=document.execCommand('copy');t.remove();if(!ok)throw Error();}toast('복사했어요. 게임 채팅창에 붙여넣어 주세요.');if(button)button.focus();}catch{const t=document.createElement('textarea');t.readOnly=true;t.value=s;t.className='copy-fallback';t.setAttribute('aria-label','복사할 내용');t.id='copy-fallback-'+(++copyId);button?.after(t);t.focus();t.select();toast('자동 복사가 제한됐어요. 선택한 내용을 직접 복사해 주세요.');}}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-copy]');if(b)copy(b.dataset.copy,b);});
+$('[data-share]')?.addEventListener('click',e=>{copy(location.href,e.currentTarget);});
+let theme=read('theme','light');if(!['light','dark'].includes(theme))theme='light';document.documentElement.dataset.theme=theme;
+function themeLabel(){$('button[data-theme]').setAttribute('aria-label',theme==='dark'?'밝은 화면으로 변경':'어두운 화면으로 변경');}themeLabel();
+$('button[data-theme]').addEventListener('click',()=>{theme=theme==='dark'?'light':'dark';document.documentElement.dataset.theme=theme;write('theme',theme);themeLabel();});
+function menu(open){const wasInside=$('#sidebar').contains(document.activeElement);document.body.classList.toggle('menu-open',open);$('[data-menu]').setAttribute('aria-expanded',String(open));$('[data-menu-close]').hidden=!open;$('#sidebar').inert=innerWidth<=1000&&!open;$('.workspace').inert=open;if(open)$('#sidebar a').focus();else if(wasInside&&innerWidth<=1000)$('[data-menu]').focus();}
+$('[data-menu]').addEventListener('click',()=>menu(!document.body.classList.contains('menu-open')));$('[data-menu-close]').addEventListener('click',()=>menu(false));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.body.classList.contains('menu-open')){menu(false);$('[data-menu]').focus();}});
+const sidebarObserver=new ResizeObserver(()=>{if(innerWidth>1000)menu(false);else if(!document.body.classList.contains('menu-open'))$('#sidebar').inert=true;});sidebarObserver.observe(document.body);
+const save=$('[data-save]');let saved=read('saved',[]);if(!Array.isArray(saved))saved=[];saved=saved.filter(x=>typeof x==='string').slice(0,100);
+function saveLabel(){if(!save)return;const on=saved.includes(page);save.setAttribute('aria-pressed',String(on));save.innerHTML=(on?'✓ 저장한 문서':'문서 저장');}saveLabel();
+save?.addEventListener('click',()=>{saved=saved.includes(page)?saved.filter(x=>x!==page):[...saved,page];const ok=write('saved',saved);saveLabel();toast(ok?(saved.includes(page)?'다시 볼 문서에 저장했어요.':'저장을 해제했어요.'):'브라우저 저장 공간이 제한되어 이번 화면에서만 유지돼요.');});
+const kstDay=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+let day=kstDay();function refreshDaily(){day=kstDay();const state=read('daily',{});$$('[data-daily]').forEach(c=>c.checked=state.day===day&&Array.isArray(state.done)&&state.done.includes(c.dataset.daily));}refreshDaily();
+$$('[data-daily]').forEach(c=>c.addEventListener('change',()=>{const now=kstDay();if(now!==day){refreshDaily();toast('한국 시간 날짜가 바뀌어 오늘의 메모를 새로 시작했어요.');return;}write('daily',{day,done:$$('[data-daily]:checked').map(x=>x.dataset.daily)});}));
+document.addEventListener('visibilitychange',()=>{if(!document.hidden&&day!==kstDay())refreshDaily();});
+let dataPromise;function loadData(){if(window.ASA_DATA)return Promise.resolve(window.ASA_DATA);if(!dataPromise)dataPromise=new Promise((resolve,reject)=>{const script=document.createElement('script');script.src=base+'assets/data/catalog.js?v=20261125.1';script.onload=()=>window.ASA_DATA?resolve(window.ASA_DATA):reject(Error('data'));script.onerror=()=>{script.remove();dataPromise=null;reject(Error('load'));};document.head.append(script);});return dataPromise;}
+// Links shared by the original single-page wiki keep reaching the corresponding new document.
+if(page==='home'&&location.hash){const raw=location.hash.slice(1).split('?')[0];const alias={home:null,community:'relation',guide:'start',life:'farming',vip:'membership',world:'worlds',legacy:'updates',news:'updates',tech:'support',shop:'quick'};const ids=['start','quick','commands','mining','economy','bank','stock','guild','fishing','relation','vault','worlds','membership','quest','battlepass','faq','market','jobs'];const dest=Object.hasOwn(alias,raw)?alias[raw]:ids.includes(raw)?raw:null;if(dest)location.replace(base+'pages/'+dest+'.html');}
+const dialog=$('#search-dialog'),input=$('#search-input');let kind='all',searchSeq=0,searchTimer,lastFocus;
+function openSearch(){if(dialog.open)return;menu(false);lastFocus=document.activeElement;dialog.showModal();input.focus();runSearch();}
+$$('[data-open-search]').forEach(b=>b.addEventListener('click',openSearch));$('[data-close-search]').addEventListener('click',()=>dialog.close());dialog.addEventListener('close',()=>lastFocus?.focus());dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});
+document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();openSearch();}});
+input.addEventListener('input',()=>{clearTimeout(searchTimer);searchTimer=setTimeout(runSearch,100);});
+$$('[data-search-kind]').forEach(b=>b.addEventListener('click',()=>{kind=b.dataset.searchKind;$$('[data-search-kind]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));runSearch();}));
+const initials=s=>[...s].map(c=>{const n=c.charCodeAt(0)-44032;return n>=0&&n<11172?'ㄱㄲㄴㄷㄸㄹㅁㅂㅃㅅㅆㅇㅈㅉㅊㅋㅌㅍㅎ'[Math.floor(n/588)]:c;}).join('');
+function searchScore(x,q){if(!q)return x.kind==='guide'?1:0;const title=norm(x.title),full=norm(x.title+' '+x.text+' '+x.desc),nq=norm(q);if(title===nq)return 100;if(title.includes(nq))return 70;if(/^[ㄱ-ㅎ]+$/.test(nq)&&initials(title).includes(nq))return 60;const words=q.toLowerCase().split(/[\s,，]+/).map(norm).filter(Boolean);return words.every(w=>full.includes(w))?20:0;}
+let allSearch;
+async function runSearch(){const seq=++searchSeq;$('#search-status').textContent='자료를 찾고 있어요…';try{const d=await loadData();if(seq!==searchSeq)return;if(!allSearch)allSearch=d.search.concat(d.products.map(p=>({kind:'product',title:p.name,desc:p.category+' · '+p.currency,text:p.name+' '+p.key+' '+p.category,url:'pages/market.html?item='+encodeURIComponent(p.id),group:'상품 가격'})));const q=input.value.trim().slice(0,200);const ranked=allSearch.filter(x=>kind==='all'||x.kind===kind).map(x=>({x,score:searchScore(x,q)})).filter(v=>v.score>0).sort((a,b)=>b.score-a.score);const items=ranked.slice(0,q?40:8);$('#search-status').textContent=q?`${ranked.length}개 결과${ranked.length>40?' · 관련도 높은 40개 표시':''}`:'자주 찾는 가이드';$('#search-results').innerHTML=items.length?items.map(({x})=>`<a class="search-result" href="${base+esc(x.url)}"><span>${esc(x.group)}</span><strong>${esc(x.title)}</strong><p>${esc(x.desc.slice(0,140))}</p></a>`).join(''):'<div class="empty-state"><strong>일치하는 결과가 없어요.</strong><p>짧은 단어나 아이템 이름으로 다시 찾아보세요.</p></div>';}catch{$('#search-status').textContent='검색 자료를 불러오지 못했어요. 연결을 확인하고 다시 입력해 주세요.';}}
+dialog.addEventListener('keydown',e=>{if(e.key==='Escape'){e.preventDefault();dialog.close();return;}if(!['ArrowDown','ArrowUp','Enter'].includes(e.key))return;const links=$$('.search-result',dialog);if(e.key==='Enter'&&document.activeElement===input){if(links[0])links[0].click();return;}if(e.key==='Enter'||!links.length)return;e.preventDefault();let i=links.indexOf(document.activeElement);i=e.key==='ArrowDown'?(i+1)%links.length:(i-1+links.length)%links.length;links[i].focus();});
+// FAQ and command filtering operate on rendered HTML and remain readable without JavaScript.
+const ffilter=$('#faq-filter');function filterFAQ(){const q=norm(ffilter.value);let n=0;$$('[data-faq]').forEach(el=>{const match=norm(el.textContent).includes(q);el.hidden=!match;if(match)n++;});$('#faq-count').textContent=n?`${n}개 질문`:'일치하는 질문이 없어요. 검색어를 바꿔 보세요.';}
+if(ffilter){ffilter.addEventListener('input',filterFAQ);filterFAQ();const fid=new URLSearchParams(location.search).get('q');if(fid)loadData().then(d=>{const i=d.faqIds.indexOf(fid),el=$$('[data-faq]')[i];if(el){el.open=true;el.scrollIntoView({block:'center'});}}).catch(()=>{});}
+const cf=$('#command-filter');if(cf){const render=()=>{let n=0;$$('[data-command]').forEach(e=>{e.hidden=!norm(e.textContent).includes(norm(cf.value));if(!e.hidden)n++;});$('#command-count').textContent=n+'개 명령어';};cf.addEventListener('input',render);render();}
+if($('#saved-guides')&&saved.length)loadData().then(d=>{const items=d.pages.filter(x=>saved.includes(x.id));if(items.length)$('#saved-guides').innerHTML=items.map(x=>`<a href="pages/${esc(x.id)}.html"><strong>${esc(x.title)}</strong><span>${esc(x.desc)}</span></a>`).join('');}).catch(()=>{});
+const sections=$$('.doc-section');if(sections.length&&'IntersectionObserver'in window){new IntersectionObserver(entries=>{for(const e of entries)if(e.isIntersecting){$$('.toc a').forEach(a=>a.classList.toggle('active',a.hash==='#'+e.target.id));}},{rootMargin:'-100px 0px -60% 0px'}).observe(sections[0]);const observer=new IntersectionObserver(es=>{const visible=es.filter(e=>e.isIntersecting);if(visible[0])$$('.toc a').forEach(a=>a.classList.toggle('active',a.hash==='#'+visible[0].target.id));},{rootMargin:'-110px 0px -55% 0px'});sections.forEach(s=>observer.observe(s));}
+const num=v=>new Intl.NumberFormat('ko-KR',{maximumFractionDigits:2}).format(v);
+function price(v,c){return v===null?'거래 불가':num(v)+(c==='캐시'?' 캐시':'원');}
+if($('#ore-list'))loadData().then(d=>{const ores=d.products.filter(p=>p.category==='특수광물'&&(/raw/.test(p.key)));$('#ore-list').innerHTML=ores.map(x=>`<a href="market.html?item=${encodeURIComponent(x.id)}"><strong>${esc(x.name)}</strong><span>판매 ${price(x.sell,x.currency)}</span></a>`).join('');}).catch(()=>{$('#ore-list').textContent='가격표에서 특수광물 분류를 확인해 주세요.';});
+async function market(){const root=$('#market-app');if(!root)return;root.innerHTML='<p role="status">상품 가격을 불러오고 있어요…</p>';let d;try{d=await loadData();}catch{root.innerHTML='<p>가격 자료를 불러오지 못했어요. 새로고침하거나 아래 CSV 파일을 이용해 주세요.</p>';return;}
+const cats=[...new Set(d.products.map(p=>p.category))].sort((a,b)=>a.localeCompare(b,'ko'));const params=new URLSearchParams(location.search);let mpage=1,selected=new Set(),focusItem=params.get('item');
+root.innerHTML=`<div class="market-filters"><label class="search-field">상품 찾기<input id="mq" type="search" placeholder="상품명 또는 아이템 ID"></label><label>분류<select id="mc"><option value="">모든 분류</option>${cats.map(c=>`<option>${esc(c)}</option>`).join('')}</select></label><label>통화<select id="mu"><option value="">모든 통화</option><option>게임머니</option><option>캐시</option></select></label><label>거래<select id="md"><option value="">구매와 판매</option><option value="buy">구매 가능한 상품</option><option value="sell">판매 가능한 상품</option></select></label><label>정렬<select id="mo"><option value="name">이름순</option><option value="buy">구매가 낮은 순</option><option value="sell">판매가 높은 순</option></select></label><label>계산 수량<input type="number" id="mn" min="1" max="2304" value="1" inputmode="numeric"></label></div><div class="market-summary"><p id="market-count" role="status"></p><button id="clear-filters">필터 초기화</button></div><div class="quantity-buttons"><span>수량 선택</span><button data-quantity="1">1개</button><button data-quantity="16">16개</button><button data-quantity="64">64개</button><small>할인·세금·별도 반올림 전 예상액</small></div><div id="product-grid" class="product-grid"></div><nav class="pagination" aria-label="상품 페이지"><button id="mprev">이전 페이지</button><span id="mpage" aria-live="polite"></span><button id="mnext">다음 페이지</button></nav><section id="compare-section" hidden><h3>골라 둔 상품 비교</h3><p>최대 4개까지 비교할 수 있어요. 단가는 1개 기준입니다.</p><div id="compare-grid"></div><button id="clear-compare">비교 비우기</button></section>`;
+const target=d.products.find(x=>x.id===focusItem);if(target){$('#mq').value=target.name;$('#mc').value=target.category;}
+else{$('#mq').value=params.get('q')||'';if(cats.includes(params.get('cat')))$('#mc').value=params.get('cat');}
+function filtered(){const q=norm($('#mq').value),cat=$('#mc').value,cur=$('#mu').value,side=$('#md').value,sort=$('#mo').value;return d.products.filter(x=>(!q||norm(x.name+' '+x.key).includes(q))&&(!cat||x.category===cat)&&(!cur||x.currency===cur)&&(!side||x[side]!==null)).sort((a,b)=>sort==='name'?a.name.localeCompare(b.name,'ko'):a.currency.localeCompare(b.currency,'ko')||(sort==='buy'?(a.buy??Infinity)-(b.buy??Infinity):(b.sell??-1)-(a.sell??-1))||a.name.localeCompare(b.name,'ko'));}
+function syncURL(){const u=new URL(location.href);u.search='';if($('#mq').value)u.searchParams.set('q',$('#mq').value);if($('#mc').value)u.searchParams.set('cat',$('#mc').value);try{history.replaceState(null,'',u);}catch{}}
+function render(){const arr=filtered();const total=Math.max(1,Math.ceil(arr.length/24));mpage=Math.min(mpage,total);const quantity=Math.max(1,Math.min(2304,Math.floor(Number($('#mn').value)||1)));$('#market-count').textContent=`전체 ${d.products.length}개 중 ${arr.length}개 · 수량 ${quantity}개 기준`;
+$('#product-grid').innerHTML=arr.length?arr.slice((mpage-1)*24,mpage*24).map((x,i)=>`<article class="product-card"><span class="product-category">${esc(x.category)}</span><h3>${esc(x.name)}</h3><span class="currency-badge ${x.currency==='캐시'?'cash':''}">${x.currency}</span><dl><div><dt>구매${quantity>1?' 합계':''}</dt><dd>${price(x.buy===null?null:x.buy*quantity,x.currency)}</dd></div><div><dt>판매${quantity>1?' 합계':''}</dt><dd>${price(x.sell===null?null:x.sell*quantity,x.currency)}</dd></div></dl><details><summary>아이템 정보</summary><code>${esc(x.key)}</code>${x.description.map(t=>'<p>'+esc(t)+'</p>').join('')}<button data-copy="${esc(x.key)}">ID 복사</button></details><label class="compare-check"><input type="checkbox" data-compare="${esc(x.id)}" ${selected.has(x.id)?'checked':''}>비교에 담기</label></article>`).join(''):'<div class="empty-state"><strong>찾는 상품이 없어요.</strong><p>검색어를 줄이거나 분류·통화 필터를 해제해 주세요.</p></div>';
+$('#mprev').disabled=mpage<=1;$('#mnext').disabled=mpage>=total;$('#mpage').textContent=mpage+' / '+total;}
+function renderCompare(){const arr=d.products.filter(x=>selected.has(x.id));$('#compare-section').hidden=!arr.length;$('#compare-grid').innerHTML=arr.map(x=>`<article><strong>${esc(x.name)}</strong><p>${esc(x.currency)} · 1개</p><p>구매 ${price(x.buy,x.currency)}<br>판매 ${price(x.sell,x.currency)}</p><button data-uncompare="${esc(x.id)}">비교에서 빼기</button></article>`).join('');}
+['mq','mc','mu','md','mo'].forEach(id=>$('#'+id).addEventListener(id==='mq'?'input':'change',()=>{mpage=1;focusItem=null;syncURL();render();}));$('#mn').addEventListener('input',render);$('#mn').addEventListener('change',()=>{$('#mn').value=Math.max(1,Math.min(2304,Math.floor(Number($('#mn').value)||1)));render();});
+$$('[data-quantity]').forEach(b=>b.addEventListener('click',()=>{$('#mn').value=b.dataset.quantity;render();}));
+$('#mprev').addEventListener('click',()=>{mpage--;render();$('#market-count').scrollIntoView({block:'center'});});$('#mnext').addEventListener('click',()=>{mpage++;render();$('#market-count').scrollIntoView({block:'center'});});
+$('#clear-filters').addEventListener('click',()=>{['mq','mc','mu','md'].forEach(id=>$('#'+id).value='');$('#mo').value='name';mpage=1;syncURL();render();});
+root.addEventListener('change',e=>{const c=e.target.closest('[data-compare]');if(!c)return;if(c.checked&&selected.size>=4){c.checked=false;toast('최대 4개까지 비교할 수 있어요.');return;}c.checked?selected.add(c.dataset.compare):selected.delete(c.dataset.compare);renderCompare();});
+root.addEventListener('click',e=>{const b=e.target.closest('[data-uncompare]');if(b){selected.delete(b.dataset.uncompare);renderCompare();render();}});$('#clear-compare').addEventListener('click',()=>{selected.clear();renderCompare();render();});render();}
+market();
 })();

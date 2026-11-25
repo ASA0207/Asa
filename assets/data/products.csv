@@ -1,0 +1,911 @@
+﻿상품명,분류,통화,구매 단가,판매 단가,아이템 ID
+육개장,완성된요리,게임머니,,51.5,addcook:addcook_food_beef_soup
+육개장 · 은빛,완성된요리,게임머니,,66.95,addcook:addcook_food_beef_soup_silver
+육개장 · 황금,완성된요리,게임머니,,87.56,addcook:addcook_food_beef_soup_golden
+삼계탕,완성된요리,게임머니,,49.49,addcook:addcook_food_boiled_chicken
+삼계탕 · 은빛,완성된요리,게임머니,,64.34,addcook:addcook_food_boiled_chicken_silver
+삼계탕 · 황금,완성된요리,게임머니,,84.14,addcook:addcook_food_boiled_chicken_golden
+삶은 달걀,완성된요리,게임머니,,17.71,addcook:addcook_food_boiled_egg
+삶은 달걀 · 은빛,완성된요리,게임머니,,23.03,addcook:addcook_food_boiled_egg_silver
+삶은 달걀 · 황금,완성된요리,게임머니,,30.11,addcook:addcook_food_boiled_egg_golden
+보쌈,완성된요리,게임머니,,19.72,addcook:addcook_food_boiled_pork
+보쌈 · 은빛,완성된요리,게임머니,,25.64,addcook:addcook_food_boiled_pork_silver
+보쌈 · 황금,완성된요리,게임머니,,33.53,addcook:addcook_food_boiled_pork_golden
+치즈 닭갈비,완성된요리,게임머니,,88.36,addcook:addcook_food_cheese_pepper_chicken
+치즈 닭갈비 · 은빛,완성된요리,게임머니,,114.87,addcook:addcook_food_cheese_pepper_chicken_silver
+치즈 닭갈비 · 황금,완성된요리,게임머니,,150.22,addcook:addcook_food_cheese_pepper_chicken_golden
+치즈스틱,완성된요리,게임머니,,42.55,addcook:addcook_food_cheese_stick
+치즈스틱 · 은빛,완성된요리,게임머니,,55.32,addcook:addcook_food_cheese_stick_silver
+치즈스틱 · 황금,완성된요리,게임머니,,72.34,addcook:addcook_food_cheese_stick_golden
+익힌 갈비,완성된요리,게임머니,,37.07,addcook:addcook_food_cooked_beef_rib
+익힌 갈비 · 은빛,완성된요리,게임머니,,48.2,addcook:addcook_food_cooked_beef_rib_silver
+익힌 갈비 · 황금,완성된요리,게임머니,,63.03,addcook:addcook_food_cooked_beef_rib_golden
+익힌 닭다리,완성된요리,게임머니,,37.07,addcook:addcook_food_cooked_chicken_leg
+익힌 닭다리 · 은빛,완성된요리,게임머니,,48.2,addcook:addcook_food_cooked_chicken_leg_silver
+익힌 닭다리 · 황금,완성된요리,게임머니,,63.03,addcook:addcook_food_cooked_chicken_leg_golden
+익힌 삼겹살,완성된요리,게임머니,,37.07,addcook:addcook_food_cooked_pork_belly
+익힌 삼겹살 · 은빛,완성된요리,게임머니,,48.2,addcook:addcook_food_cooked_pork_belly_silver
+익힌 삼겹살 · 황금,완성된요리,게임머니,,63.03,addcook:addcook_food_cooked_pork_belly_golden
+크림 스프,완성된요리,게임머니,,32.6,addcook:addcook_food_cream_soup
+크림 스프 · 은빛,완성된요리,게임머니,,42.38,addcook:addcook_food_cream_soup_silver
+크림 스프 · 황금,완성된요리,게임머니,,55.42,addcook:addcook_food_cream_soup_golden
+자른 사과,완성된요리,게임머니,,13.33,addcook:addcook_food_cutting_apple
+자른 사과 · 은빛,완성된요리,게임머니,,17.33,addcook:addcook_food_cutting_apple_silver
+자른 사과 · 황금,완성된요리,게임머니,,22.66,addcook:addcook_food_cutting_apple_golden
+자른 빵,완성된요리,게임머니,,14.84,addcook:addcook_food_cutting_bread
+자른 빵 · 은빛,완성된요리,게임머니,,19.29,addcook:addcook_food_cutting_bread_silver
+자른 빵 · 황금,완성된요리,게임머니,,25.22,addcook:addcook_food_cutting_bread_golden
+자른 당근,완성된요리,게임머니,,12.32,addcook:addcook_food_cutting_carrot
+자른 당근 · 은빛,완성된요리,게임머니,,16.02,addcook:addcook_food_cutting_carrot_silver
+자른 당근 · 황금,완성된요리,게임머니,,20.95,addcook:addcook_food_cutting_carrot_golden
+자른 파,완성된요리,게임머니,,21.36,addcook:addcook_food_cutting_green_onion
+자른 파 · 은빛,완성된요리,게임머니,,27.78,addcook:addcook_food_cutting_green_onion_silver
+자른 파 · 황금,완성된요리,게임머니,,36.32,addcook:addcook_food_cutting_green_onion_golden
+자른 레몬,완성된요리,게임머니,,21.36,addcook:addcook_food_cutting_lemon
+자른 레몬 · 은빛,완성된요리,게임머니,,27.78,addcook:addcook_food_cutting_lemon_silver
+자른 레몬 · 황금,완성된요리,게임머니,,36.32,addcook:addcook_food_cutting_lemon_golden
+자른 고등어,완성된요리,게임머니,,33.42,addcook:addcook_food_cutting_mackerel
+자른 고등어 · 은빛,완성된요리,게임머니,,43.45,addcook:addcook_food_cutting_mackerel_silver
+자른 고등어 · 황금,완성된요리,게임머니,,56.82,addcook:addcook_food_cutting_mackerel_golden
+자른 삼겹살,완성된요리,게임머니,,33.42,addcook:addcook_food_cutting_pork_belly
+자른 삼겹살 · 은빛,완성된요리,게임머니,,43.45,addcook:addcook_food_cutting_pork_belly_silver
+자른 삼겹살 · 황금,완성된요리,게임머니,,56.82,addcook:addcook_food_cutting_pork_belly_golden
+자른 연어,완성된요리,게임머니,,47.48,addcook:addcook_food_cutting_salmon
+자른 연어 · 은빛,완성된요리,게임머니,,61.73,addcook:addcook_food_cutting_salmon_silver
+자른 연어 · 황금,완성된요리,게임머니,,80.73,addcook:addcook_food_cutting_salmon_golden
+감자튀김,완성된요리,게임머니,,21.46,addcook:addcook_food_french_fries
+감자튀김 · 은빛,완성된요리,게임머니,,27.89,addcook:addcook_food_french_fries_silver
+감자튀김 · 황금,완성된요리,게임머니,,36.48,addcook:addcook_food_french_fries_golden
+만두튀김,완성된요리,게임머니,,38.53,addcook:addcook_food_fried_dimsum
+만두튀김 · 은빛,완성된요리,게임머니,,50.1,addcook:addcook_food_fried_dimsum_silver
+만두튀김 · 황금,완성된요리,게임머니,,65.51,addcook:addcook_food_fried_dimsum_golden
+계란프라이,완성된요리,게임머니,,14.97,addcook:addcook_food_fried_egg
+계란프라이 · 은빛,완성된요리,게임머니,,19.47,addcook:addcook_food_fried_egg_silver
+계란프라이 · 황금,완성된요리,게임머니,,25.46,addcook:addcook_food_fried_egg_golden
+생선튀김,완성된요리,게임머니,,42.55,addcook:addcook_food_fried_fish
+생선튀김 · 은빛,완성된요리,게임머니,,55.32,addcook:addcook_food_fried_fish_silver
+생선튀김 · 황금,완성된요리,게임머니,,72.34,addcook:addcook_food_fried_fish_golden
+문어튀김,완성된요리,게임머니,,42.55,addcook:addcook_food_fried_octopus
+문어튀김 · 은빛,완성된요리,게임머니,,55.32,addcook:addcook_food_fried_octopus_silver
+문어튀김 · 황금,완성된요리,게임머니,,72.34,addcook:addcook_food_fried_octopus_golden
+고추튀김,완성된요리,게임머니,,30.5,addcook:addcook_food_fried_pepper
+고추튀김 · 은빛,완성된요리,게임머니,,39.65,addcook:addcook_food_fried_pepper_silver
+고추튀김 · 황금,완성된요리,게임머니,,51.85,addcook:addcook_food_fried_pepper_golden
+새우튀김,완성된요리,게임머니,,42.55,addcook:addcook_food_fried_shrimp
+새우튀김 · 은빛,완성된요리,게임머니,,55.32,addcook:addcook_food_fried_shrimp_silver
+새우튀김 · 황금,완성된요리,게임머니,,72.34,addcook:addcook_food_fried_shrimp_golden
+야채튀김,완성된요리,게임머니,,21.46,addcook:addcook_food_fried_vegetable
+야채튀김 · 은빛,완성된요리,게임머니,,27.89,addcook:addcook_food_fried_vegetable_silver
+야채튀김 · 황금,완성된요리,게임머니,,36.48,addcook:addcook_food_fried_vegetable_golden
+생선구이,완성된요리,게임머니,,37.07,addcook:addcook_food_grilled_fish
+생선구이 · 은빛,완성된요리,게임머니,,48.2,addcook:addcook_food_grilled_fish_silver
+생선구이 · 황금,완성된요리,게임머니,,63.03,addcook:addcook_food_grilled_fish_golden
+연어구이,완성된요리,게임머니,,81.93,addcook:addcook_food_grilled_salmon
+연어구이 · 은빛,완성된요리,게임머니,,106.52,addcook:addcook_food_grilled_salmon_silver
+연어구이 · 황금,완성된요리,게임머니,,139.29,addcook:addcook_food_grilled_salmon_golden
+새우구이,완성된요리,게임머니,,37.07,addcook:addcook_food_grilled_shrimp
+새우구이 · 은빛,완성된요리,게임머니,,48.2,addcook:addcook_food_grilled_shrimp_silver
+새우구이 · 황금,완성된요리,게임머니,,63.03,addcook:addcook_food_grilled_shrimp_golden
+다진 고기,완성된요리,게임머니,,13.33,addcook:addcook_food_ground_pork
+다진 고기 · 은빛,완성된요리,게임머니,,17.33,addcook:addcook_food_ground_pork_silver
+다진 고기 · 황금,완성된요리,게임머니,,22.66,addcook:addcook_food_ground_pork_golden
+가라아게,완성된요리,게임머니,,20.45,addcook:addcook_food_japan_fried_chicken
+가라아게 · 은빛,완성된요리,게임머니,,26.59,addcook:addcook_food_japan_fried_chicken_silver
+가라아게 · 황금,완성된요리,게임머니,,34.77,addcook:addcook_food_japan_fried_chicken_golden
+미역국,완성된요리,게임머니,,23.56,addcook:addcook_food_kelp_soup
+미역국 · 은빛,완성된요리,게임머니,,30.63,addcook:addcook_food_kelp_soup_silver
+미역국 · 황금,완성된요리,게임머니,,40.05,addcook:addcook_food_kelp_soup_golden
+오믈렛,완성된요리,게임머니,,30.86,addcook:addcook_food_omelet
+오믈렛 · 은빛,완성된요리,게임머니,,40.12,addcook:addcook_food_omelet_silver
+오믈렛 · 황금,완성된요리,게임머니,,52.47,addcook:addcook_food_omelet_golden
+제육볶음,완성된요리,게임머니,,52.96,addcook:addcook_food_pepper_pork
+제육볶음 · 은빛,완성된요리,게임머니,,68.85,addcook:addcook_food_pepper_pork_silver
+제육볶음 · 황금,완성된요리,게임머니,,90.04,addcook:addcook_food_pepper_pork_golden
+돈까스,완성된요리,게임머니,,22.46,addcook:addcook_food_pork_cutlet
+돈까스 · 은빛,완성된요리,게임머니,,29.2,addcook:addcook_food_pork_cutlet_silver
+돈까스 · 황금,완성된요리,게임머니,,38.19,addcook:addcook_food_pork_cutlet_golden
+라면,완성된요리,게임머니,,35.79,addcook:addcook_food_ramen_food
+라면 · 은빛,완성된요리,게임머니,,46.53,addcook:addcook_food_ramen_food_silver
+라면 · 황금,완성된요리,게임머니,,60.85,addcook:addcook_food_ramen_food_golden
+해물탕,완성된요리,게임머니,,83.65,addcook:addcook_food_seafood_soup
+해물탕 · 은빛,완성된요리,게임머니,,108.74,addcook:addcook_food_seafood_soup_silver
+해물탕 · 황금,완성된요리,게임머니,,142.21,addcook:addcook_food_seafood_soup_golden
+자른 치즈,완성된요리,게임머니,,33.42,addcook:addcook_food_slide_cheese
+자른 치즈 · 은빛,완성된요리,게임머니,,43.45,addcook:addcook_food_slide_cheese_silver
+자른 치즈 · 황금,완성된요리,게임머니,,56.82,addcook:addcook_food_slide_cheese_golden
+문어찜,완성된요리,게임머니,,39.81,addcook:addcook_food_steamed_octopus
+문어찜 · 은빛,완성된요리,게임머니,,51.76,addcook:addcook_food_steamed_octopus_silver
+문어찜 · 황금,완성된요리,게임머니,,67.68,addcook:addcook_food_steamed_octopus_golden
+토마토 스프,완성된요리,게임머니,,41.64,addcook:addcook_food_tomato_soup
+토마토 스프 · 은빛,완성된요리,게임머니,,54.13,addcook:addcook_food_tomato_soup_silver
+토마토 스프 · 황금,완성된요리,게임머니,,70.79,addcook:addcook_food_tomato_soup_golden
+음식물 쓰레기,완성된요리,게임머니,,0.1,addcook:addcook_food_trash1
+음식물 쓰레기,완성된요리,게임머니,,0.1,addcook:addcook_food_trash2
+음식물 쓰레기,완성된요리,게임머니,,0.1,addcook:addcook_food_trash3
+피,야생잡템,게임머니,,3.16,addrpg:addrpg_blood
+뇌,야생잡템,게임머니,,20.7,addrpg:addrpg_brain
+심장,야생잡템,게임머니,,11.57,addrpg:addrpg_heart
+대장,야생잡템,게임머니,,13.36,addrpg:addrpg_large_intestine
+간,야생잡템,게임머니,,13.36,addrpg:addrpg_liver
+위,야생잡템,게임머니,,13.36,addrpg:addrpg_stomach
+우유,야생잡템,게임머니,,3.16,addrpg:addrpg_milk
+가죽1,야생잡템,게임머니,,6.42,addrpg:addrpg_leather1
+가죽2,야생잡템,게임머니,,6.42,addrpg:addrpg_leather2
+가죽3,야생잡템,게임머니,,6.42,addrpg:addrpg_leather3
+뼈,야생잡템,게임머니,,10.49,addrpg:addrpg_bone
+뼛조각,야생잡템,게임머니,,3.16,addrpg:addrpg_bone_piece
+해골,야생잡템,게임머니,,10.35,addrpg:addrpg_skull
+썩은 뇌,야생잡템,게임머니,,16.1,addrpg:addrpg_rotten_brain
+썩은 심장,야생잡템,게임머니,,9.0,addrpg:addrpg_rotten_heart
+오염된 피,야생잡템,게임머니,,1.89,addrpg:addrpg_corrupted_blood
+부패된 장기,야생잡템,게임머니,,1.71,addrpg:addrpg_decayed_part
+혈액 덩어리,야생잡템,게임머니,,11.5,addrpg:addrpg_blood_clot
+구더기,야생잡템,게임머니,,2.09,addrpg:addrpg_maggot
+밀 씨앗,일반작물,게임머니,2.0,1.0,WHEAT_SEEDS
+밀,일반작물,게임머니,4.0,2.5,WHEAT
+당근,일반작물,게임머니,5.0,1.35,CARROT
+감자,일반작물,게임머니,5.0,1.35,POTATO
+비트 씨앗,일반작물,게임머니,2.0,1.0,BEETROOT_SEEDS
+비트,일반작물,게임머니,4.0,2.2,BEETROOT
+수박씨,일반작물,게임머니,2.0,0.75,MELON_SEEDS
+수박 조각,일반작물,게임머니,3.0,0.75,MELON_SLICE
+호박씨,일반작물,게임머니,2.0,0.75,PUMPKIN_SEEDS
+호박,일반작물,게임머니,10.0,4.0,PUMPKIN
+코코아 콩,일반작물,게임머니,3.0,1.4,COCOA_BEANS
+네더 사마귀,일반작물,게임머니,8.0,2.2,NETHER_WART
+달콤한 열매,일반작물,게임머니,4.0,1.1,SWEET_BERRIES
+발광 열매,일반작물,게임머니,5.0,1.5,GLOW_BERRIES
+사탕수수,일반작물,게임머니,3.0,0.8,SUGAR_CANE
+대나무,일반작물,게임머니,2.0,0.15,BAMBOO
+선인장,일반작물,게임머니,3.0,0.6,CACTUS
+다시마,일반작물,게임머니,2.0,0.25,KELP
+후렴과,일반작물,게임머니,12.0,6.0,CHORUS_FRUIT
+횃불꽃 씨앗,일반작물,게임머니,6.0,3.0,TORCHFLOWER_SEEDS
+벌레잡이풀 꼬투리,일반작물,게임머니,6.0,3.0,PITCHER_POD
+가스레인지,요리도구,게임머니,1200.0,,addcook:addcook_furniture_stove
+프라이팬,요리도구,게임머니,450.0,,addcook:addcook_furniture_frypan
+냄비,요리도구,게임머니,450.0,,addcook:addcook_furniture_pot
+소형 냄비,요리도구,게임머니,350.0,,addcook:addcook_furniture_small_pot
+찜기,요리도구,게임머니,900.0,,addcook:addcook_furniture_steamer
+도마,요리도구,게임머니,450.0,,addcook:addcook_furniture_chopping_board
+오븐,요리도구,게임머니,1800.0,,addcook:addcook_furniture_oven
+튀김기,요리도구,게임머니,1200.0,,addcook:addcook_furniture_fryer
+뜰채,요리도구,게임머니,220.0,,addcook:addcook_furniture_strainer
+조리대,요리도구,게임머니,600.0,,addcook:addcook_furniture_desk
+조리대 도마,요리도구,게임머니,650.0,,addcook:addcook_furniture_chopping_board2
+인덕션,요리도구,게임머니,2200.0,,addcook:addcook_furniture_induction
+싱크대,요리도구,게임머니,900.0,,addcook:addcook_furniture_sink
+망치,요리도구,게임머니,220.0,,addcook:addcook_tool_hammer
+식칼,요리도구,게임머니,220.0,,addcook:addcook_tool_knife
+뒤집개,요리도구,게임머니,220.0,,addcook:addcook_tool_turner
+부싯돌과 부시,요리도구,게임머니,60.0,,addcook:flint_and_steel
+꿀병,요리재료,게임머니,25.0,,addcook:addcook_material_honey_bottle
+물 양동이,요리재료,게임머니,150.0,,addcook:addcook_material_water_bucket
+물병,요리재료,게임머니,12.0,,addcook:addcook_material_water_bottle
+간장,요리재료,게임머니,18.0,,addcook:addcook_material_soy
+칠리 소스,요리재료,게임머니,18.0,,addcook:addcook_material_chilli_sauce
+오일,요리재료,게임머니,18.0,,addcook:addcook_material_oil
+소형 오일,요리재료,게임머니,18.0,,addcook:addcook_material_small_oil
+익히지 않은 갈비,요리재료,게임머니,26.0,,addcook:addcook_material_beef_rib
+베스,요리재료,게임머니,26.0,,addcook:addcook_material_bess
+버터,요리재료,게임머니,26.0,,addcook:addcook_material_butter
+치즈,요리재료,게임머니,26.0,,addcook:addcook_material_cheese
+익히지 않은 닭다리,요리재료,게임머니,26.0,,addcook:addcook_material_chicken_leg
+만두,요리재료,게임머니,22.0,,addcook:addcook_material_dimsum
+달걀,요리재료,게임머니,12.0,,addcook:addcook_material_egg
+파,요리재료,게임머니,14.0,,addcook:addcook_material_green_onion
+레몬,요리재료,게임머니,14.0,,addcook:addcook_material_lemon
+고등어,요리재료,게임머니,26.0,,addcook:addcook_material_mackerel
+우유,요리재료,게임머니,12.0,,addcook:addcook_material_milk
+문어,요리재료,게임머니,26.0,,addcook:addcook_material_octopus
+양파,요리재료,게임머니,14.0,,addcook:addcook_material_onion
+고추,요리재료,게임머니,14.0,,addcook:addcook_material_pepper
+파인애플,요리재료,게임머니,14.0,,addcook:addcook_material_pineapple
+익히지 않은 삼겹살,요리재료,게임머니,26.0,,addcook:addcook_material_pork_belly
+라면,요리재료,게임머니,22.0,,addcook:addcook_material_ramen
+새우,요리재료,게임머니,26.0,,addcook:addcook_material_shrimp
+토마토,요리재료,게임머니,14.0,,addcook:addcook_material_tomato
+조약돌,광산 전리품,게임머니,1.0,0.25,COBBLESTONE
+돌,광산 전리품,게임머니,2.0,0.5,STONE
+심층암,광산 전리품,게임머니,2.0,0.5,DEEPSLATE
+심층암 조약돌,광산 전리품,게임머니,4.0,1.0,COBBLED_DEEPSLATE
+응회암,광산 전리품,게임머니,5.0,1.0,TUFF
+방해석,광산 전리품,게임머니,7.0,2.0,CALCITE
+점적석 블록,광산 전리품,게임머니,7.0,2.0,DRIPSTONE_BLOCK
+뾰족한 점적석,광산 전리품,게임머니,5.0,1.0,POINTED_DRIPSTONE
+화강암,광산 전리품,게임머니,3.0,0.75,GRANITE
+섬록암,광산 전리품,게임머니,3.0,0.75,DIORITE
+안산암,광산 전리품,게임머니,3.0,0.75,ANDESITE
+자갈,광산 전리품,게임머니,5.0,1.0,GRAVEL
+부싯돌,광산 전리품,게임머니,6.0,1.0,FLINT
+모래,광산 전리품,게임머니,5.0,1.0,SAND
+붉은 모래,광산 전리품,게임머니,6.0,1.0,RED_SAND
+점토 덩이,광산 전리품,게임머니,8.0,2.3,CLAY_BALL
+네더랙,광산 전리품,게임머니,3.0,1.0,NETHERRACK
+현무암,광산 전리품,게임머니,5.0,1.0,BASALT
+흑암,광산 전리품,게임머니,6.0,2.0,BLACKSTONE
+영혼 모래,광산 전리품,게임머니,7.0,2.0,SOUL_SAND
+영혼 흙,광산 전리품,게임머니,7.0,2.0,SOUL_SOIL
+엔드 돌,광산 전리품,게임머니,14.0,4.6,END_STONE
+흑요석,광산 전리품,게임머니,60.0,20.7,OBSIDIAN
+우는 흑요석,광산 전리품,게임머니,85.0,28.75,CRYING_OBSIDIAN
+석탄,광물,게임머니,,2.85,COAL
+숯,광물,게임머니,,1.9,CHARCOAL
+구리 원석,광물,게임머니,,4.75,RAW_COPPER
+구리 주괴,광물,게임머니,,6.65,COPPER_INGOT
+구리 블록,광물,게임머니,,59.85,COPPER_BLOCK
+철 원석,광물,게임머니,,12.35,RAW_IRON
+철 주괴,광물,게임머니,,17.1,IRON_INGOT
+철 블록,광물,게임머니,,153.9,IRON_BLOCK
+금 원석,광물,게임머니,,20.9,RAW_GOLD
+금 주괴,광물,게임머니,,29.45,GOLD_INGOT
+금 블록,광물,게임머니,,268.85,GOLD_BLOCK
+레드스톤 가루,광물,게임머니,,3.8,REDSTONE
+청금석,광물,게임머니,,4.75,LAPIS_LAZULI
+네더 석영,광물,게임머니,,9.5,QUARTZ
+자수정 조각,광물,게임머니,,10.45,AMETHYST_SHARD
+에메랄드,광물,게임머니,,74.1,EMERALD
+에메랄드 블록,광물,게임머니,,666.9,EMERALD_BLOCK
+다이아몬드,광물,게임머니,,132.0,DIAMOND
+다이아몬드 블록,광물,게임머니,,1188.0,DIAMOND_BLOCK
+네더라이트 파편,광물,게임머니,,513.0,NETHERITE_SCRAP
+네더라이트 주괴,광물,게임머니,,2337.0,NETHERITE_INGOT
+고대 잔해,광물,게임머니,,627.0,ANCIENT_DEBRIS
+Rare Diamond,광물,게임머니,,132.0,DIAMOND
+하얀색 양털,건축,게임머니,8.0,2.0,WHITE_WOOL
+회백색 양털,건축,게임머니,8.0,2.0,LIGHT_GRAY_WOOL
+회색 양털,건축,게임머니,8.0,2.0,GRAY_WOOL
+검은색 양털,건축,게임머니,8.0,2.0,BLACK_WOOL
+갈색 양털,건축,게임머니,8.0,2.0,BROWN_WOOL
+빨간색 양털,건축,게임머니,8.0,2.0,RED_WOOL
+주황색 양털,건축,게임머니,8.0,2.0,ORANGE_WOOL
+노란색 양털,건축,게임머니,8.0,2.0,YELLOW_WOOL
+연두색 양털,건축,게임머니,8.0,2.0,LIME_WOOL
+초록색 양털,건축,게임머니,8.0,2.0,GREEN_WOOL
+청록색 양털,건축,게임머니,8.0,2.0,CYAN_WOOL
+하늘색 양털,건축,게임머니,8.0,2.0,LIGHT_BLUE_WOOL
+파란색 양털,건축,게임머니,8.0,2.0,BLUE_WOOL
+보라색 양털,건축,게임머니,8.0,2.0,PURPLE_WOOL
+자홍색 양털,건축,게임머니,8.0,2.0,MAGENTA_WOOL
+분홍색 양털,건축,게임머니,8.0,2.0,PINK_WOOL
+하얀색 콘크리트,건축,게임머니,12.0,4.0,WHITE_CONCRETE
+회백색 콘크리트,건축,게임머니,12.0,4.0,LIGHT_GRAY_CONCRETE
+회색 콘크리트,건축,게임머니,12.0,4.0,GRAY_CONCRETE
+검은색 콘크리트,건축,게임머니,12.0,4.0,BLACK_CONCRETE
+갈색 콘크리트,건축,게임머니,12.0,4.0,BROWN_CONCRETE
+빨간색 콘크리트,건축,게임머니,12.0,4.0,RED_CONCRETE
+주황색 콘크리트,건축,게임머니,12.0,4.0,ORANGE_CONCRETE
+노란색 콘크리트,건축,게임머니,12.0,4.0,YELLOW_CONCRETE
+연두색 콘크리트,건축,게임머니,12.0,4.0,LIME_CONCRETE
+초록색 콘크리트,건축,게임머니,12.0,4.0,GREEN_CONCRETE
+청록색 콘크리트,건축,게임머니,12.0,4.0,CYAN_CONCRETE
+하늘색 콘크리트,건축,게임머니,12.0,4.0,LIGHT_BLUE_CONCRETE
+파란색 콘크리트,건축,게임머니,12.0,4.0,BLUE_CONCRETE
+보라색 콘크리트,건축,게임머니,12.0,4.0,PURPLE_CONCRETE
+자홍색 콘크리트,건축,게임머니,12.0,4.0,MAGENTA_CONCRETE
+분홍색 콘크리트,건축,게임머니,12.0,4.0,PINK_CONCRETE
+하얀색 콘크리트 가루,건축,게임머니,10.0,3.0,WHITE_CONCRETE_POWDER
+회백색 콘크리트 가루,건축,게임머니,10.0,3.0,LIGHT_GRAY_CONCRETE_POWDER
+회색 콘크리트 가루,건축,게임머니,10.0,3.0,GRAY_CONCRETE_POWDER
+검은색 콘크리트 가루,건축,게임머니,10.0,3.0,BLACK_CONCRETE_POWDER
+갈색 콘크리트 가루,건축,게임머니,10.0,3.0,BROWN_CONCRETE_POWDER
+빨간색 콘크리트 가루,건축,게임머니,10.0,3.0,RED_CONCRETE_POWDER
+주황색 콘크리트 가루,건축,게임머니,10.0,3.0,ORANGE_CONCRETE_POWDER
+노란색 콘크리트 가루,건축,게임머니,10.0,3.0,YELLOW_CONCRETE_POWDER
+연두색 콘크리트 가루,건축,게임머니,10.0,3.0,LIME_CONCRETE_POWDER
+초록색 콘크리트 가루,건축,게임머니,10.0,3.0,GREEN_CONCRETE_POWDER
+청록색 콘크리트 가루,건축,게임머니,10.0,3.0,CYAN_CONCRETE_POWDER
+하늘색 콘크리트 가루,건축,게임머니,10.0,3.0,LIGHT_BLUE_CONCRETE_POWDER
+파란색 콘크리트 가루,건축,게임머니,10.0,3.0,BLUE_CONCRETE_POWDER
+보라색 콘크리트 가루,건축,게임머니,10.0,3.0,PURPLE_CONCRETE_POWDER
+자홍색 콘크리트 가루,건축,게임머니,10.0,3.0,MAGENTA_CONCRETE_POWDER
+분홍색 콘크리트 가루,건축,게임머니,10.0,3.0,PINK_CONCRETE_POWDER
+하얀색 테라코타,건축,게임머니,14.0,4.0,WHITE_TERRACOTTA
+회백색 테라코타,건축,게임머니,14.0,4.0,LIGHT_GRAY_TERRACOTTA
+회색 테라코타,건축,게임머니,14.0,4.0,GRAY_TERRACOTTA
+검은색 테라코타,건축,게임머니,14.0,4.0,BLACK_TERRACOTTA
+갈색 테라코타,건축,게임머니,14.0,4.0,BROWN_TERRACOTTA
+빨간색 테라코타,건축,게임머니,14.0,4.0,RED_TERRACOTTA
+주황색 테라코타,건축,게임머니,14.0,4.0,ORANGE_TERRACOTTA
+노란색 테라코타,건축,게임머니,14.0,4.0,YELLOW_TERRACOTTA
+연두색 테라코타,건축,게임머니,14.0,4.0,LIME_TERRACOTTA
+초록색 테라코타,건축,게임머니,14.0,4.0,GREEN_TERRACOTTA
+청록색 테라코타,건축,게임머니,14.0,4.0,CYAN_TERRACOTTA
+하늘색 테라코타,건축,게임머니,14.0,4.0,LIGHT_BLUE_TERRACOTTA
+파란색 테라코타,건축,게임머니,14.0,4.0,BLUE_TERRACOTTA
+보라색 테라코타,건축,게임머니,14.0,4.0,PURPLE_TERRACOTTA
+자홍색 테라코타,건축,게임머니,14.0,4.0,MAGENTA_TERRACOTTA
+분홍색 테라코타,건축,게임머니,14.0,4.0,PINK_TERRACOTTA
+하얀색 유광 테라코타,건축,게임머니,18.0,6.0,WHITE_GLAZED_TERRACOTTA
+회백색 유광 테라코타,건축,게임머니,18.0,6.0,LIGHT_GRAY_GLAZED_TERRACOTTA
+회색 유광 테라코타,건축,게임머니,18.0,6.0,GRAY_GLAZED_TERRACOTTA
+검은색 유광 테라코타,건축,게임머니,18.0,5.35,BLACK_GLAZED_TERRACOTTA
+갈색 유광 테라코타,건축,게임머니,18.0,5.01,BROWN_GLAZED_TERRACOTTA
+빨간색 유광 테라코타,건축,게임머니,18.0,5.1,RED_GLAZED_TERRACOTTA
+주황색 유광 테라코타,건축,게임머니,18.0,6.0,ORANGE_GLAZED_TERRACOTTA
+노란색 유광 테라코타,건축,게임머니,18.0,6.0,YELLOW_GLAZED_TERRACOTTA
+연두색 유광 테라코타,건축,게임머니,18.0,6.0,LIME_GLAZED_TERRACOTTA
+초록색 유광 테라코타,건축,게임머니,18.0,5.01,GREEN_GLAZED_TERRACOTTA
+청록색 유광 테라코타,건축,게임머니,18.0,6.0,CYAN_GLAZED_TERRACOTTA
+하늘색 유광 테라코타,건축,게임머니,18.0,6.0,LIGHT_BLUE_GLAZED_TERRACOTTA
+파란색 유광 테라코타,건축,게임머니,18.0,6.0,BLUE_GLAZED_TERRACOTTA
+보라색 유광 테라코타,건축,게임머니,18.0,6.0,PURPLE_GLAZED_TERRACOTTA
+자홍색 유광 테라코타,건축,게임머니,18.0,6.0,MAGENTA_GLAZED_TERRACOTTA
+분홍색 유광 테라코타,건축,게임머니,18.0,6.0,PINK_GLAZED_TERRACOTTA
+하얀색 색유리,건축,게임머니,16.0,5.0,WHITE_STAINED_GLASS
+회백색 색유리,건축,게임머니,16.0,5.0,LIGHT_GRAY_STAINED_GLASS
+회색 색유리,건축,게임머니,16.0,5.0,GRAY_STAINED_GLASS
+검은색 색유리,건축,게임머니,16.0,3.99,BLACK_STAINED_GLASS
+갈색 색유리,건축,게임머니,16.0,3.65,BROWN_STAINED_GLASS
+빨간색 색유리,건축,게임머니,16.0,3.74,RED_STAINED_GLASS
+주황색 색유리,건축,게임머니,16.0,5.0,ORANGE_STAINED_GLASS
+노란색 색유리,건축,게임머니,16.0,5.0,YELLOW_STAINED_GLASS
+연두색 색유리,건축,게임머니,16.0,5.0,LIME_STAINED_GLASS
+초록색 색유리,건축,게임머니,16.0,3.65,GREEN_STAINED_GLASS
+청록색 색유리,건축,게임머니,16.0,5.0,CYAN_STAINED_GLASS
+하늘색 색유리,건축,게임머니,16.0,5.0,LIGHT_BLUE_STAINED_GLASS
+파란색 색유리,건축,게임머니,16.0,5.0,BLUE_STAINED_GLASS
+보라색 색유리,건축,게임머니,16.0,5.0,PURPLE_STAINED_GLASS
+자홍색 색유리,건축,게임머니,16.0,5.0,MAGENTA_STAINED_GLASS
+분홍색 색유리,건축,게임머니,16.0,5.0,PINK_STAINED_GLASS
+하얀색 양탄자,건축,게임머니,3.0,1.0,WHITE_CARPET
+회백색 양탄자,건축,게임머니,3.0,1.0,LIGHT_GRAY_CARPET
+회색 양탄자,건축,게임머니,3.0,1.0,GRAY_CARPET
+검은색 양탄자,건축,게임머니,3.0,1.0,BLACK_CARPET
+갈색 양탄자,건축,게임머니,3.0,1.0,BROWN_CARPET
+빨간색 양탄자,건축,게임머니,3.0,1.0,RED_CARPET
+주황색 양탄자,건축,게임머니,3.0,1.0,ORANGE_CARPET
+노란색 양탄자,건축,게임머니,3.0,1.0,YELLOW_CARPET
+연두색 양탄자,건축,게임머니,3.0,1.0,LIME_CARPET
+초록색 양탄자,건축,게임머니,3.0,1.0,GREEN_CARPET
+청록색 양탄자,건축,게임머니,3.0,1.0,CYAN_CARPET
+하늘색 양탄자,건축,게임머니,3.0,1.0,LIGHT_BLUE_CARPET
+파란색 양탄자,건축,게임머니,3.0,1.0,BLUE_CARPET
+보라색 양탄자,건축,게임머니,3.0,1.0,PURPLE_CARPET
+자홍색 양탄자,건축,게임머니,3.0,1.0,MAGENTA_CARPET
+분홍색 양탄자,건축,게임머니,3.0,1.0,PINK_CARPET
+하얀색 색유리판,건축,게임머니,4.0,1.0,WHITE_STAINED_GLASS_PANE
+회백색 색유리판,건축,게임머니,4.0,1.0,LIGHT_GRAY_STAINED_GLASS_PANE
+회색 색유리판,건축,게임머니,4.0,1.0,GRAY_STAINED_GLASS_PANE
+검은색 색유리판,건축,게임머니,4.0,1.0,BLACK_STAINED_GLASS_PANE
+갈색 색유리판,건축,게임머니,4.0,1.0,BROWN_STAINED_GLASS_PANE
+빨간색 색유리판,건축,게임머니,4.0,1.0,RED_STAINED_GLASS_PANE
+주황색 색유리판,건축,게임머니,4.0,1.0,ORANGE_STAINED_GLASS_PANE
+노란색 색유리판,건축,게임머니,4.0,1.0,YELLOW_STAINED_GLASS_PANE
+연두색 색유리판,건축,게임머니,4.0,1.0,LIME_STAINED_GLASS_PANE
+초록색 색유리판,건축,게임머니,4.0,1.0,GREEN_STAINED_GLASS_PANE
+청록색 색유리판,건축,게임머니,4.0,1.0,CYAN_STAINED_GLASS_PANE
+하늘색 색유리판,건축,게임머니,4.0,1.0,LIGHT_BLUE_STAINED_GLASS_PANE
+파란색 색유리판,건축,게임머니,4.0,1.0,BLUE_STAINED_GLASS_PANE
+보라색 색유리판,건축,게임머니,4.0,1.0,PURPLE_STAINED_GLASS_PANE
+자홍색 색유리판,건축,게임머니,4.0,1.0,MAGENTA_STAINED_GLASS_PANE
+분홍색 색유리판,건축,게임머니,4.0,1.0,PINK_STAINED_GLASS_PANE
+돌,건축,게임머니,2.0,0.5,STONE
+조약돌,건축,게임머니,1.0,0.25,COBBLESTONE
+심층암,건축,게임머니,2.0,0.5,DEEPSLATE
+안산암,건축,게임머니,3.0,0.75,ANDESITE
+섬록암,건축,게임머니,3.0,0.75,DIORITE
+화강암,건축,게임머니,3.0,0.75,GRANITE
+석재 벽돌,건축,게임머니,4.0,0.68,STONE_BRICKS
+벽돌,건축,게임머니,6.0,1.5,BRICKS
+진흙 벽돌,건축,게임머니,6.0,1.5,MUD_BRICKS
+프리즈머린,건축,게임머니,8.0,2.0,PRISMARINE
+짙은 프리즈머린,건축,게임머니,10.0,2.5,DARK_PRISMARINE
+석영 블록,건축,게임머니,20.0,7.0,QUARTZ_BLOCK
+매끄러운 석영 블록,건축,게임머니,22.0,7.5,SMOOTH_QUARTZ
+바다 랜턴,건축,게임머니,25.0,8.0,SEA_LANTERN
+발광석,건축,게임머니,18.0,6.0,GLOWSTONE
+랜턴,건축,게임머니,12.0,4.0,LANTERN
+거친 호박석,특수광물,게임머니,,36.0,orespackvol1:raw_amber
+[1단계] 호박석 조각,특수광물,게임머니,,4.89,orespackvol1:amber_nugget
+[1단계] 호박석 주괴,특수광물,게임머니,,44.0,orespackvol1:amber_ingot
+[1단계] 호박석 블록,특수광물,게임머니,,396.0,orespackvol1:amber_block
+[1단계] 호박석 원석,특수광물,게임머니,,40.0,orespackvol1:amber_ore
+[1단계] 심층암 호박석 원석,특수광물,게임머니,,44.0,orespackvol1:deepslate_amber_ore
+[1단계] 호박석 네더 원석,특수광물,게임머니,,52.0,orespackvol1:amber_nether_ore
+[1단계] 호박석 엔드 원석,특수광물,게임머니,,59.2,orespackvol1:amber_end_ore
+거친 연수정,특수광물,게임머니,,45.6,orespackvol4:raw_smokyquartz
+[2단계] 연수정 조각,특수광물,게임머니,,6.21,orespackvol4:smokyquartz_nugget
+[2단계] 연수정 주괴,특수광물,게임머니,,56.0,orespackvol4:smokyquartz_ingot
+[2단계] 연수정 블록,특수광물,게임머니,,504.0,orespackvol4:smokyquartz_block
+[2단계] 연수정 원석,특수광물,게임머니,,50.4,orespackvol4:smokyquartz_ore
+[2단계] 심층암 연수정 원석,특수광물,게임머니,,56.0,orespackvol4:deepslate_smokyquartz_ore
+[2단계] 연수정 네더 원석,특수광물,게임머니,,65.6,orespackvol4:smokyquartz_nether_ore
+[2단계] 연수정 엔드 원석,특수광물,게임머니,,75.2,orespackvol4:smokyquartz_end_ore
+거친 페리도트,특수광물,게임머니,,58.4,orespackvol3:raw_peridot
+[3단계] 페리도트 조각,특수광물,게임머니,,7.89,orespackvol3:peridot_nugget
+[3단계] 페리도트 주괴,특수광물,게임머니,,71.2,orespackvol3:peridot_ingot
+[3단계] 페리도트 블록,특수광물,게임머니,,640.0,orespackvol3:peridot_block
+[3단계] 페리도트 원석,특수광물,게임머니,,64.0,orespackvol3:peridot_ore
+[3단계] 심층암 페리도트 원석,특수광물,게임머니,,71.2,orespackvol3:deepslate_peridot_ore
+[3단계] 페리도트 네더 원석,특수광물,게임머니,,84.0,orespackvol3:peridot_nether_ore
+[3단계] 페리도트 엔드 원석,특수광물,게임머니,,96.0,orespackvol3:peridot_end_ore
+거친 진주,특수광물,게임머니,,73.6,orespackvol3:raw_pearl
+[4단계] 진주 조각,특수광물,게임머니,,10.4,orespackvol3:pearl_nugget
+[4단계] 진주 주괴,특수광물,게임머니,,92.0,orespackvol3:pearl_ingot
+[4단계] 진주 블록,특수광물,게임머니,,812.0,orespackvol3:pearl_block
+[4단계] 진주 원석,특수광물,게임머니,,80.0,orespackvol3:pearl_ore
+[4단계] 심층암 진주 원석,특수광물,게임머니,,92.0,orespackvol3:deepslate_pearl_ore
+[4단계] 진주 네더 원석,특수광물,게임머니,,108.0,orespackvol3:pearl_nether_ore
+[4단계] 진주 엔드 원석,특수광물,게임머니,,120.0,orespackvol3:pearl_end_ore
+거친 아쿠아마린,특수광물,게임머니,,92.0,orespackvol4:raw_aquamarine
+[5단계] 아쿠아마린 조각,특수광물,게임머니,,12.8,orespackvol4:aquamarine_nugget
+[5단계] 아쿠아마린 주괴,특수광물,게임머니,,116.0,orespackvol4:aquamarine_ingot
+[5단계] 아쿠아마린 블록,특수광물,게임머니,,1032.0,orespackvol4:aquamarine_block
+[5단계] 아쿠아마린 원석,특수광물,게임머니,,104.0,orespackvol4:aquamarine_ore
+[5단계] 심층암 아쿠아마린 원석,특수광물,게임머니,,116.0,orespackvol4:deepslate_aquamarine_ore
+[5단계] 아쿠아마린 네더 원석,특수광물,게임머니,,136.0,orespackvol4:aquamarine_nether_ore
+[5단계] 아쿠아마린 엔드 원석,특수광물,게임머니,,156.0,orespackvol4:aquamarine_end_ore
+거친 아이올라이트,특수광물,게임머니,,120.0,orespackvol4:raw_iolite
+[6단계] 아이올라이트 조각,특수광물,게임머니,,16.0,orespackvol4:iolite_nugget
+[6단계] 아이올라이트 주괴,특수광물,게임머니,,144.0,orespackvol4:iolite_ingot
+[6단계] 아이올라이트 블록,특수광물,게임머니,,1308.0,orespackvol4:iolite_block
+[6단계] 아이올라이트 원석,특수광물,게임머니,,132.0,orespackvol4:iolite_ore
+[6단계] 심층암 아이올라이트 원석,특수광물,게임머니,,144.0,orespackvol4:deepslate_iolite_ore
+[6단계] 아이올라이트 네더 원석,특수광물,게임머니,,172.0,orespackvol4:iolite_nether_ore
+[6단계] 아이올라이트 엔드 원석,특수광물,게임머니,,196.0,orespackvol4:iolite_end_ore
+거친 갈레나이트,특수광물,게임머니,,152.0,orespackvol1:raw_galenite
+[7단계] 갈레나이트 조각,특수광물,게임머니,,20.8,orespackvol1:galenite_nugget
+[7단계] 갈레나이트 주괴,특수광물,게임머니,,184.0,orespackvol1:galenite_ingot
+[7단계] 갈레나이트 블록,특수광물,게임머니,,1660.0,orespackvol1:galenite_block
+[7단계] 갈레나이트 원석,특수광물,게임머니,,168.0,orespackvol1:galenite_ore
+[7단계] 심층암 갈레나이트 원석,특수광물,게임머니,,184.0,orespackvol1:deepslate_galenite_ore
+[7단계] 갈레나이트 네더 원석,특수광물,게임머니,,216.0,orespackvol1:galenite_nether_ore
+[7단계] 갈레나이트 엔드 원석,특수광물,게임머니,,248.0,orespackvol1:galenite_end_ore
+거친 문스톤,특수광물,게임머니,,192.0,orespackvol3:raw_moonstone
+[8단계] 문스톤 조각,특수광물,게임머니,,26.4,orespackvol3:moonstone_nugget
+[8단계] 문스톤 주괴,특수광물,게임머니,,236.0,orespackvol3:moonstone_ingot
+[8단계] 문스톤 블록,특수광물,게임머니,,2112.0,orespackvol3:moonstone_block
+[8단계] 문스톤 원석,특수광물,게임머니,,212.0,orespackvol3:moonstone_ore
+[8단계] 심층암 문스톤 원석,특수광물,게임머니,,236.0,orespackvol3:deepslate_moonstone_ore
+[8단계] 문스톤 네더 원석,특수광물,게임머니,,276.0,orespackvol3:moonstone_nether_ore
+[8단계] 문스톤 엔드 원석,특수광물,게임머니,,316.0,orespackvol3:moonstone_end_ore
+거친 로도나이트,특수광물,게임머니,,244.0,orespackvol4:raw_rhodonite
+[9단계] 로도나이트 조각,특수광물,게임머니,,32.8,orespackvol4:rhodonite_nugget
+[9단계] 로도나이트 주괴,특수광물,게임머니,,296.0,orespackvol4:rhodonite_ingot
+[9단계] 로도나이트 블록,특수광물,게임머니,,2680.0,orespackvol4:rhodonite_block
+[9단계] 로도나이트 원석,특수광물,게임머니,,268.0,orespackvol4:rhodonite_ore
+[9단계] 심층암 로도나이트 원석,특수광물,게임머니,,296.0,orespackvol4:deepslate_rhodonite_ore
+[9단계] 로도나이트 네더 원석,특수광물,게임머니,,352.0,orespackvol4:rhodonite_nether_ore
+[9단계] 로도나이트 엔드 원석,특수광물,게임머니,,400.0,orespackvol4:rhodonite_end_ore
+거친 아메트린,특수광물,게임머니,,312.0,orespackvol3:raw_ametrine
+[10단계] 아메트린 조각,특수광물,게임머니,,42.4,orespackvol3:ametrine_nugget
+[10단계] 아메트린 주괴,특수광물,게임머니,,380.0,orespackvol3:ametrine_ingot
+[10단계] 아메트린 블록,특수광물,게임머니,,3404.0,orespackvol3:ametrine_block
+[10단계] 아메트린 원석,특수광물,게임머니,,340.0,orespackvol3:ametrine_ore
+[10단계] 심층암 아메트린 원석,특수광물,게임머니,,380.0,orespackvol3:deepslate_ametrine_ore
+[10단계] 아메트린 네더 원석,특수광물,게임머니,,448.0,orespackvol3:ametrine_nether_ore
+[10단계] 아메트린 엔드 원석,특수광물,게임머니,,512.0,orespackvol3:ametrine_end_ore
+거친 혈석,특수광물,게임머니,,392.0,orespackvol1:raw_bloodstone
+[11단계] 혈석 조각,특수광물,게임머니,,53.6,orespackvol1:bloodstone_nugget
+[11단계] 혈석 주괴,특수광물,게임머니,,480.0,orespackvol1:bloodstone_ingot
+[11단계] 혈석 블록,특수광물,게임머니,,4324.0,orespackvol1:bloodstone_block
+[11단계] 혈석 원석,특수광물,게임머니,,432.0,orespackvol1:bloodstone_ore
+[11단계] 심층암 혈석 원석,특수광물,게임머니,,480.0,orespackvol1:deepslate_bloodstone_ore
+[11단계] 혈석 네더 원석,특수광물,게임머니,,568.0,orespackvol1:bloodstone_nether_ore
+[11단계] 혈석 엔드 원석,특수광물,게임머니,,648.0,orespackvol1:bloodstone_end_ore
+거친 결정석,특수광물,게임머니,,500.0,orespackvol1:raw_crystalite
+[12단계] 결정석 조각,특수광물,게임머니,,68.0,orespackvol1:crystalite_nugget
+[12단계] 결정석 주괴,특수광물,게임머니,,608.0,orespackvol1:crystalite_ingot
+[12단계] 결정석 블록,특수광물,게임머니,,5488.0,orespackvol1:crystalite_block
+[12단계] 결정석 원석,특수광물,게임머니,,548.0,orespackvol1:crystalite_ore
+[12단계] 심층암 결정석 원석,특수광물,게임머니,,608.0,orespackvol1:deepslate_crystalite_ore
+[12단계] 결정석 네더 원석,특수광물,게임머니,,720.0,orespackvol1:crystalite_nether_ore
+[12단계] 결정석 엔드 원석,특수광물,게임머니,,824.0,orespackvol1:crystalite_end_ore
+거친 차로아이트,특수광물,게임머니,,636.0,orespackvol2:raw_charoite
+[13단계] 차로아이트 조각,특수광물,게임머니,,88.0,orespackvol2:charoite_nugget
+[13단계] 차로아이트 주괴,특수광물,게임머니,,776.0,orespackvol2:charoite_ingot
+[13단계] 차로아이트 블록,특수광물,게임머니,,6972.0,orespackvol2:charoite_block
+[13단계] 차로아이트 원석,특수광물,게임머니,,696.0,orespackvol2:charoite_ore
+[13단계] 심층암 차로아이트 원석,특수광물,게임머니,,776.0,orespackvol2:deepslate_charoite_ore
+[13단계] 차로아이트 네더 원석,특수광물,게임머니,,916.0,orespackvol2:charoite_nether_ore
+[13단계] 차로아이트 엔드 원석,특수광물,게임머니,,1044.0,orespackvol2:charoite_end_ore
+거친 카이아나이트,특수광물,게임머니,,808.0,orespackvol2:raw_kyanite
+[14단계] 카이아나이트 조각,특수광물,게임머니,,108.0,orespackvol2:kyanite_nugget
+[14단계] 카이아나이트 주괴,특수광물,게임머니,,984.0,orespackvol2:kyanite_ingot
+[14단계] 카이아나이트 블록,특수광물,게임머니,,8856.0,orespackvol2:kyanite_block
+[14단계] 카이아나이트 원석,특수광물,게임머니,,884.0,orespackvol2:kyanite_ore
+[14단계] 심층암 카이아나이트 원석,특수광물,게임머니,,984.0,orespackvol2:deepslate_kyanite_ore
+[14단계] 카이아나이트 네더 원석,특수광물,게임머니,,1160.0,orespackvol2:kyanite_nether_ore
+[14단계] 카이아나이트 엔드 원석,특수광물,게임머니,,1328.0,orespackvol2:kyanite_end_ore
+거친 라브라도라이트,특수광물,게임머니,,1024.0,orespackvol2:raw_labradorite
+[15단계] 라브라도라이트 조각,특수광물,게임머니,,140.0,orespackvol2:labradorite_nugget
+[15단계] 라브라도라이트 주괴,특수광물,게임머니,,1248.0,orespackvol2:labradorite_ingot
+[15단계] 라브라도라이트 블록,특수광물,게임머니,,11244.0,orespackvol2:labradorite_block
+[15단계] 라브라도라이트 원석,특수광물,게임머니,,1124.0,orespackvol2:labradorite_ore
+[15단계] 심층암 라브라도라이트 원석,특수광물,게임머니,,1248.0,orespackvol2:deepslate_labradorite_ore
+[15단계] 라브라도라이트 네더 원석,특수광물,게임머니,,1476.0,orespackvol2:labradorite_nether_ore
+[15단계] 라브라도라이트 엔드 원석,특수광물,게임머니,,1688.0,orespackvol2:labradorite_end_ore
+거친 루비스,특수광물,게임머니,,1300.0,orespackvol2:raw_rubis
+[16단계] 루비스 조각,특수광물,게임머니,,176.0,orespackvol2:rubis_nugget
+[16단계] 루비스 주괴,특수광물,게임머니,,1588.0,orespackvol2:rubis_ingot
+[16단계] 루비스 블록,특수광물,게임머니,,14280.0,orespackvol2:rubis_block
+[16단계] 루비스 원석,특수광물,게임머니,,1428.0,orespackvol2:rubis_ore
+[16단계] 심층암 루비스 원석,특수광물,게임머니,,1588.0,orespackvol2:deepslate_rubis_ore
+[16단계] 루비스 네더 원석,특수광물,게임머니,,1872.0,orespackvol2:rubis_nether_ore
+[16단계] 루비스 엔드 원석,특수광물,게임머니,,2144.0,orespackvol2:rubis_end_ore
+바나나 씨앗,특수과일,게임머니,7.0,,addfruit:addfruit_banana_seed
+바나나,특수과일,게임머니,,23.53,addfruit:addfruit_banana
+바나나 ★,특수과일,게임머니,,30.57,addfruit:addfruit_banana_silver
+바나나 ★,특수과일,게임머니,,39.98,addfruit:addfruit_banana_golden
+희귀 바나나,특수과일,게임머니,,94.08,addfruit:addfruit_banana_rare
+블루베리 씨앗,특수과일,게임머니,7.0,,addfruit:addfruit_blueberry_seed
+블루베리,특수과일,게임머니,,16.86,addfruit:addfruit_blueberry
+블루베리 ★,특수과일,게임머니,,21.93,addfruit:addfruit_blueberry_silver
+블루베리 ★,특수과일,게임머니,,28.7,addfruit:addfruit_blueberry_golden
+희귀 블루베리,특수과일,게임머니,,67.5,addfruit:addfruit_blueberry_rare
+포도 씨앗,특수과일,게임머니,7.0,,addfruit:addfruit_grape_seed
+포도,특수과일,게임머니,,23.53,addfruit:addfruit_grape
+포도 ★,특수과일,게임머니,,30.57,addfruit:addfruit_grape_silver
+포도 ★,특수과일,게임머니,,39.98,addfruit:addfruit_grape_golden
+희귀 포도,특수과일,게임머니,,94.08,addfruit:addfruit_grape_rare
+레몬 씨앗,특수과일,게임머니,7.0,,addfruit:addfruit_lemon_seed
+레몬,특수과일,게임머니,,13.06,addfruit:addfruit_lemon
+레몬 ★,특수과일,게임머니,,16.98,addfruit:addfruit_lemon_silver
+레몬 ★,특수과일,게임머니,,22.19,addfruit:addfruit_lemon_golden
+희귀 레몬,특수과일,게임머니,,52.28,addfruit:addfruit_lemon_rare
+망고 씨앗,특수과일,게임머니,7.0,,addfruit:addfruit_mango_seed
+망고,특수과일,게임머니,,28.84,addfruit:addfruit_mango
+망고 ★,특수과일,게임머니,,37.47,addfruit:addfruit_mango_silver
+망고 ★,특수과일,게임머니,,49.01,addfruit:addfruit_mango_golden
+희귀 망고,특수과일,게임머니,,115.32,addfruit:addfruit_mango_rare
+멜론 씨앗,특수과일,게임머니,7.0,,addfruit:addfruit_melon_seed
+멜론,특수과일,게임머니,,44.67,addfruit:addfruit_melon
+멜론 ★,특수과일,게임머니,,58.06,addfruit:addfruit_melon_silver
+멜론 ★,특수과일,게임머니,,75.91,addfruit:addfruit_melon_golden
+희귀 멜론,특수과일,게임머니,,178.61,addfruit:addfruit_melon_rare
+오렌지 씨앗,특수과일,게임머니,7.0,,addfruit:addfruit_orange_seed
+오렌지,특수과일,게임머니,,23.53,addfruit:addfruit_orange
+오렌지 ★,특수과일,게임머니,,30.57,addfruit:addfruit_orange_silver
+오렌지 ★,특수과일,게임머니,,39.98,addfruit:addfruit_orange_golden
+희귀 오렌지,특수과일,게임머니,,94.08,addfruit:addfruit_orange_rare
+복숭아 씨앗,특수과일,게임머니,7.0,,addfruit:addfruit_peach_seed
+복숭아,특수과일,게임머니,,23.53,addfruit:addfruit_peach
+복숭아 ★,특수과일,게임머니,,30.57,addfruit:addfruit_peach_silver
+복숭아 ★,특수과일,게임머니,,39.98,addfruit:addfruit_peach_golden
+희귀 복숭아,특수과일,게임머니,,94.08,addfruit:addfruit_peach_rare
+파인애플 씨앗,특수과일,게임머니,8.0,,addfruit:addfruit_pineapple_seed
+파인애플,특수과일,게임머니,,58.49,addfruit:addfruit_pineapple
+파인애플 ★,특수과일,게임머니,,76.03,addfruit:addfruit_pineapple_silver
+파인애플 ★,특수과일,게임머니,,99.41,addfruit:addfruit_pineapple_golden
+희귀 파인애플,특수과일,게임머니,,233.9,addfruit:addfruit_pineapple_rare
+딸기 씨앗,특수과일,게임머니,7.0,,addfruit:addfruit_strawberry_seed
+딸기,특수과일,게임머니,,13.06,addfruit:addfruit_strawberry
+딸기 ★,특수과일,게임머니,,16.98,addfruit:addfruit_strawberry_silver
+딸기 ★,특수과일,게임머니,,22.19,addfruit:addfruit_strawberry_golden
+희귀 딸기,특수과일,게임머니,,52.28,addfruit:addfruit_strawberry_rare
+나무 낫,특수농기구,게임머니,60.0,18.0,addcrop:addcrop_item_scythe_wooden
+돌 낫,특수농기구,게임머니,150.0,45.0,addcrop:addcrop_item_scythe_stone
+철 낫,특수농기구,게임머니,360.0,108.0,addcrop:addcrop_item_scythe_iron
+금 낫,특수농기구,게임머니,300.0,90.0,addcrop:addcrop_item_scythe_golden
+다이아몬드 낫,특수농기구,게임머니,900.0,270.0,addcrop:addcrop_item_scythe_diamond
+네더라이트 낫,특수농기구,게임머니,1800.0,540.0,addcrop:addcrop_item_scythe_netherite
+나무 갈퀴,특수농기구,게임머니,60.0,18.0,addcrop:addcrop_item_rake_wooden
+돌 갈퀴,특수농기구,게임머니,150.0,45.0,addcrop:addcrop_item_rake_stone
+철 갈퀴,특수농기구,게임머니,360.0,108.0,addcrop:addcrop_item_rake_iron
+금 갈퀴,특수농기구,게임머니,300.0,90.0,addcrop:addcrop_item_rake_golden
+다이아몬드 갈퀴,특수농기구,게임머니,900.0,270.0,addcrop:addcrop_item_rake_diamond
+네더라이트 갈퀴,특수농기구,게임머니,1800.0,540.0,addcrop:addcrop_item_rake_netherite
+빈 마법의 물병,특수농기구,게임머니,20.0,6.0,addcrop:addcrop_item_magic_bottle
+마법의 물병,특수농기구,게임머니,80.0,24.0,addcrop:addcrop_item_magic_water
+마법의 물병 ★,특수농기구,게임머니,140.0,42.0,addcrop:addcrop_item_magic_water_silver
+마법의 물병 ★,특수농기구,게임머니,220.0,66.0,addcrop:addcrop_item_magic_water_golden
+마법의 뼛가루,특수농기구,게임머니,3900.0,36.0,addcrop:addcrop_item_magic_meal
+마법의 뼛가루 ★,특수농기구,게임머니,10800.0,63.0,addcrop:addcrop_item_magic_meal_silver
+마법의 뼛가루 ★,특수농기구,게임머니,21200.0,99.0,addcrop:addcrop_item_magic_meal_golden
+랜덤 씨앗,특수농기구,게임머니,12.0,4.0,addcrop:addcrop_random_seed
+랜덤 씨앗 주머니,특수농기구,게임머니,90.0,27.0,addcrop:addcrop_random_seed_pack
+랜덤 씨앗 주머니 ★,특수농기구,게임머니,140.0,42.0,addcrop:addcrop_random_seed_pack_silver
+랜덤 씨앗 주머니 ★,특수농기구,게임머니,200.0,60.0,addcrop:addcrop_random_seed_pack_golden
+참나무 경작지 (마른),특수농기구,게임머니,45.0,14.0,addcrop:addcrop_pot_oak_dry
+참나무 경작지 (젖은),특수농기구,게임머니,60.0,18.0,addcrop:addcrop_pot_oak_wet
+가문비나무 경작지 (마른),특수농기구,게임머니,45.0,14.0,addcrop:addcrop_pot_spruce_dry
+가문비나무 경작지 (젖은),특수농기구,게임머니,60.0,18.0,addcrop:addcrop_pot_spruce_wet
+자작나무 경작지 (마른),특수농기구,게임머니,45.0,14.0,addcrop:addcrop_pot_birch_dry
+자작나무 경작지 (젖은),특수농기구,게임머니,60.0,18.0,addcrop:addcrop_pot_birch_wet
+정글나무 경작지 (마른),특수농기구,게임머니,45.0,14.0,addcrop:addcrop_pot_jungle_dry
+정글나무 경작지 (젖은),특수농기구,게임머니,60.0,18.0,addcrop:addcrop_pot_jungle_wet
+아카시아나무 경작지 (마른),특수농기구,게임머니,45.0,14.0,addcrop:addcrop_pot_acacia_dry
+아카시아나무 경작지 (젖은),특수농기구,게임머니,60.0,18.0,addcrop:addcrop_pot_acacia_wet
+짙은 참나무 경작지 (마른),특수농기구,게임머니,45.0,14.0,addcrop:addcrop_pot_dark_oak_dry
+짙은 참나무 경작지 (젖은),특수농기구,게임머니,60.0,18.0,addcrop:addcrop_pot_dark_oak_wet
+맹그로브나무 경작지 (마른),특수농기구,게임머니,45.0,14.0,addcrop:addcrop_pot_mangrove_dry
+맹그로브나무 경작지 (젖은),특수농기구,게임머니,60.0,18.0,addcrop:addcrop_pot_mangrove_wet
+벚나무 경작지 (마른),특수농기구,게임머니,45.0,14.0,addcrop:addcrop_pot_cherry_dry
+벚나무 경작지 (젖은),특수농기구,게임머니,60.0,18.0,addcrop:addcrop_pot_cherry_wet
+대나무 경작지 (마른),특수농기구,게임머니,45.0,14.0,addcrop:addcrop_pot_bamboo_dry
+대나무 경작지 (젖은),특수농기구,게임머니,60.0,18.0,addcrop:addcrop_pot_bamboo_wet
+진홍빛 경작지 (마른),특수농기구,게임머니,45.0,14.0,addcrop:addcrop_pot_crimson_dry
+진홍빛 경작지 (젖은),특수농기구,게임머니,60.0,18.0,addcrop:addcrop_pot_crimson_wet
+뒤틀린 경작지 (마른),특수농기구,게임머니,45.0,14.0,addcrop:addcrop_pot_warped_dry
+뒤틀린 경작지 (젖은),특수농기구,게임머니,60.0,18.0,addcrop:addcrop_pot_warped_wet
+창백나무 경작지 (마른),특수농기구,게임머니,45.0,14.0,addcrop:addcrop_pot_pale_oak_dry
+창백나무 경작지 (젖은),특수농기구,게임머니,60.0,18.0,addcrop:addcrop_pot_pale_oak_wet
+아티초크 씨앗,특수작물,게임머니,6.0,,addcrop:addcrop_artichoke_seed
+아티초크,특수작물,게임머니,,41.07,addcrop:addcrop_artichoke
+아티초크 ★,특수작물,게임머니,,53.36,addcrop:addcrop_artichoke_silver
+아티초크 ★,특수작물,게임머니,,69.81,addcrop:addcrop_artichoke_golden
+희귀 아티초크,특수작물,게임머니,,164.26,addcrop:addcrop_artichoke_rare
+아스파라거스 씨앗,특수작물,게임머니,6.0,,addcrop:addcrop_asparagus_seed
+아스파라거스,특수작물,게임머니,,23.89,addcrop:addcrop_asparagus
+아스파라거스 ★,특수작물,게임머니,,31.06,addcrop:addcrop_asparagus_silver
+아스파라거스 ★,특수작물,게임머니,,40.61,addcrop:addcrop_asparagus_golden
+희귀 아스파라거스,특수작물,게임머니,,95.56,addcrop:addcrop_asparagus_rare
+콩 씨앗,특수작물,게임머니,6.0,,addcrop:addcrop_bean_seed
+콩,특수작물,게임머니,,17.86,addcrop:addcrop_bean
+콩 ★,특수작물,게임머니,,23.25,addcrop:addcrop_bean_silver
+콩 ★,특수작물,게임머니,,30.37,addcrop:addcrop_bean_golden
+희귀 콩,특수작물,게임머니,,71.49,addcrop:addcrop_bean_rare
+브로콜리 씨앗,특수작물,게임머니,6.0,,addcrop:addcrop_broccoli_seed
+브로콜리,특수작물,게임머니,,41.07,addcrop:addcrop_broccoli
+브로콜리 ★,특수작물,게임머니,,53.36,addcrop:addcrop_broccoli_silver
+브로콜리 ★,특수작물,게임머니,,69.81,addcrop:addcrop_broccoli_golden
+희귀 브로콜리,특수작물,게임머니,,164.26,addcrop:addcrop_broccoli_rare
+양배추 씨앗,특수작물,게임머니,6.0,,addcrop:addcrop_cabbage_seed
+양배추,특수작물,게임머니,,31.67,addcrop:addcrop_cabbage
+양배추 ★,특수작물,게임머니,,41.17,addcrop:addcrop_cabbage_silver
+양배추 ★,특수작물,게임머니,,53.83,addcrop:addcrop_cabbage_golden
+희귀 양배추,특수작물,게임머니,,126.73,addcrop:addcrop_cabbage_rare
+옥수수 씨앗,특수작물,게임머니,6.0,,addcrop:addcrop_corn_seed
+옥수수,특수작물,게임머니,,30.56,addcrop:addcrop_corn
+옥수수 ★,특수작물,게임머니,,39.73,addcrop:addcrop_corn_silver
+옥수수 ★,특수작물,게임머니,,51.96,addcrop:addcrop_corn_golden
+희귀 옥수수,특수작물,게임머니,,122.21,addcrop:addcrop_corn_rare
+가지 씨앗,특수작물,게임머니,6.0,,addcrop:addcrop_egg_plant_seed
+가지,특수작물,게임머니,,30.56,addcrop:addcrop_egg_plant
+가지 ★,특수작물,게임머니,,39.73,addcrop:addcrop_egg_plant_silver
+가지 ★,특수작물,게임머니,,51.96,addcrop:addcrop_egg_plant_golden
+희귀 가지,특수작물,게임머니,,122.21,addcrop:addcrop_egg_plant_rare
+마늘 씨앗,특수작물,게임머니,6.0,,addcrop:addcrop_garlic_seed
+마늘,특수작물,게임머니,,23.89,addcrop:addcrop_garlic
+마늘 ★,특수작물,게임머니,,31.06,addcrop:addcrop_garlic_silver
+마늘 ★,특수작물,게임머니,,40.61,addcrop:addcrop_garlic_golden
+희귀 마늘,특수작물,게임머니,,95.56,addcrop:addcrop_garlic_rare
+파 씨앗,특수작물,게임머니,6.0,,addcrop:addcrop_green_onion_seed
+파,특수작물,게임머니,,23.89,addcrop:addcrop_green_onion
+파 ★,특수작물,게임머니,,31.06,addcrop:addcrop_green_onion_silver
+파 ★,특수작물,게임머니,,40.61,addcrop:addcrop_green_onion_golden
+희귀 파,특수작물,게임머니,,95.56,addcrop:addcrop_green_onion_rare
+배추 씨앗,특수작물,게임머니,6.0,,addcrop:addcrop_korea_cabbage_seed
+배추,특수작물,게임머니,,41.07,addcrop:addcrop_korea_cabbage
+배추 ★,특수작물,게임머니,,53.36,addcrop:addcrop_korea_cabbage_silver
+배추 ★,특수작물,게임머니,,69.81,addcrop:addcrop_korea_cabbage_golden
+희귀 배추,특수작물,게임머니,,164.26,addcrop:addcrop_korea_cabbage_rare
+양파 씨앗,특수작물,게임머니,6.0,,addcrop:addcrop_onion_seed
+양파,특수작물,게임머니,,31.67,addcrop:addcrop_onion
+양파 ★,특수작물,게임머니,,41.17,addcrop:addcrop_onion_silver
+양파 ★,특수작물,게임머니,,53.83,addcrop:addcrop_onion_golden
+희귀 양파,특수작물,게임머니,,126.73,addcrop:addcrop_onion_rare
+파프리카 씨앗,특수작물,게임머니,6.0,,addcrop:addcrop_paprika_seed
+파프리카,특수작물,게임머니,,30.56,addcrop:addcrop_paprika
+파프리카 ★,특수작물,게임머니,,39.73,addcrop:addcrop_paprika_silver
+파프리카 ★,특수작물,게임머니,,51.96,addcrop:addcrop_paprika_golden
+희귀 파프리카,특수작물,게임머니,,122.21,addcrop:addcrop_paprika_rare
+파슬리 씨앗,특수작물,게임머니,6.0,,addcrop:addcrop_parsley_seed
+파슬리,특수작물,게임머니,,23.89,addcrop:addcrop_parsley
+파슬리 ★,특수작물,게임머니,,31.06,addcrop:addcrop_parsley_silver
+파슬리 ★,특수작물,게임머니,,40.61,addcrop:addcrop_parsley_golden
+희귀 파슬리,특수작물,게임머니,,95.56,addcrop:addcrop_parsley_rare
+고추 씨앗,특수작물,게임머니,6.0,,addcrop:addcrop_pepper_seed
+고추,특수작물,게임머니,,25.53,addcrop:addcrop_pepper
+고추 ★,특수작물,게임머니,,33.17,addcrop:addcrop_pepper_silver
+고추 ★,특수작물,게임머니,,43.38,addcrop:addcrop_pepper_golden
+희귀 고추,특수작물,게임머니,,102.03,addcrop:addcrop_pepper_rare
+무 씨앗,특수작물,게임머니,6.0,,addcrop:addcrop_radish_seed
+무,특수작물,게임머니,,41.07,addcrop:addcrop_radish
+무 ★,특수작물,게임머니,,53.36,addcrop:addcrop_radish_silver
+무 ★,특수작물,게임머니,,69.81,addcrop:addcrop_radish_golden
+희귀 무,특수작물,게임머니,,164.26,addcrop:addcrop_radish_rare
+쌀 씨앗,특수작물,게임머니,7.0,,addcrop:addcrop_rice_seed
+쌀,특수작물,게임머니,,32.25,addcrop:addcrop_rice
+쌀 ★,특수작물,게임머니,,41.91,addcrop:addcrop_rice_silver
+쌀 ★,특수작물,게임머니,,54.83,addcrop:addcrop_rice_golden
+희귀 쌀,특수작물,게임머니,,129.0,addcrop:addcrop_rice_rare
+고구마 씨앗,특수작물,게임머니,6.0,,addcrop:addcrop_sweet_potato_seed
+고구마,특수작물,게임머니,,30.56,addcrop:addcrop_sweet_potato
+고구마 ★,특수작물,게임머니,,39.73,addcrop:addcrop_sweet_potato_silver
+고구마 ★,특수작물,게임머니,,51.96,addcrop:addcrop_sweet_potato_golden
+희귀 고구마,특수작물,게임머니,,122.21,addcrop:addcrop_sweet_potato_rare
+토마토 씨앗,특수작물,게임머니,6.0,,addcrop:addcrop_tomato_seed
+토마토,특수작물,게임머니,,30.56,addcrop:addcrop_tomato
+토마토 ★,특수작물,게임머니,,39.73,addcrop:addcrop_tomato_silver
+토마토 ★,특수작물,게임머니,,51.96,addcrop:addcrop_tomato_golden
+희귀 토마토,특수작물,게임머니,,122.21,addcrop:addcrop_tomato_rare
+순무 씨앗,특수작물,게임머니,6.0,,addcrop:addcrop_turnip_seed
+순무,특수작물,게임머니,,31.67,addcrop:addcrop_turnip
+순무 ★,특수작물,게임머니,,41.17,addcrop:addcrop_turnip_silver
+순무 ★,특수작물,게임머니,,53.83,addcrop:addcrop_turnip_golden
+희귀 순무,특수작물,게임머니,,126.73,addcrop:addcrop_turnip_rare
+산삼 씨앗,특수작물,게임머니,8.0,,addcrop:addcrop_wild_ginseng_seed
+산삼,특수작물,게임머니,,48.67,addcrop:addcrop_wild_ginseng
+산삼 ★,특수작물,게임머니,,63.29,addcrop:addcrop_wild_ginseng_silver
+산삼 ★,특수작물,게임머니,,82.77,addcrop:addcrop_wild_ginseng_golden
+희귀 산삼,특수작물,게임머니,,194.74,addcrop:addcrop_wild_ginseng_rare
+조약돌,바닐라잡화,게임머니,1.0,0.25,COBBLESTONE
+심층암 조약돌,바닐라잡화,게임머니,4.0,1.0,COBBLED_DEEPSLATE
+돌,바닐라잡화,게임머니,2.0,0.5,STONE
+화강암,바닐라잡화,게임머니,3.0,0.75,GRANITE
+섬록암,바닐라잡화,게임머니,3.0,0.75,DIORITE
+안산암,바닐라잡화,게임머니,3.0,0.75,ANDESITE
+응회암,바닐라잡화,게임머니,5.0,1.0,TUFF
+방해석,바닐라잡화,게임머니,7.0,2.0,CALCITE
+점적석 블록,바닐라잡화,게임머니,7.0,2.0,DRIPSTONE_BLOCK
+뾰족한 점적석,바닐라잡화,게임머니,5.0,1.0,POINTED_DRIPSTONE
+흙,바닐라잡화,게임머니,3.0,1.0,DIRT
+거친 흙,바닐라잡화,게임머니,4.0,1.0,COARSE_DIRT
+자갈,바닐라잡화,게임머니,5.0,1.0,GRAVEL
+모래,바닐라잡화,게임머니,5.0,1.0,SAND
+붉은 모래,바닐라잡화,게임머니,6.0,1.0,RED_SAND
+점토,바닐라잡화,게임머니,7.0,2.0,CLAY
+네더랙,바닐라잡화,게임머니,3.0,1.0,NETHERRACK
+현무암,바닐라잡화,게임머니,5.0,1.0,BASALT
+흑암,바닐라잡화,게임머니,6.0,2.0,BLACKSTONE
+영혼 모래,바닐라잡화,게임머니,7.0,2.0,SOUL_SAND
+영혼 흙,바닐라잡화,게임머니,7.0,2.0,SOUL_SOIL
+마그마 블록,바닐라잡화,게임머니,10.0,3.0,MAGMA_BLOCK
+썩은 살점,바닐라잡화,게임머니,5.0,1.0,ROTTEN_FLESH
+뼈다귀,바닐라잡화,게임머니,360.0,2.0,BONE
+실,바닐라잡화,게임머니,7.0,2.0,STRING
+거미 눈,바닐라잡화,게임머니,8.0,2.0,SPIDER_EYE
+화약,바닐라잡화,게임머니,14.0,4.0,GUNPOWDER
+화살,바닐라잡화,게임머니,6.0,1.0,ARROW
+깃털,바닐라잡화,게임머니,6.0,1.0,FEATHER
+가죽,바닐라잡화,게임머니,10.0,3.0,LEATHER
+토끼 가죽,바닐라잡화,게임머니,8.0,2.0,RABBIT_HIDE
+토끼발,바닐라잡화,게임머니,28.0,7.0,RABBIT_FOOT
+먹물 주머니,바닐라잡화,게임머니,7.0,2.0,INK_SAC
+발광 먹물 주머니,바닐라잡화,게임머니,14.0,4.0,GLOW_INK_SAC
+슬라임볼,바닐라잡화,게임머니,18.0,5.0,SLIME_BALL
+팬텀 막,바닐라잡화,게임머니,30.0,8.0,PHANTOM_MEMBRANE
+프리즈머린 조각,바닐라잡화,게임머니,10.0,3.0,PRISMARINE_SHARD
+프리즈머린 수정,바닐라잡화,게임머니,14.0,4.0,PRISMARINE_CRYSTALS
+블레이즈 막대기,바닐라잡화,게임머니,24.0,7.0,BLAZE_ROD
+마그마 크림,바닐라잡화,게임머니,18.0,5.0,MAGMA_CREAM
+가스트 눈물,바닐라잡화,게임머니,40.0,12.0,GHAST_TEAR
+엔더 진주,바닐라잡화,게임머니,22.0,6.0,ENDER_PEARL
+부싯돌,바닐라잡화,게임머니,6.0,1.0,FLINT
+눈덩이,바닐라잡화,게임머니,3.0,1.0,SNOWBALL
+달걀,바닐라잡화,게임머니,4.0,1.0,EGG
+심층암,바닐라잡화,게임머니,2.0,0.5,DEEPSLATE
+돼지 꼬리,몬스터 전리품,게임머니,,9.9,addrpg:addrpg_pig_tail
+돼지 코,몬스터 전리품,게임머니,,9.9,addrpg:addrpg_pig_nose
+삼겹살,몬스터 전리품,게임머니,,8.58,addrpg:addrpg_pork_belly
+앞다리살,몬스터 전리품,게임머니,,7.0,addrpg:addrpg_pork_picnic
+목심,몬스터 전리품,게임머니,,7.0,addrpg:addrpg_pork_shoulder
+돼지 결정석,몬스터 전리품,게임머니,,57.5,addrpg:addrpg_pig_crystal
+소 꼬리,몬스터 전리품,게임머니,,9.9,addrpg:addrpg_cow_tail
+소 뿔,몬스터 전리품,게임머니,,9.9,addrpg:addrpg_cow_horn
+갈비,몬스터 전리품,게임머니,,8.58,addrpg:addrpg_cow_rib
+채끝,몬스터 전리품,게임머니,,7.0,addrpg:addrpg_cow_striploin
+등심,몬스터 전리품,게임머니,,7.0,addrpg:addrpg_cow_loin
+소 결정석,몬스터 전리품,게임머니,,57.5,addrpg:addrpg_cow_crystal
+벼슬,몬스터 전리품,게임머니,,9.9,addrpg:addrpg_chicken_cockscomb
+닭다리,몬스터 전리품,게임머니,,8.58,addrpg:addrpg_chicken_leg
+닭날개,몬스터 전리품,게임머니,,7.0,addrpg:addrpg_chicken_wing
+닭가슴살,몬스터 전리품,게임머니,,7.0,addrpg:addrpg_chicken_chest
+닭발,몬스터 전리품,게임머니,,9.9,addrpg:addrpg_chicken_feet
+닭 결정석,몬스터 전리품,게임머니,,57.5,addrpg:addrpg_chicken_crystal
+양털,몬스터 전리품,게임머니,,9.44,addrpg:addrpg_wool
+프렌치랙,몬스터 전리품,게임머니,,8.18,addrpg:addrpg_french_rack
+숄더랙,몬스터 전리품,게임머니,,6.68,addrpg:addrpg_shoulder_rack
+큐브형 양고기,몬스터 전리품,게임머니,,6.68,addrpg:addrpg_sheep_cube_meat
+양 결정석,몬스터 전리품,게임머니,,57.5,addrpg:addrpg_sheep_crystal
+눈알,몬스터 전리품,게임머니,,20.7,addrpg:addrpg_eyes
+옷감,몬스터 전리품,게임머니,,6.68,addrpg:addrpg_cloth
+좀비 다리살,몬스터 전리품,게임머니,,8.18,addrpg:addrpg_zombie_leg
+좀비 스테이크,몬스터 전리품,게임머니,,6.68,addrpg:addrpg_zombie_steak
+좀비 손,몬스터 전리품,게임머니,,6.68,addrpg:addrpg_zombie_hand
+좀비 결정석,몬스터 전리품,게임머니,,57.5,addrpg:addrpg_zombie_crystal
+다리뼈,몬스터 전리품,게임머니,,8.79,addrpg:addrpg_leg_bone
+갈비뼈,몬스터 전리품,게임머니,,8.79,addrpg:addrpg_lib_bone
+손뼈,몬스터 전리품,게임머니,,8.79,addrpg:addrpg_hand_bone
+골반뼈,몬스터 전리품,게임머니,,8.79,addrpg:addrpg_pelvis
+척추뼈,몬스터 전리품,게임머니,,8.79,addrpg:addrpg_vertebrae
+스켈레톤 결정석,몬스터 전리품,게임머니,,57.5,addrpg:addrpg_skeleton_crystal
+거미 다리,몬스터 전리품,게임머니,,8.58,addrpg:addrpg_spider_leg
+거미 이빨,몬스터 전리품,게임머니,,7.0,addrpg:addrpg_spider_tooth
+거미 몸통,몬스터 전리품,게임머니,,7.0,addrpg:addrpg_spider_body
+거미 알,몬스터 전리품,게임머니,,9.9,addrpg:addrpg_spider_egg
+질긴 실,몬스터 전리품,게임머니,,9.9,addrpg:addrpg_tough_string
+거미 결정석,몬스터 전리품,게임머니,,57.5,addrpg:addrpg_spider_crystal
+크리퍼 스테이크,몬스터 전리품,게임머니,,7.76,addrpg:addrpg_creeper_steak
+크리퍼 티본 스테이크,몬스터 전리품,게임머니,,6.33,addrpg:addrpg_creeper_tbone
+크리퍼 혈관,몬스터 전리품,게임머니,,6.33,addrpg:addrpg_creeper_blood_vessels
+크리퍼 심장,몬스터 전리품,게임머니,,11.57,addrpg:addrpg_creeper_heart
+크리퍼 가죽,몬스터 전리품,게임머니,,6.68,addrpg:addrpg_creeper_leather
+크리퍼 결정석,몬스터 전리품,게임머니,,57.5,addrpg:addrpg_creeper_crystal
+건축 플라이권 30분,건축 플라이권,게임머니,5000.0,,PAPER
+건축 플라이권 1시간,건축 플라이권,게임머니,10000.0,,PAPER
+건축 플라이권 3시간,건축 플라이권,게임머니,30000.0,,PAPER
+건축 플라이권 12시간,건축 플라이권,게임머니,120000.0,,PAPER
+건축 플라이권 1일,건축 플라이권,게임머니,240000.0,,PAPER
+건축 플라이권 3일,건축 플라이권,게임머니,720000.0,,PAPER
+VIP 잠수 낚싯대 (VIP 이상 구매),등급별 잠수 낚싯대,게임머니,100000.0,,FISHING_ROD
+VIP+ 잠수 낚싯대 (VIP+ 이상 구매),등급별 잠수 낚싯대,게임머니,200000.0,,FISHING_ROD
+MVP 잠수 낚싯대 (MVP 이상 구매),등급별 잠수 낚싯대,게임머니,400000.0,,FISHING_ROD
+MVP+ 잠수 낚싯대 (MVP+ 이상 구매),등급별 잠수 낚싯대,게임머니,400000.0,,FISHING_ROD
+VIP 30일 등급권,VIP 등급권,캐시,9900.0,,PAPER
+VIP+ 30일 등급권,VIP 등급권,캐시,19900.0,,PAPER
+MVP 30일 등급권,VIP 등급권,캐시,49900.0,,PAPER
+MVP+ 30일 등급권,VIP 등급권,캐시,99000.0,,PAPER
+인챈트 슬롯 확장권 +1,인챈트 아이템,게임머니,75000.0,,PAPER
+무기 슬롯 확장 서책 · 4칸,인챈트 아이템,게임머니,140000.0,,PAPER
+방어구 슬롯 확장 서책 · 4칸,인챈트 아이템,게임머니,140000.0,,PAPER
+도구 슬롯 확장 서책 · 4칸,인챈트 아이템,게임머니,140000.0,,PAPER
+장비 파괴 방지 두루마리,인챈트 아이템,게임머니,15000.0,,PAPER
+인챈트 추출 두루마리,인챈트 아이템,게임머니,50000.0,,PAPER
+사망 보호 두루마리,인챈트 아이템,게임머니,150000.0,,PAPER
+장비 이름 변경권,인챈트 아이템,게임머니,10000.0,,PAPER
+인챈트 정렬 두루마리,인챈트 아이템,게임머니,3000.0,,PAPER
+채광 기록 두루마리,인챈트 아이템,게임머니,5000.0,,PAPER
+낚시 기록 두루마리,인챈트 아이템,게임머니,5000.0,,PAPER
+전투 기록 두루마리,인챈트 아이템,게임머니,5000.0,,PAPER
+사냥 기록 두루마리,인챈트 아이템,게임머니,5000.0,,PAPER
+영혼 수집 두루마리,인챈트 아이템,게임머니,10000.0,,PAPER
+"영혼 보석 · 1,000",인챈트 아이템,게임머니,20000.0,,PAPER
+일반 비밀 보석 주머니,인챈트 아이템,게임머니,250.0,,PAPER
+일반 인챈트 보조 보석 · 5%,인챈트 아이템,게임머니,1000.0,,PAPER
+일반 확률 재설정 두루마리,인챈트 아이템,게임머니,500.0,,PAPER
+고급 비밀 보석 주머니,인챈트 아이템,게임머니,500.0,,PAPER
+고급 인챈트 보조 보석 · 5%,인챈트 아이템,게임머니,2500.0,,PAPER
+고급 확률 재설정 두루마리,인챈트 아이템,게임머니,1000.0,,PAPER
+희귀 비밀 보석 주머니,인챈트 아이템,게임머니,1500.0,,PAPER
+희귀 인챈트 보조 보석 · 5%,인챈트 아이템,게임머니,5000.0,,PAPER
+희귀 확률 재설정 두루마리,인챈트 아이템,게임머니,2000.0,,PAPER
+영웅 비밀 보석 주머니,인챈트 아이템,게임머니,3500.0,,PAPER
+영웅 인챈트 보조 보석 · 5%,인챈트 아이템,게임머니,10000.0,,PAPER
+영웅 확률 재설정 두루마리,인챈트 아이템,게임머니,4000.0,,PAPER
+전설 비밀 보석 주머니,인챈트 아이템,게임머니,10000.0,,PAPER
+전설 인챈트 보조 보석 · 5%,인챈트 아이템,게임머니,20000.0,,PAPER
+전설 확률 재설정 두루마리,인챈트 아이템,게임머니,8000.0,,PAPER
+신화 비밀 보석 주머니,인챈트 아이템,게임머니,18000.0,,PAPER
+신화 인챈트 보조 보석 · 5%,인챈트 아이템,게임머니,35000.0,,PAPER
+신화 확률 재설정 두루마리,인챈트 아이템,게임머니,15000.0,,PAPER
+보니타 전체 패키지,보니타 시즌 스킨,캐시,49900.0,,bonitaset:bonita_chest
+보니타 랜덤상자,보니타 시즌 스킨,캐시,1000.0,,bonitaset:bonita_chest
+보니타 도끼 스킨권,보니타 시즌 스킨,캐시,4900.0,,bonitaset:bonita_axe
+보니타 활 스킨권,보니타 시즌 스킨,캐시,4900.0,,bonitaset:bonita_bow
+보니타 석궁 스킨권,보니타 시즌 스킨,캐시,4900.0,,bonitaset:bonita_crossbow
+보니타 낚싯대 스킨권,보니타 시즌 스킨,캐시,4900.0,,bonitaset:bonita_fishing_rod
+보니타 대검 스킨권,보니타 시즌 스킨,캐시,4900.0,,bonitaset:bonita_greatsword
+보니타 망치 스킨권,보니타 시즌 스킨,캐시,4900.0,,bonitaset:bonita_hammer
+보니타 괭이 스킨권,보니타 시즌 스킨,캐시,4900.0,,bonitaset:bonita_hoe
+보니타 곡괭이 스킨권,보니타 시즌 스킨,캐시,4900.0,,bonitaset:bonita_pickaxe
+보니타 대낫 스킨권,보니타 시즌 스킨,캐시,4900.0,,bonitaset:bonita_scythe
+보니타 방패 스킨권,보니타 시즌 스킨,캐시,4900.0,,bonitaset:bonita_shield
+보니타 삽 스킨권,보니타 시즌 스킨,캐시,4900.0,,bonitaset:bonita_shovel
+보니타 창 스킨권,보니타 시즌 스킨,캐시,4900.0,,bonitaset:bonita_spear
+보니타 지팡이 스킨권,보니타 시즌 스킨,캐시,4900.0,,bonitaset:bonita_staff
+보니타 검 스킨권,보니타 시즌 스킨,캐시,4900.0,,bonitaset:bonita_sword
+보니타 삼지창 스킨권,보니타 시즌 스킨,캐시,4900.0,,bonitaset:bonita_trident
+보니타 장화 스킨권,보니타 시즌 스킨,캐시,4900.0,,bonitaset:bonitaboots
+보니타 흉갑 스킨권,보니타 시즌 스킨,캐시,4900.0,,bonitaset:bonitachestplate
+보니타 각반 스킨권,보니타 시즌 스킨,캐시,4900.0,,bonitaset:bonitaleggings
+보니타 투구 스킨권,보니타 시즌 스킨,캐시,4900.0,,bonitaset:bonitahelmet
+바하무트 전체 패키지,바하무트 시즌 스킨,캐시,49900.0,,elitecreatures:bahamut_animated_weapon_set_chest
+바하무트 랜덤상자,바하무트 시즌 스킨,캐시,1000.0,,elitecreatures:bahamut_animated_weapon_set_chest
+바하무트 투구 스킨권,바하무트 시즌 스킨,캐시,4900.0,,elitecreatures:bahamut_animated_weapon_set_helmet_2
+바하무트 흉갑 스킨권,바하무트 시즌 스킨,캐시,4900.0,,elitecreatures:bahamut_animated_weapon_set_chestplate
+바하무트 각반 스킨권,바하무트 시즌 스킨,캐시,4900.0,,elitecreatures:bahamut_animated_weapon_set_leggings
+바하무트 장화 스킨권,바하무트 시즌 스킨,캐시,4900.0,,elitecreatures:bahamut_animated_weapon_set_boots
+바하무트 도끼 스킨권,바하무트 시즌 스킨,캐시,4900.0,,elitecreatures:bahamut_animated_weapon_set_axe
+바하무트 대검 스킨권,바하무트 시즌 스킨,캐시,4900.0,,elitecreatures:bahamut_animated_weapon_set_big_sword
+바하무트 활 스킨권,바하무트 시즌 스킨,캐시,4900.0,,elitecreatures:bahamut_animated_weapon_set_bow
+바하무트 곤봉 스킨권,바하무트 시즌 스킨,캐시,4900.0,,elitecreatures:bahamut_animated_weapon_set_club
+바하무트 단검 스킨권,바하무트 시즌 스킨,캐시,4900.0,,elitecreatures:bahamut_animated_weapon_set_dagger
+바하무트 낚싯대 스킨권,바하무트 시즌 스킨,캐시,4900.0,,elitecreatures:bahamut_animated_weapon_set_fishing_rod
+바하무트 미늘창 스킨권,바하무트 시즌 스킨,캐시,4900.0,,elitecreatures:bahamut_animated_weapon_set_halberd
+바하무트 망치 스킨권,바하무트 시즌 스킨,캐시,4900.0,,elitecreatures:bahamut_animated_weapon_set_hammer
+바하무트 괭이 스킨권,바하무트 시즌 스킨,캐시,4900.0,,elitecreatures:bahamut_animated_weapon_set_hoe
+바하무트 철퇴 스킨권,바하무트 시즌 스킨,캐시,4900.0,,elitecreatures:bahamut_animated_weapon_set_mace
+바하무트 곡괭이 스킨권,바하무트 시즌 스킨,캐시,4900.0,,elitecreatures:bahamut_animated_weapon_set_pickaxe
+바하무트 방패 스킨권,바하무트 시즌 스킨,캐시,4900.0,,elitecreatures:bahamut_animated_weapon_set_shield
+바하무트 삽 스킨권,바하무트 시즌 스킨,캐시,4900.0,,elitecreatures:bahamut_animated_weapon_set_shovel
+바하무트 창 스킨권,바하무트 시즌 스킨,캐시,4900.0,,elitecreatures:bahamut_animated_weapon_set_spear
+바하무트 지팡이 스킨권,바하무트 시즌 스킨,캐시,4900.0,,elitecreatures:bahamut_animated_weapon_set_staff
+바하무트 검 스킨권,바하무트 시즌 스킨,캐시,4900.0,,elitecreatures:bahamut_animated_weapon_set_sword
+시즌 1 프리미엄 패스권,프리미엄 패스권,캐시,19900.0,,rpgbundle_vol1:rpgbundle_vol1_paper2
+닉네임 변경권,닉네임 변경권,캐시,4900.0,,PAPER
+"게임머니 20,000원",재화 상점,캐시,1000.0,,GOLD_INGOT
+"게임머니 100,000원",재화 상점,캐시,5000.0,,GOLD_INGOT
+"게임머니 200,000원",재화 상점,캐시,10000.0,,GOLD_INGOT
